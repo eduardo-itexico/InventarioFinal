@@ -35,7 +35,7 @@
 		background: #e6e6e6;
 	}
 	.planning > li.planning-header {
-		background: #a4a4a4 url(../images/old-browsers-bg/planning-header-bg.png) repeat-x top;
+		background: #a4a4a4 url(../img/old-browsers-bg/planning-header-bg.png) repeat-x top;
 		-webkit-background-size: 100% 100%;
 		-moz-background-size: 100% 100%;
 		-o-background-size: 100% 100%;
@@ -117,7 +117,7 @@
 			-webkit-border-radius: 0.167em;
 			-webkit-background-clip: padding-box;
 			border-radius: 0.167em;
-			background: #e5e5e5 url(../images/old-browsers-bg/planning-bar-bg.png) repeat-x top;
+			background: #e5e5e5 url(../img/old-browsers-bg/planning-bar-bg.png) repeat-x top;
 			-webkit-background-size: 100% 100%;
 			-moz-background-size: 100% 100%;
 			-o-background-size: 100% 100%;
@@ -183,7 +183,7 @@
 			}
 			.planning > li > ul.zebras,
 			.planning > li > ul > li.zebras {
-				background: white url(../images/zebras.png);
+				background: white url(../img/zebras.png);
 			}
 			.planning > li > ul > li.current-time {
 				background: none;
@@ -273,7 +273,7 @@
 	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 .planning > li > ul .event-blue {
-	background: #4398c9 url(../images/old-browsers-bg/planning-bar-blue-bg.png) repeat-x top;
+	background: #4398c9 url(../img/old-browsers-bg/planning-bar-blue-bg.png) repeat-x top;
 	background: -moz-linear-gradient(
 		top,
 		#b0cde5,
@@ -291,7 +291,7 @@
 	);
 }
 .planning > li > ul .event-green {
-	background: #56c943 url(../images/old-browsers-bg/planning-bar-green-bg.png) repeat-x top;
+	background: #56c943 url(../img/old-browsers-bg/planning-bar-green-bg.png) repeat-x top;
 	background: -moz-linear-gradient(
 		top,
 		#b3e6b1,
@@ -309,7 +309,7 @@
 	);
 }
 .planning > li > ul .event-orange {
-	background: #c99c43 url(../images/old-browsers-bg/planning-bar-orange-bg.png) repeat-x top;
+	background: #c99c43 url(../img/old-browsers-bg/planning-bar-orange-bg.png) repeat-x top;
 	background: -moz-linear-gradient(
 		top,
 		#e6d4b1,
@@ -327,7 +327,7 @@
 	);
 }
 .planning > li > ul .event-purple {
-	background: #b543c9 url(../images/old-browsers-bg/planning-bar-purple-bg.png) repeat-x top;
+	background: #b543c9 url(../img/old-browsers-bg/planning-bar-purple-bg.png) repeat-x top;
 	background: -moz-linear-gradient(
 		top,
 		#e3b1e6,
