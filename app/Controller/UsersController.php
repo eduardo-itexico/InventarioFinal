@@ -97,6 +97,15 @@ class UsersController extends AppController {
 		$this->redirect(array('action' => 'index'));
 	}
 	
+	public function login(){
+		$this->layout = null;
+	}
+	
+	public function loginJSON(){
+		$body = array("valid"=>true,
+					  "redirect"=>"sells/index");
+		return new CakeResponse(array("body"=>json_encode($body)));
+	}
 	
 	
 /**
