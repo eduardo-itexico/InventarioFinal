@@ -1,4 +1,5 @@
 <?php
+
 /**
  *
  * PHP 5
@@ -275,7 +276,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 	<header><div class="container_12">
 		
 		<p id="skin-name"><small>Constellation<br> Admin Skin</small> <strong>1.0</strong></p>
-		<div class="server-info">Server: <strong>Apache <?php echo apache_version(); ?></strong></div>
+		<div class="server-info">Server: <strong>Apache <?php //echo apache_version(); ?></strong></div>
 		<div class="server-info">Php: <strong><?php echo phpversion(); ?></strong></div>
 		
 	</div></header>

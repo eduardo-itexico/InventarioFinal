@@ -98,6 +98,7 @@ class UsersController extends AppController {
 	}
 	
 	
+	
 /**
  * home method
  *
