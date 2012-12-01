@@ -285,9 +285,9 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 	<nav id="main-nav">
 		
 		<ul class="container_12">
-			<li class="home current"><a href="#" title="Home">Home</a>
+			<li class="home current"><a href="#" title="Inicio">Inicio</a>
 				<ul>
-					<li class="current"><a href="#" title="Dashboard">Dashboard</a></li>
+					<li class="current"><?=$this->html->link("Ventas",array("controller"=>"sells"));?><!--<a href="#" title="Dashboard">Dashboard</a>--></li>
 					<li><a href="#" title="My profile">My profile</a></li>
 					<li class="with-menu"><a href="#" title="My settings">My settings</a>
 						<div class="menu">
