@@ -5,11 +5,22 @@
              
         <div class="block-controls">
             <ul class="controls-buttons">
+            <li>
+            <?php echo $this->Paginator->prev($this->Html->image("icons/fugue/navigation-180.png"), array("escape"=>false), null, array("escape"=>false));?>
+            </li>
+            
+            <?php echo $this->Paginator->numbers(array("tag"=>"li","separator"=>""))?>
+            
+            <li>
+			<?php echo $this->Paginator->next($this->Html->image("icons/fugue/navigation.png"), array("escape"=>false), null, array("escape"=>false));?>
+			</li>
+			<!-- 
                 <li><a href="#" title="Previous"><img src="images/icons/fugue/navigation-180.png" width="16" height="16"> Prev</a></li>
                 <li><a href="#" title="Page 1" class="current><b>1</b></a></li>
                 <li><a href="#" title="Page 2""><b>2</b></a></li>
                 <li><a href="#" title="Page 3"><b>3</b></a></li>
                 <li><a href="#" title="Next">Next <img src="images/icons/fugue/navigation.png" width="16" height="16"></a></li>
+                 -->
             </ul>
         </div>
     </div>
@@ -111,11 +122,7 @@
 	
 
 	<div class="paging">
-	<?php
-		echo $this->Paginator->prev('< ' . __('previous'), array(), null, array('class' => 'prev disabled'));
-		echo $this->Paginator->numbers(array('separator' => ''));
-		echo $this->Paginator->next(__('next') . ' >', array(), null, array('class' => 'next disabled'));
-	?>
+		?>
 	</div>
 </div>
 <div class="actions">

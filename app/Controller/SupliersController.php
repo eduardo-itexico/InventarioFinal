@@ -7,6 +7,12 @@ App::uses('AppController', 'Controller');
  */
 class SupliersController extends AppController {
 
+	public $paginate = array(
+			'limit' => 2,
+			'order' => array(
+					"Suplier.status LIKE '1'"
+			)
+	);
 /**
  * index method
  *
