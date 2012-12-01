@@ -286,15 +286,24 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 	<nav id="main-nav">
 		
 		<ul class="container_12">
-			<li class="home current"><a href="#" title="Inicio">Inicio</a>
+			<li class="home current"><?=$this->html->link("Nueva Venta",array("controller"=>"sells", 'action' => 'index')); ?>
 				<ul>
-					<li class="current"><?=$this->html->link("Ventas",array("controller"=>"sells"));?><!--<a href="#" title="Dashboard">Dashboard</a>--></li>
-					<li><a href="#" title="My profile">My profile</a></li>
-					<li class="with-menu"><a href="#" title="My settings">My settings</a>
-						<div class="menu">
+					<li><?=$this->html->link("Nueva Venta",array("controller"=>"sells","action"=>"add"));?><!--<a href="#" title="Dashboard">Dashboard</a>--></li>
+					<li><?=$this->html->link("Clientes",array("controller"=>"customers"));?></li>
+                    <li><?=$this->html->link("Nuevos Cliente",array("controller"=>"customers","action"=>"add"));?></li>
+                    <li><?=$this->html->link("Usuarios",array("controller"=>"users"));?></li>
+                    <li><?=$this->html->link("Nuevos Usuario",array("controller"=>"users","action"=>"add"));?></li>
+                    <li class="with-menu"><?=$this->html->link("Productos",array("controller"=>"products", 'action' => 'index'));?>
+                    <div class="menu">
 							<?=$this->Html->image("menu-open-arrow.png");?><!--<img src="images/menu-open-arrow.png" width="16" height="16">-->
 							<ul>
-								<li class="icon_address"><a href="#">Browse by</a>
+                            	<li class="icon_address"><?=$this->html->link("Categorias",array("controller"=>"categories", 'action' => 'index'));?></li>
+                                <li ><?=$this->html->link("Nuevas Categorias",array("controller"=>"categories","action"=>"add"));?></li>
+                                
+                                <li class="icon_address"><?=$this->html->link("Unidades",array("controller"=>"unities", 'action' => 'index'));?></li>
+                                <li ><?=$this->html->link("Nuevas Unidades",array("controller"=>"unities","action"=>"add"));?></li>
+                                
+								<!--<li class="icon_address"><a href="#">Browse by</a>
 									<ul>
 										<li class="icon_blog"><a href="#">Blog</a>
 											<ul>
@@ -328,10 +337,11 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 								<li class="icon_search"><a href="#">Search</a></li>
 								<li class="sep"></li>
 								<li class="icon_terminal"><a href="#">Custom request</a></li>
-								<li class="icon_battery"><a href="#">Stats server load</a></li>
+								<li class="icon_battery"><a href="#">Stats server load</a></li>-->
 							</ul>
 						</div>
-					</li>
+                    </li>
+                    <li><?=$this->html->link("Nuevos Productos",array("controller"=>"products","action"=>"add"));?></li>
 				</ul>
 			</li>
 			<li class="write"><a href="#" title="Write">Write</a>
