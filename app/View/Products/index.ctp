@@ -14,16 +14,17 @@
 	<?php
 	foreach ($products as $product): ?>
 	<tr>
+    	
 		<td><?php echo h($product['Product']['id']); ?>&nbsp;</td>
 		<td><?php echo h($product['Product']['nombre']); ?>&nbsp;</td>
 		<td><?php echo h($product['Product']['descripcion']); ?>&nbsp;</td>
 		<td>
-			<?php echo $this->Html->link($product['Categories']['name'], array('controller' => 'categories', 'action' => 'view', $product['Categories']['id'])); ?>
+			<?php echo ($product["Category"]["name"])?>
 		</td>
 		<td><?php echo h($product['Product']['precio']); ?>&nbsp;</td>
 		<td><?php echo h($product['Product']['imagen']); ?>&nbsp;</td>
 		<td>
-			<?php echo $this->Html->link($product['Unities']['name'], array('controller' => 'unities', 'action' => 'view', $product['Unities']['id'])); ?>
+			<?php echo ($product["Unity"]["name"])?>
 		</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $product['Product']['id'])); ?>
