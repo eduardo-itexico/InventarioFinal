@@ -289,9 +289,9 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 			<li class="home current"><?=$this->html->link("Nueva Venta",array("controller"=>"sells", 'action' => 'index')); ?>
 				<ul>
 					<li><?=$this->html->link("Nueva Venta",array("controller"=>"sells","action"=>"add"));?><!--<a href="#" title="Dashboard">Dashboard</a>--></li>
-					<li><?=$this->html->link("Clientes",array("controller"=>"customers"));?></li>
+					<li><?=$this->html->link("Clientes",array("controller"=>"customers", 'action' => 'index'));?></li>
                     <li><?=$this->html->link("Nuevos Cliente",array("controller"=>"customers","action"=>"add"));?></li>
-                    <li><?=$this->html->link("Usuarios",array("controller"=>"users"));?></li>
+                    <li><?=$this->html->link("Usuarios",array("controller"=>"users", 'action' => 'index'));?></li>
                     <li><?=$this->html->link("Nuevos Usuario",array("controller"=>"users","action"=>"add"));?></li>
                     <li class="with-menu"><?=$this->html->link("Productos",array("controller"=>"products", 'action' => 'index'));?>
                     <div class="menu">
@@ -352,7 +352,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 					<li><a href="#" title="Add post">Add post</a></li>
 				</ul>
 			</li>
-			<li class="comments"><a href="#" title="Comments">Comments</a>
+			<li class="comments"><?=$this->html->link("Ordenes",array("controller"=>"orders", 'action' => 'index')); ?>
 				<ul>
 					<li><a href="#" title="Manage">Manage</a></li>
 					<li><a href="#" title="Spams">Spams</a></li>
