@@ -81,13 +81,14 @@
                  <?php
                     foreach ($sells as $sell): ?>
                     <tr>
+					
                         <th scope="row" class="table-check-cell"><input type="checkbox" name="selected[]" id="table-selected-1" value="1"></th>
                         <td><?php echo h($sell['Sell']['id']); ?>&nbsp;</td>
                         <td><?php echo h($sell['Sell']['subtotal']); ?>&nbsp;</td>
                         <td><?php echo h($sell['Sell']['iva']); ?>&nbsp;</td>
                         <td><?php echo h($sell['Sell']['total']); ?>&nbsp;</td>
                         <td>
-                            <?php echo h($sell['Customers']['id']); ?>
+                            <?php echo ($sell["Customer"]["nombre"])?>
                         </td>
                         <td>
                             <?php //echo h($sell['Users']['id']); ?>
