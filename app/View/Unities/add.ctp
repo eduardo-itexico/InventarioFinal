@@ -1,17 +1,21 @@
-<div class="unities form">
-<?php echo $this->Form->create('Unity'); ?>
-	<fieldset>
-		<legend><?php echo __('Add Unity'); ?></legend>
-	<?php
-		echo $this->Form->input('name');
-	?>
-	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
-</div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-
-		<li><?php echo $this->Html->link(__('List Unities'), array('action' => 'index')); ?></li>
-	</ul>
-</div>
+<!-- Content -->
+<article class="container_12">
+    
+    <div class="block-border">
+        <div class="block-content">
+            <h1>Nueva Categoria</h1>
+            <div class="unities form">
+            <?php echo $this->Form->create('Unity'); ?>
+                <fieldset>
+                <?php
+                    echo $this->Form->input('name');
+                ?>
+                </fieldset>
+            <?php echo $this->Form->end(__('Submit')); ?>
+            </div>
+		</div>
+	</div>
+    
+    
+</article>
+<!-- End content -->

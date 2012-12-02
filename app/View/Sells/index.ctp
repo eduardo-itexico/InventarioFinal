@@ -1,5 +1,4 @@
 
-
 <!-- Always visible control bar -->
 	<div id="control-bar" class="grey-bg clearfix"><div class="container_12">
 	
@@ -91,15 +90,18 @@
                             <?php echo ($sell["Customer"]["nombre"])?>
                         </td>
                         <td>
-                            <?php //echo h($sell['Users']['id']); ?>
+                            <?php echo ($sell["User"]["nombre"])?>
                         </td>
                         <td><?php echo h($sell['Sell']['date']); ?>&nbsp;</td>
                         <td><?php echo h($sell['Sell']['facturado']); ?>&nbsp;</td>
                         <!-- The class table-actions is designed for action icons -->
                         <td class="table-actions">
                         <?php echo $this->Html->link("View", array('action' => 'view', $sell['Sell']['id']),array("class"=>"with-tip")); ?>
-                            <?php echo $this->Html->link($this->Html->image("icons/fugue/pencil.png"), array('action' => 'edit', $sell['Sell']['id']),array("class"=>"with-tip")); ?>
-                            <?php echo $this->Form->postLink($this->Html->image("icons/fugue/cross-circle.png"), array('action' => 'delete', $sell['Sell']['id']),array("class"=>"with-tip"), __('Are you sure you want to delete # %s?', $sell['Sell']['id'])); ?>
+                            <?php //echo $this->Html->link($this->Html->image("icons/fugue/pencil.png"), array('action' => 'edit', $sell['Sell']['id']),array("class"=>"with-tip")); ?>
+                            <?php //echo $this->Form->postLink($this->Html->image("icons/fugue/cross-circle.png"), array('action' => 'delete', $sell['Sell']['id']),array("class"=>"with-tip"), __('Are you sure you want to delete # %s?', $sell['Sell']['id'])); ?>
+							
+							<a href="#" title="Edit" class="with-tip"><?=$this->Html->image("icons/fugue/pencil.png")?></a>
+                        <a href="#" title="Delete" class="with-tip"><?=$this->Html->image("icons/fugue/cross-circle.png")?></a>
                             
                         </td>
             

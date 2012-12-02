@@ -78,7 +78,7 @@
                      <td><?php echo h($user['User']['email']); ?>&nbsp;</td>
                     <!-- The class table-actions is designed for action icons -->
                     <td class="table-actions">
-                    <?php //echo $this->Html->link(__('View'), array('action' => 'view', $user['User']['id'])); ?>
+                    <?php echo $this->Html->link(__('View'), array('action' => 'view', $user['User']['id'])); ?>
 						<?php //echo $this->Html->link(__('Edit'), array('action' => 'edit', $user['User']['id'])); ?>
 						<?php //echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $user['User']['id']), null, __('Are you sure you want to delete # %s?', $user['User']['id'])); ?>
                         <a href="#" title="Edit" class="with-tip"><?=$this->Html->image("icons/fugue/pencil.png")?></a>
