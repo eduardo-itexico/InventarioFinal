@@ -14,13 +14,6 @@
             <li>
 			<?php echo $this->Paginator->next($this->Html->image("icons/fugue/navigation.png"), array("escape"=>false), null, array("escape"=>false));?>
 			</li>
-			<!-- 
-                <li><a href="#" title="Previous"><img src="images/icons/fugue/navigation-180.png" width="16" height="16"> Prev</a></li>
-                <li><a href="#" title="Page 1" class="current><b>1</b></a></li>
-                <li><a href="#" title="Page 2""><b>2</b></a></li>
-                <li><a href="#" title="Page 3"><b>3</b></a></li>
-                <li><a href="#" title="Next">Next <img src="images/icons/fugue/navigation.png" width="16" height="16"></a></li>
-                 -->
             </ul>
         </div>
     </div>
@@ -33,11 +26,15 @@
              
                 <!-- Table sorting arrows -->
                 <span class="column-sort">
-                    <a href="#" title="Sort up" class="sort-up active"></a>
-                    <a href="#" title="Sort down" class="sort-down"></a>
+                	<?php echo $this->Html->link('',$this->Paginator->url(array('sort'=>'id','direction' => 'asc' ) ), array("class"=>"sort-up active" ) ); ?>
+                	<?php echo $this->Html->link('',$this->Paginator->url(array('sort'=>'id','direction' => 'desc' ) ), array("class"=>"sort-down" ) ); ?>
+                    <!--   	
+                    		<a href="#" title="Sort up" class="sort-up active"></a>
+                    		<a href="#" title="Sort down" class="sort-down"></a>
+                    -->
                 </span>
                  
-                Id
+                <?php echo $this->Paginator->sort('id'); ?>
             </th>
             <th scope="col">
              
@@ -87,7 +84,7 @@
     
      <tfoot>
         <tr>
-            <td colspan="6"><?= $this->Html->image("icons/fugue/arrow-curve-000-left.png", array("class"=>"picto"))?><b>Total:</b> <?php
+            <td colspan="7"><?= $this->Html->image("icons/fugue/arrow-curve-000-left.png", array("class"=>"picto"))?><b>Total:</b> <?php
 	echo $this->Paginator->counter(array(
 	'format' => __('Page {:page} of {:pages} ')
 	));
@@ -119,12 +116,7 @@
 <?php endforeach; ?>
 	</tbody>
 	</table>
-	
-
-	<div class="paging">
-		?>
 	</div>
-</div>
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
