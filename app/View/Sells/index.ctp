@@ -32,7 +32,7 @@
             ?>
             </div>
             <!-- Add the class 'table' -->
-            <table class="table" cellspacing="0" width="100px">
+            <table class="table" cellspacing="0" width="100%">
              
                 <thead >
                     <tr>
