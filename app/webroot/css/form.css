@@ -514,7 +514,7 @@
 	.form input[type=text].error,
 	.form input[type=password].error,
 	.form .input-type-text.error {
-		border-color: #CC0000;
+		border-color: #CC0000 !important;
 	}
 	
 	.check-ok,

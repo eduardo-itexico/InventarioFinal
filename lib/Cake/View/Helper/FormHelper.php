@@ -643,7 +643,7 @@ class FormHelper extends AppHelper {
  * @link http://book.cakephp.org/2.0/en/core-libraries/helpers/form.html#FormHelper::error
  */
 	public function error($field, $text = null, $options = array()) {
-		$defaults = array('wrap' => true, 'class' => 'error-message', 'escape' => true);
+		$defaults = array('wrap' => "ul", 'class' => 'message error no-margin', 'escape' => true);
 		$options = array_merge($defaults, $options);
 		$this->setEntity($field);
 
@@ -2464,7 +2464,7 @@ class FormHelper extends AppHelper {
 
 						if (empty($attributes['class'])) {
 							$attributes['class'] = 'checkbox';
-						} elseif ($attributes['class'] === 'form-error') {
+						} elseif ($attributes['class'] === 'error') {
 							$attributes['class'] = 'checkbox ' . $attributes['class'];
 						}
 						$label = $this->label(null, $title, $label);
@@ -2600,7 +2600,7 @@ class FormHelper extends AppHelper {
 
 		$result = parent::_initInputField($field, $options);
 		if ($this->tagIsInvalid() !== false) {
-			$result = $this->addClass($result, 'form-error');
+			$result = $this->addClass($result, 'error');
 		}
 		if (!empty($result['disabled']) || $secure === self::SECURE_SKIP) {
 			return $result;

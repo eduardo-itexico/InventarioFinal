@@ -1,6 +1,6 @@
 <?php
 
-define("PAGINATION_LIMIT",10    );
+define("PAGINATION_LIMIT",25);
 /**
  * Application level Controller
  *

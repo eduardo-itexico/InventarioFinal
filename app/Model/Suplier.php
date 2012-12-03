@@ -22,7 +22,7 @@ class Suplier extends AppModel {
 		'nombre' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Se requiere un nombre del Proveedor',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule

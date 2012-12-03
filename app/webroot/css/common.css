@@ -1548,6 +1548,10 @@ section {
 		background-color: #ffffcc;
 		border-color: #c3c39e;
 	}
+	.error-message {
+		background-color: #fff3f2;
+		border-color: #c00000;
+	}
 	.message.error {
 		background-color: #fff3f2;
 		border-color: #c00000;
@@ -1563,7 +1567,8 @@ section {
 	
 	.message li,
 	div.message,
-	p.message {
+	p.message,
+	 {
 		background-image: url(../img/icons/fugue/information-ocre.png);
 		color: #576a73;
 		}
@@ -1585,9 +1590,12 @@ section {
 		}
 	.message.error li,
 	div.message.error,
+	div.error-message,
 	p.message.error {
 		background-image: url(../img/icons/fugue/cross-circle.png);
 		color: #563f3e;
+		
+		
 		}
 		.message.error li strong,
 		div.message.error strong,
