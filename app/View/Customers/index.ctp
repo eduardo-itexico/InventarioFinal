@@ -25,25 +25,25 @@
                             <a href="#" title="Sort down" class="sort-down"></a>
                         </span>
                          
-                        <?php echo $this->Paginator->sort('id'); ?>
+                        <?php echo "ID";//$this->Paginator->sort('id'); ?>
                     </th>
-                    <th scope="col"><?php echo $this->Paginator->sort('nombre'); ?></th>
-                    <th scope="col"><?php echo $this->Paginator->sort('direccion'); ?></th>
+                    <th scope="col"><?php echo "Nombre";//$this->Paginator->sort('nombre'); ?></th>
+                    <th scope="col"><?php echo "Direccion";//$this->Paginator->sort('direccion'); ?></th>
                     <th scope="col">
                         <span class="column-sort">
                             <a href="#" title="Sort up" class="sort-up"></a>
                             <a href="#" title="Sort down" class="sort-down"></a>
                         </span>
-                        <?php echo $this->Paginator->sort('telefono'); ?>
+                        <?php echo "Telefono";//$this->Paginator->sort('telefono'); ?>
                     </th>
                     <th scope="col">
                         <span class="column-sort">
                             <a href="#" title="Sort up" class="sort-up"></a>
                             <a href="#" title="Sort down" class="sort-down"></a>
                         </span>
-                        <?php echo $this->Paginator->sort('rfc'); ?>
+                        <?php echo "RFC";//$this->Paginator->sort('rfc'); ?>
                     </th>
-                    <th scope="col"><?php echo $this->Paginator->sort('ciudad'); ?></th>
+                    <th scope="col"><?php echo "Ciudad";//$this->Paginator->sort('ciudad'); ?></th>
                     <th scope="col" class="table-actions">Actions</th>
                 </tr>
             </thead>
