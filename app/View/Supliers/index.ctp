@@ -1,10 +1,19 @@
 <article class="container_12">
 	<section class="grid_4">
-		<div class="actions">
-		<h3><?php echo __('Actions'); ?></h3>
-		<ul>
-			<li><?php echo $this->Html->link(__('New Suplier'), array('action' => 'add')); ?></li>
-		</ul>
+	<div class="block-border">
+            <div class="block-content">
+                <h1><?php echo __('Acciones'); ?></h1>
+                <h3><?php echo __('Proveedor'); ?></h3>
+                <ul class="shortcuts-list">
+                        <li>
+                                <?php echo $this->Html->link($this->Html->image("icons/web-app/48/Add.png") ."Agregar", 
+                                                                                         array('action' => 'add'),
+                                                                                         array("escape"=>false)); ?>
+
+                        </li>
+                </ul>
+		
+            </div>
 	</div>
 	</section>
 <section class="grid_8">
