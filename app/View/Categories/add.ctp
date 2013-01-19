@@ -9,8 +9,8 @@
                 <fieldset>
                 <?php
                     echo $this->Form->input('name');
-                    echo $this->Form->input('status');
-                    echo $this->Form->input('Category');
+                    //echo $this->Form->input('status');
+                    echo $this->Form->input('Category.category_id');
                 ?>
                 </fieldset>
             <?php echo $this->Form->end(__('Submit')); ?>

@@ -40,9 +40,11 @@ class CategoriesController extends AppController {
 	public function add() {
 		if ($this->request->is('post')) {
 			$this->Category->create();
+			var_dump($this->request->data);
+			$this->request->data["Category"]["status"] = "1";
 			if ($this->Category->save($this->request->data)) {
 				$this->Session->setFlash(__('The category has been saved'));
-				$this->redirect(array('action' => 'index'));
+				//$this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The category could not be saved. Please, try again.'));
 			}
