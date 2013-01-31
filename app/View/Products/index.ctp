@@ -6,11 +6,39 @@
     <div class="block-border">
         <div class="block-content">
             <h1>Productos</h1>
-            <?php
-				echo $this->Paginator->prev('< ' . __('previous'), array(), null, array('class' => 'prev disabled'));
-				echo $this->Paginator->numbers(array('separator' => ''));
-				echo $this->Paginator->next(__('next') . ' >', array(), null, array('class' => 'next disabled'));
-			?>
+            <div class="block-controls">
+	            <ul class="controls-buttons">
+                
+                <li class="sep"></li>
+	            <li>
+	            <?php echo $this->Paginator->prev($this->Html->image("icons/fugue/navigation-180.png"), array("escape"=>false), null, array("escape"=>false));?>
+	            </li>
+	            
+	            <?php echo $this->Paginator->numbers(array("tag"=>"li","separator"=>""))?>
+	            
+	            <li>
+				<?php echo $this->Paginator->next($this->Html->image("icons/fugue/navigation.png"), array("escape"=>false), null, array("escape"=>false));?>
+				</li>
+	            </ul>
+	        </div>
+            <?php echo $this->Form->create('Product', array("id"=>"simple-list-form",'class'=>"form","action"=>"")); ?>
+                    
+                
+                <div class="columns">
+                    <div class="colx3-left-double">
+                        <label for="field16">Buscar</label>
+                        <p class="input-type-text">
+                            <input id="simple-search" type="text" title="Filter results" style="width:90%" value="" name="simple-search" >
+                            <?php echo $this->Html->image("icons/fugue/magnifier.png");
+                            ?>
+                        </p>
+              
+                    </div>
+                    <div class="colx3-right">
+                    	<?php echo $this->Form->end(__('Submit'), array("margin"=>"30px")); ?>
+                    </div>
+                </div>
+                <p></p>
     		
             <table class="table" cellspacing="0" width="100%">
  

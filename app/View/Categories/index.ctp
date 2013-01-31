@@ -4,13 +4,40 @@
     <div class="block-border">
         <div class="block-content">
             <h1>Categorias</h1>
-            <div class="paging">
-			<?php
-                echo $this->Paginator->prev('< ' . __('previous'), array(), null, array('class' => 'prev disabled'));
-                echo $this->Paginator->numbers(array('separator' => ''));
-                echo $this->Paginator->next(__('next') . ' >', array(), null, array('class' => 'next disabled'));
-            ?>
-            </div>
+			<div class="block-controls">
+	            <ul class="controls-buttons">
+                
+                <li class="sep"></li>
+	            <li>
+	            <?php echo $this->Paginator->prev($this->Html->image("icons/fugue/navigation-180.png"), array("escape"=>false), null, array("escape"=>false));?>
+	            </li>
+	            
+	            <?php echo $this->Paginator->numbers(array("tag"=>"li","separator"=>""))?>
+	            
+	            <li>
+				<?php echo $this->Paginator->next($this->Html->image("icons/fugue/navigation.png"), array("escape"=>false), null, array("escape"=>false));?>
+				</li>
+	            </ul>
+	        </div>
+            
+        	 <?php echo $this->Form->create('Category', array("id"=>"simple-list-form",'class'=>"form","action"=>"")); ?>
+                    
+                
+                <div class="columns">
+                    <div class="colx3-left-double">
+                        <label for="field16">Buscar</label>
+                        <p class="input-type-text">
+                            <input id="simple-search" type="text" title="Filter results" style="width:90%" value="" name="simple-search" >
+                            <?php echo $this->Html->image("icons/fugue/magnifier.png");
+                            ?>
+                        </p>
+              
+                    </div>
+                    <div class="colx3-right">
+                    	<?php echo $this->Form->end(__('Submit'), array("margin"=>"30px")); ?>
+                    </div>
+                </div>
+                <p></p>
             <table class="table" cellspacing="0" width="100%">
  
                 <thead>
@@ -28,7 +55,8 @@
                              
                             <?php echo $this->Paginator->sort('id'); ?>
                         </th>
-                        <th scope="col"><?php echo $this->Paginator->sort('Name'); ?></th>
+                        <th scope="col"><?php echo $this->Paginator->sort('name',"Categoria"); ?></th>
+                        <th scope="col"><?php echo $this->Paginator->sort("ParentCategory.name",'Sub Categoria'); ?></th>
                         <th scope="col"><?php echo $this->Paginator->sort('status'); ?></th>
                         <th scope="col" class="table-actions">Actions</th>
                     </tr>
@@ -36,7 +64,7 @@
              
                 <tfoot>
                     <tr>
-                        <td colspan="4"><img src="images/icons/fugue/arrow-curve-000-left.png" width="16" height="16" class="picto"><?php
+                        <td colspan="5"><img src="images/icons/fugue/arrow-curve-000-left.png" width="16" height="16" class="picto"><?php
 	echo $this->Paginator->counter(array(
 	'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
 	));
@@ -47,10 +75,14 @@
                  
                 <tbody>
                      <?php
-					foreach ($categories as $category): ?>
+					foreach ($categories as $category): 
+						//var_dump($category);
+					?>
+                    	
 					<tr>
                     	<th scope="row" class="table-check-cell"><input type="checkbox" name="selected[]" id="table-selected-1" value="1"></th>
 						<td><?php echo h($category['Category']['id']); ?>&nbsp;</td>
+                        <td><?php echo h($category['ParentCategory']['name']); ?>&nbsp;</td>
 						<td><?php echo h($category['Category']['name']); ?>&nbsp;</td>
 						<td><?php echo h($category['Category']['status']); ?>&nbsp;</td>
                         <!-- The class table-actions is designed for action icons -->

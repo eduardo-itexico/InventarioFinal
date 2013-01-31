@@ -14,7 +14,17 @@ class CustomersController extends AppController {
  */
 	public function index() {
 		$this->Customer->recursive = 0;
-		$this->set('customers', $this->paginate());
+		$customers = $this->paginate();
+		if ($this->request->is('post')) {
+			$search = $this->request->data["simple-search"];
+			$conditions["conditions"]["OR"]["Customer.nombre LIKE"]  	= "%$search%"; 
+			$conditions["conditions"]["OR"]["Customer.direccion LIKE"]  = "%$search%"; 
+			$conditions["conditions"]["OR"]["Customer.ciudad LIKE"]  	= "%$search%"; 
+			$conditions["conditions"]["OR"]["Customer.telefono LIKE"]  	= "%$search%";
+			$conditions["conditions"]["OR"]["Customer.rfc LIKE"]  		= "%$search%"; 
+			$customers = $this->Customer->find('all',$conditions);
+		}
+		$this->set('customers', $customers);
 	}
 
 /**

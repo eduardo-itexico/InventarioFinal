@@ -21,11 +21,13 @@
 	<div class="block-border">
 
 	
-	    <div class="block-content no-padding">
+	    <div class="block-content">
 	        <h1>Clientes</h1>
 	             
 	        <div class="block-controls">
 	            <ul class="controls-buttons">
+                
+                <li class="sep"></li>
 	            <li>
 	            <?php echo $this->Paginator->prev($this->Html->image("icons/fugue/navigation-180.png"), array("escape"=>false), null, array("escape"=>false));?>
 	            </li>
@@ -37,7 +39,26 @@
 				</li>
 	            </ul>
 	        </div>
-	    </div>
+	    
+        <?php echo $this->Form->create('Customer', array("id"=>"simple-list-form",'class'=>"form","action"=>"")); ?>
+                    
+                
+                <div class="columns">
+                    <div class="colx3-left-double">
+                        <label for="field16">Buscar</label>
+                        <p class="input-type-text">
+                            <input id="simple-search" type="text" title="Filter results" style="width:90%" value="" name="simple-search" >
+                            <?php echo $this->Html->image("icons/fugue/magnifier.png");
+                            ?>
+                        </p>
+              
+                    </div>
+                    <div class="colx3-right">
+                    	<?php echo $this->Form->end(__('Submit'), array("margin"=>"30px")); ?>
+                    </div>
+                </div>
+                <p></p>
+                
 		<table cellpadding="0" cellspacing="0" class="table" width="100%">
 		 <tr>
 	            <!-- This is a special cell for loading statuses - see below for more -->
@@ -118,6 +139,7 @@
 	<?php endforeach; ?>
 		</tbody>
 		</table>
+        </div>
 	</div>
 </section>
 </article>

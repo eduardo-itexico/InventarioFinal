@@ -14,7 +14,16 @@ class ProductsController extends AppController {
  */
 	public function index() {
 		$this->Product->recursive = 0;
-		$this->set('products', $this->paginate());
+		//$this->set('products', $this->paginate());
+		$products = $this->paginate();
+		if ($this->request->is('post')) {
+			$search = $this->request->data["simple-search"];
+			$conditions["conditions"]["OR"]["Product.nombre LIKE"]  	= "%$search%"; 
+			$conditions["conditions"]["OR"]["Product.descripcion LIKE"]  	= "%$search%"; 
+			$conditions["conditions"]["OR"]["Product.precio LIKE"]  	= "%$search%"; 
+			$products = $this->Product->find('all',$conditions);
+		}
+		$this->set('products', $products);
 	}
 
 /**

@@ -14,8 +14,18 @@ class UsersController extends AppController {
  */
 	public function index() {
 		$this->User->recursive = 0;
-		$this->set('users', $this->paginate());
+		//$this->set('users', $this->paginate());
+		$users = $this->paginate();
+		if ($this->request->is('post')) {
+			$search = $this->request->data["simple-search"];
+			$conditions["conditions"]["OR"]["User.Username LIKE"]  	= "%$search%"; 
+			$conditions["conditions"]["OR"]["User.Nombre LIKE"]  	= "%$search%"; 
+			$conditions["conditions"]["OR"]["User.Email LIKE"]  	= "%$search%"; 
+			$users = $this->User->find('all',$conditions);
+		}
+		$this->set('users', $users);
 	}
+	
 
 /**
  * view method

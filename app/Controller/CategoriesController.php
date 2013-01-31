@@ -13,8 +13,16 @@ class CategoriesController extends AppController {
  * @return void
  */
 	public function index() {
-		$this->Category->recursive = 0;
-		$this->set('categories', $this->paginate());
+		$this->Category->recursive = 1;
+		//$this->set('categories', $this->paginate());
+		$categories = $this->paginate();
+		if ($this->request->is('post')) {
+			$search = $this->request->data["simple-search"];
+			$conditions["conditions"]["OR"]["Category.name LIKE"]  	= "%$search%"; 
+			$conditions["conditions"]["OR"]["ParentCategory.name LIKE"]  	= "%$search%"; 
+			$categories = $this->Category->find('all',$conditions);
+		}
+		$this->set('categories', $categories);
 	}
 
 /**
@@ -40,18 +48,41 @@ class CategoriesController extends AppController {
 	public function add() {
 		if ($this->request->is('post')) {
 			$this->Category->create();
-			var_dump($this->request->data);
-			$this->request->data["Category"]["status"] = "1";
+			//var_dump($this->request->data);
+			//$this->request->data["Category"]["status"] = "1";
 			if ($this->Category->save($this->request->data)) {
 				$this->Session->setFlash(__('The category has been saved'));
-				//$this->redirect(array('action' => 'index'));
+				$this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The category could not be saved. Please, try again.'));
 			}
 		}
-		$categories = $this->Category->Category->find('list');
+		$categories = $this->Category->ParentCategory->find('list');
 		$this->set(compact('categories'));
 	}
+	
+	
+	/**
+ * addSubcategory method
+ *
+ * @return void
+ */
+	public function addSubcategory() {
+		if ($this->request->is('post')) {
+			$this->Category->create();
+			//var_dump($this->request->data);
+			//$this->request->data["Category"]["status"] = "1";
+			if ($this->Category->save($this->request->data)) {
+				$this->Session->setFlash(__('The category has been saved'));
+				$this->redirect(array('action' => 'index'));
+			} else {
+				$this->Session->setFlash(__('The category could not be saved. Please, try again.'));
+			}
+		}
+		$categories = $this->Category->ParentCategory->find('list');
+		$this->set(compact('categories'));
+	}
+	
 
 /**
  * edit method

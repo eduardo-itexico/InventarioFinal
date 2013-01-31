@@ -8,9 +8,10 @@
             <?php echo $this->Form->create('Category'); ?>
                 <fieldset>
                 <?php
+					echo $this->Form->input('Category.ParentCategory.category_id');
                     echo $this->Form->input('name');
                     //echo $this->Form->input('status');
-                    echo $this->Form->input('Category.category_id',array("type"=>"hidden","value"=>"1"));
+                   
                 ?>
                 </fieldset>
             <?php echo $this->Form->end(__('Submit')); ?>

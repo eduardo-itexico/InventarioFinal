@@ -9,13 +9,13 @@
                 <fieldset>
                 <?php
                     echo $this->Form->input('nombre');
-                    echo $this->Form->input('descripcion');
-                    echo $this->Form->input('categories_id');
+                    echo $this->Form->input('descripcion',array('type'=>'textarea'));
+                    echo $this->Form->input('category_id');
                     echo $this->Form->input('precio');
-                    echo $this->Form->input('imagen');
-                    echo $this->Form->input('unities_id');
-                    echo $this->Form->input('Order');
-                    echo $this->Form->input('Sell');
+                    echo $this->Form->input('imagen',array('type'=>'file'));
+                    echo $this->Form->input('unity_id');
+                    //echo $this->Form->input('Order');
+                    //echo $this->Form->input('Sell');
                 ?>
                 </fieldset>
             <?php echo $this->Form->end(__('Submit')); ?>

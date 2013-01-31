@@ -14,7 +14,14 @@ class UnitiesController extends AppController {
  */
 	public function index() {
 		$this->Unity->recursive = 0;
-		$this->set('unities', $this->paginate());
+		//$this->set('unities', $this->paginate());
+		$unities = $this->paginate();
+		if ($this->request->is('post')) {
+			$search = $this->request->data["simple-search"];
+			$conditions["conditions"]["OR"]["Unity.name LIKE"]  	= "%$search%";
+			$unities = $this->Unity->find('all',$conditions);
+		}
+		$this->set('unities', $unities);
 	}
 
 /**
