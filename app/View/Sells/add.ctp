@@ -4,11 +4,11 @@
     <div class="block-border">
         <div class="block-content">
             <h1>Ventas</h1>
-            
+            <div class="sells form">
             <div class="columns">
      			
                 <!-- Left column -->
-                <?php echo $this->Form->create('Sell', array('class'=>"form","action"=>"")); ?>
+                <?php echo $this->Form->create('Sell'); ?>
                 <div class="colx3-left-double">
                     <fieldset>
                         <legend>Factura</legend>
@@ -19,6 +19,14 @@
                         <legend>Cliente</legend>
                         <p><?=$this->Form->input('customers_id'); ?></p>
     				</fieldset>
+                    <fieldset>
+                    <?php
+                        
+                        echo $this->Form->input('users_id');
+                        
+                        echo $this->Form->input('Product');
+                    ?>
+                    </fieldset>
                 </div>
                 
                 <!-- Right column -->
@@ -35,21 +43,10 @@
                 </div>
                <?php echo $this->Form->end(__('Submit')); ?>
             </div>
-            
-            
-            <div class="sells form">
-            
-                <fieldset>
-                    <legend><?php echo __('Add Sell'); ?></legend>
-                <?php
-                    
-                    echo $this->Form->input('users_id');
-                    
-                    echo $this->Form->input('Product');
-                ?>
-                </fieldset>
-            
             </div>
+            
+            
+    
             <div class="actions">
                 <h3><?php echo __('Actions'); ?></h3>
                 <ul>
