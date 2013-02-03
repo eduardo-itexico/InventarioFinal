@@ -20,6 +20,7 @@
                         <p><?=$this->Form->input('customers_id'); ?></p>
     				</fieldset>
                     <fieldset>
+                    	<legend>Productos</legend>
                     <?php
                         
                         echo $this->Form->input('users_id');
@@ -90,8 +91,7 @@
                                     <a href="#" title="Delete" class="with-tip"><img src="images/icons/fugue/cross-circle.png" width="16" height="16"></a>
                                 </td>
                             </tr>
-                             
-                            ...
+                          
                              
                         </tbody>
                      
