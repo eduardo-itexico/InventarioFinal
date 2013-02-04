@@ -115,4 +115,27 @@ class ProductsController extends AppController {
 		$this->Session->setFlash(__('Product was not deleted'));
 		$this->redirect(array('action' => 'index'));
 	}
+        public function __searchProduct($search){
+            $conditions["conditions"]["OR"]["Product.nombre LIKE"]  	= "%$search%"; 
+            $conditions["conditions"]["OR"]["Product.descripcion LIKE"]  	= "%$search%"; 
+            $conditions["conditions"]["OR"]["Product.precio LIKE"]  	= "%$search%"; 
+            $products = $this->Product->find('all',$conditions);
+            return $products;
+        }
+        
+        public function searchJSON(){
+            try{
+                //var_dump($this->request->data);
+                $this->Product->recursive = 0;
+                $campo_busqueda = isset($this->request->data["Product"]["busqueda"])?
+                                                $this->request->data["Product"]["busqueda"]:
+                                                "";
+                $body["data"] = $this->__searchProduct($campo_busqueda);
+            }catch(Exception $e){
+                echo $e->getMessage();
+            }
+            return new CakeResponse(array('body' => json_encode($body)));
+    }
+        
+	
 }
