@@ -4,6 +4,29 @@
 <?php echo $this->Html->script('standard')?>
 <?php echo $this->Html->script('jquery.modal')?>
 <?php echo $this->Html->script('sells/add/add')?>
+<style>
+	.modal {
+		background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
+		height: 100%;
+		left: 0;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 999980;
+		display:block;
+	}
+	.no-modal {
+		display:none;
+	} 
+</style>
+<script>
+	// Demo modal
+	function openSearchProducts()
+	{
+		document.getElementById('productos-modal').className = 'modal';
+		
+	} 
+</script>
 <article class="container_12">
     
     <div class="block-border">
@@ -22,7 +45,8 @@
     				</fieldset>
                     <fieldset>
                         <legend>Cliente</legend>
-                        <p><?=$this->Form->input('customers_id'); ?></p>
+                        <p><?=$this->Form->input('customers_id',array("hidden"=>true,"label"=>false)); ?></p>
+                        <button type="button" class="modal-link">Buscar Cliente</button>
                     </fieldset>
                     <fieldset>
                         <legend>Usuario</legend>
@@ -36,7 +60,7 @@
                     <fieldset>
 
                         <legend>Productos</legend>
-                        <button type="button" class="modal-link">Agregar</button>
+                        <button type="button" class="modal-link"  onclick="openSearchProducts()">Agregar</button>
                          <table class="table" cellspacing="0" width="100%">
 
                     	
@@ -127,7 +151,12 @@
 		</div>
 	</div>
     
-    <div id="productos-modal">
+    <div id="productos-modal" class="no-modal">
+    <div style="position:relative;margin:0 auto;width:1100px;top:200px">
+        <div class="block-border">
+            <div class="block-content">
+                <h1>Block title</h1>
+                
         <?php echo $this->Form->create('Product', array("action"=>"searchJSON"))?>
             
                 <fieldset>
@@ -168,7 +197,11 @@
                         <tbody id="rows-productos">
                         </tbody>
                     </table>
-				
-        
+                <div class="block-footer align-right">
+                    <button type="button" onclick="document.getElementById('productos-modal').className = 'no-modal';">Close</button>
+                </div>
+            </div>
+        </div>		
+      </div>  
     </div>
 </article>
