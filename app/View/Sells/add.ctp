@@ -25,9 +25,26 @@
                         <p><?=$this->Form->input('customers_id'); ?></p>
                     </fieldset>
                     <fieldset>
+                        <legend>Usuario</legend>
+                        <?php
+                        
+                        echo $this->Form->input('users_id');
+                        
+                        
+                    ?>
+                    </fieldset>
+                    <fieldset>
+
                         <legend>Productos</legend>
                         <button type="button" class="modal-link">Agregar</button>
                          <table class="table" cellspacing="0" width="100%">
+
+                    	
+                    
+                    <!-- Add the class 'table' -->
+                    <table class="table" cellspacing="0" width="100%">
+                     
+
                         <thead>
                             <tr>
                                 <!-- This is a special cell for loading statuses - see below for more -->
@@ -52,8 +69,13 @@
                                 </td>
                                 <td></td>
                             </tr>
+
                         </tfoot>
                         <tbody id="rows-formulario-productos">
+
+                          
+                             
+
                         </tbody>
                     </table>
                     </fieldset>    
@@ -76,10 +98,10 @@
                     <div class="sells form">
                         <fieldset>
                             <legend>Desglose</legend>
-                            <p><?=$this->Form->input('subtotal'); ?></p>
+                            <p><?=$this->Form->input('subtotal', array("type"=>"text")); ?></p>
                             <BR/>
-                            <p><?=$this->Form->input('iva'); ?></p>
-                            <p><?=$this->Form->input('total'); ?></p>
+                            <p><?=$this->Form->input('iva', array("type"=>"text")); ?></p>
+                            <p><?=$this->Form->input('total', array("type"=>"text")); ?></p>
                         </fieldset>
                     </div>
                 </div>

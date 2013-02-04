@@ -30,9 +30,16 @@ $(document).ready(function()
     });
     
     function calculateSubtotal(){
-        console.log("Enctro al calculate")
-        var inputs = $("#rows-formulario-productos").find("input[id^='subtotal']");
-        console.log(inputs);
+        
+        var subtotal = 0;
+        var inputs = $("#rows-formulario-productos td[id^='subtotal']").each(function(){
+            subtotal += parseFloat($(this).html());
+            //console.log();
+        });
+        $("#SellSubtotal").val(subtotal.toFixed(2));
+        $("#SellIva").val((subtotal*0.15).toFixed(2));
+        $("#SellTotal").val(((subtotal*0.15)+subtotal).toFixed(2));
+        
     };
     
     $("#ProductSearchJSONForm").submit(function(){
@@ -102,6 +109,7 @@ $(document).ready(function()
                             var clone_row = $(this).parent().parent().parent().parent().clone();
                             clone_row.find("li").html("").append(anchor_eliminar);
                             $("#rows-formulario-productos").append(clone_row);
+                            calculateSubtotal();
                             //console.log($(this).parent().parent().parent().parent());
                       });
                       li_add.html(anchor_agregar);
