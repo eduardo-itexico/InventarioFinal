@@ -3,6 +3,7 @@
 <?php echo $this->Html->script('common')?>
 <?php echo $this->Html->script('standard')?>
 <?php echo $this->Html->script('jquery.modal')?>
+<?php echo $this->Html->script('sells/sells')?>
 <?php echo $this->Html->script('sells/add/add')?>
 <style>
 	.modal {
@@ -67,7 +68,7 @@
 
                         <legend>Productos</legend>
                         <button type="button" class="modal-link"  onclick="openSearchProducts()">Agregar</button>
-                         <table class="table" cellspacing="0" width="100%">
+                         
 
                     	
                     
@@ -132,6 +133,7 @@
                             <BR/>
                             <p><?=$this->Form->input('iva', array("type"=>"text")); ?></p>
                             <p><?=$this->Form->input('total', array("type"=>"text")); ?></p>
+                            <p><?=$this->Form->input('Product.0.id'); ?></p>
                         </fieldset>
                     </div>
                 </div>

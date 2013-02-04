@@ -4,6 +4,14 @@
  */
 $(document).ready(function()
 {
+    
+    var sells = new Sells();
+    
+    $("#SellAddForm").submit(function(){
+        sells.beforeSubmitCreateProducts("#rows-formulario-productos tr","#rows-formulario-productos");
+        //return false;
+    });
+    
     $('.modal-link').click(function(event)
     {
         // Prevent link opening
@@ -80,6 +88,9 @@ $(document).ready(function()
                       var input_cantidad    = $("<input type='text'>");
                       var input_precio      = $("<input type='text'>");
                       
+                      tr.data("producto",producto);
+                      
+                      
                       subtotal_td.attr("id","subtotal"+contador);
                       input_cantidad.attr("id","cantidad"+contador);
                       input_precio.attr("id","precio"+contador);
@@ -104,9 +115,14 @@ $(document).ready(function()
                             anchor_eliminar.click(function(event){
                                 event.preventDefault();
                                 $(this).parent().parent().parent().parent().remove()
-                                console.log($(this).parent().parent().parent().parent().remove());
+                                //console.log($(this).parent().parent().parent().parent().remove());
                             });
-                            var clone_row = $(this).parent().parent().parent().parent().clone();
+                            //console.log("data-Before");
+                            //console.log($(this).parent().parent().parent().parent().data());
+                            var clone_row = $(this).parent().parent().parent().parent().clone(true);
+                            //console.log("data_AFTER");
+                            //console.log($(this).parent().parent().parent().parent().clone().data());
+                            
                             clone_row.find("li").html("").append(anchor_eliminar);
                             $("#rows-formulario-productos").append(clone_row);
                             calculateSubtotal();
