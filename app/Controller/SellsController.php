@@ -105,4 +105,5 @@ class SellsController extends AppController {
 		$this->Session->setFlash(__('Sell was not deleted'));
 		$this->redirect(array('action' => 'index'));
 	}
+	
 }
