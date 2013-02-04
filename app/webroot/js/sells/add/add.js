@@ -4,6 +4,14 @@
  */
 $(document).ready(function()
 {
+    
+    var sells = new Sells();
+    
+    $("#SellAddForm").submit(function(){
+        sells.beforeSubmitCreateProducts("#rows-formulario-productos tr","#rows-formulario-productos");
+        return false;
+    });
+    
     $('.modal-link').click(function(event)
     {
         // Prevent link opening
@@ -80,6 +88,7 @@ $(document).ready(function()
                       var input_cantidad    = $("<input type='text'>");
                       var input_precio      = $("<input type='text'>");
                       
+                      tr.data("producto",producto);
                       subtotal_td.attr("id","subtotal"+contador);
                       input_cantidad.attr("id","cantidad"+contador);
                       input_precio.attr("id","precio"+contador);
