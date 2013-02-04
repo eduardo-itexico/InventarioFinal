@@ -62,7 +62,7 @@
 
                         <legend>Productos</legend>
                         <button type="button" class="modal-link"  onclick="openSearchProducts()">Agregar</button>
-                         <table class="table" cellspacing="0" width="100%">
+                         
 
                     	
                     

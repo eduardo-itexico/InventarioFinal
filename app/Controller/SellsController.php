@@ -40,13 +40,16 @@ class SellsController extends AppController {
 	public function add() {
 		if ($this->request->is('post')) {
 			$this->Sell->create();
-			if ($this->Sell->save($this->request->data)) {
+                        //var_dump($this->request->data);
+                        
+			if ($this->Sell->saveAssociated($this->request->data)) {
 				$this->Session->setFlash(__('The sell has been saved'));
-				$this->redirect(array('action' => 'index'));
+				//$this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The sell could not be saved. Please, try again.'));
 				
 			}
+                        
 		}
 		$customers = $this->Sell->Customer->find('list');
 		$users = $this->Sell->User->find('list');

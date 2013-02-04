@@ -16,12 +16,12 @@ Sells.prototype.beforeSubmitCreateProducts = function(selector,placeSave){
         
     
     $(selector).each(function(index){
+        
         var producto = $(this).data("producto");
         var cantidad = $(this).find("input[id^='cantidad']").val();
         var precio   = $(this).find("input[id^='precio']").val();
         
-        console.log("cantidad:"+cantidad);
-        console.log("precio:"+precio);
+        //console.log(precio);
         
         var cantidad_hidden     = input_hidden.clone().attr("name","data[Product]["+index+"][cantidad]");
         var precio_hidden       = input_hidden.clone().attr("name","data[Product]["+index+"][precio]");
@@ -32,7 +32,8 @@ Sells.prototype.beforeSubmitCreateProducts = function(selector,placeSave){
         product_id_hidden.attr("id","Product"+index+"Id");
         
         cantidad_hidden.val(cantidad);
-        cantidad_hidden.val(precio);
+        precio_hidden.val(precio);
+        console.log(producto.id);
         product_id_hidden.val(producto.id);
         
         $(placeSave).append(cantidad_hidden,precio_hidden,product_id_hidden);
@@ -41,5 +42,5 @@ Sells.prototype.beforeSubmitCreateProducts = function(selector,placeSave){
     }catch(e){
         alert(e.message);
     }
-    return false;
+    
 }
