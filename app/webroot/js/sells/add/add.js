@@ -16,7 +16,7 @@ $(document).ready(function()
     {
         // Prevent link opening
         event.preventDefault();
-         console.log("llego");
+         //console.log("llego");
         // Open modal
         $("#productos-modal").modal({
             

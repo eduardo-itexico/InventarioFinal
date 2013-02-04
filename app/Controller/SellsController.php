@@ -49,7 +49,6 @@ class SellsController extends AppController {
 				$this->Session->setFlash(__('The sell could not be saved. Please, try again.'));
 				
 			}
-                        
 		}
 		$customers = $this->Sell->Customer->find('list');
 		$users = $this->Sell->User->find('list');
