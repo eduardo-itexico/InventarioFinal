@@ -25,6 +25,12 @@
 	{
 		document.getElementById('productos-modal').className = 'modal';
 		
+	}
+	
+	function openSearchClient()
+	{
+		document.getElementById('client-modal').className = 'modal';
+		
 	} 
 </script>
 <article class="container_12">
@@ -46,7 +52,7 @@
                     <fieldset>
                         <legend>Cliente</legend>
                         <p><?=$this->Form->input('customers_id',array("hidden"=>true,"label"=>false)); ?></p>
-                        <button type="button" class="modal-link">Buscar Cliente</button>
+                        <button type="button" class="modal-link" onclick="openSearchClient()">Buscar Cliente</button>
                     </fieldset>
                     <fieldset>
                         <legend>Usuario</legend>
@@ -203,5 +209,53 @@
             </div>
         </div>		
       </div>  
+    </div>
+    
+    
+    <div id="client-modal" class="no-modal">
+        <div style="position:relative;margin:0 auto;width:1100px;top:200px">
+            <div class="block-border">
+                <div class="block-content">
+                    <h1>Buscar Cliente</h1>
+                    <?php echo $this->Form->create('Customer', array("action"=>"searchJSON"))?>
+            
+                    <fieldset>
+                            <legend>xxxxxxxx</legend>
+                    <?php
+                            echo $this->Form->input('busqueda');
+                    ?>
+                    </fieldset>
+                    <fieldset class="grey-bg no-margin">
+                            <?php echo $this->Form->end(__('Submit')); ?>	
+                    </fieldset>
+                    <table class="table" cellspacing="0" width="100%">
+                        <thead>
+                            <tr>
+                                <!-- This is a special cell for loading statuses - see below for more -->
+                                <th class="black-cell"><span class="loading"></span></th>
+
+                                <th scope="col">Id</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col" class="table-actions">Actions</th>
+                            </tr>
+                        </thead>
+
+                        <tfoot>
+                            <tr>
+                                <td colspan="3"><img src="images/icons/fugue/arrow-curve-000-left.png" width="16" height="16" class="picto"> 
+                                </td>
+                                <td><a href="#" class="button"><?=$this->Html->image("icons/fugue/cross-circle.png")?> delete all</a></td>
+                            </tr>
+                        </tfoot>
+                        <tbody id="rows-clients">
+                        </tbody>
+                    </table>
+                    
+                    <div class="block-footer align-right">
+                   		<button type="button" onclick="document.getElementById('client-modal').className = 'no-modal';">Close</button>
+                    </div>
+                </div>
+            </div>		
+        </div>  
     </div>
 </article>
