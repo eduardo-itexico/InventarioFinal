@@ -147,5 +147,44 @@ $(document).ready(function()
         });
         return false;
     });
+	
+	
+	/*
+	* Seacrh Customer
+	*/
+	$("#CustomerSearchJSONForm").submit(function(){
+        //event.preventDefault();
+        //console.log("Aqui llego");
+        //console.log($(this).serialize());
+        $.ajax({
+          type: "POST",
+          url: $(this).attr("action"),
+          dataType: 'json',
+          data: $(this).serialize(),
+          success:function(data){
+              
+              $("#rows-clients").html('');
+                var datos = data.data;
+                
+                if(datos.length > 0){
+                  var contador = 0;
+                  for(var i in  datos){
+                     
+                      contador++;
+                }                
+              }else{
+                  alert("No existen clientes con esas descripciones...");
+              }
+              
+              console.log('Exito');
+          } ,
+          error:function(data){
+              console.log('Error');
+              console.log(data);
+          }
+          
+        });
+        return false;
+    });
 });
 
