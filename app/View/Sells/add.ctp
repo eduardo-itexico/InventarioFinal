@@ -24,9 +24,25 @@
 	// Demo modal
 	function openSearchProducts()
 	{
-		document.getElementById('productos-modal').className = 'modal';
+		document.getElementById('productos-modal').className = 'modal';3
+		
+	}
+	
+	function openSearchClient()
+	{
+		document.getElementById('client-modal').className = 'modal';
 		
 	} 
+	
+	function addCustomer(_id,_name,_rfc,_phone){
+		$('#SellCustomersId').val(_id);
+		$('#idC').val(_id);
+		$('#nameC').val(_name);
+		$('#rfcC').val(_rfc);
+		$('#phoneC').val(_phone);
+		document.getElementById('client-modal').className = 'no-modal';
+			
+	}
 </script>
 <article class="container_12">
     
@@ -41,13 +57,53 @@
                 <div class="colx3-left-double">
                     <fieldset>
                         <legend>Factura</legend>
-                        <p><?=$this->Form->input('facturado'); ?></p>
-                        <p><?=$this->Form->input('date'); ?></p>
+                        <div class="columns">
+     
+                            <!-- Left column -->
+                            <div class="colx3-left-double">
+                                <?=$this->Form->input('date'); ?>
+                            </div>
+                             
+                            <!-- Right column -->
+                            <div class="colx3-right">
+                                <?=$this->Form->input('facturado'); ?>
+                            </div>
+                              
+        				</div>
+                        
     				</fieldset>
                     <fieldset>
                         <legend>Cliente</legend>
-                        <p><?=$this->Form->input('customers_id',array("hidden"=>true,"label"=>false)); ?></p>
-                        <button type="button" class="modal-link">Buscar Cliente</button>
+                        <?=$this->Form->input('customers_id',array("hidden"=>true,"label"=>false,"value"=>0,"type"=>"text")); ?>
+                        <p style="overflow:hidden"><button type="button" class="float-right" onclick="openSearchClient()">Buscar Cliente</button></p>
+                        
+                        <div class="columns">
+     
+                            <!-- Left column -->
+                            <div class="colx2-left">
+                            	<p class="inline-small-label">
+                                    <label >ID:</label>
+                                    <input type="text" disabled="disabled" id="idC">
+                                </p>
+                               <p class="inline-small-label">
+                                    <label >Nombre:</label>
+                                    <input type="text" disabled="disabled" id="nameC">
+                                </p>
+                            </div>
+                             
+                            <!-- Right column -->
+                            <div class="colx2-left">
+                                <p class="inline-small-label">
+                                    <label >RFC:</label>
+                                    <input type="text" disabled="disabled" id="rfcC">
+                                </p>
+                                <p class="inline-small-label">
+                                    <label >Telefono:</label>
+                                    <input type="text" disabled="disabled" id="phoneC">
+                                </p>
+                            </div>
+                             
+                        </div>
                     </fieldset>
                     <fieldset>
                         <legend>Usuario</legend>
@@ -125,7 +181,7 @@
                         <fieldset>
                             <legend>Desglose</legend>
                             <p><?=$this->Form->input('subtotal', array("type"=>"text")); ?></p>
-                            <BR/>
+                           
                             <p><?=$this->Form->input('iva', array("type"=>"text")); ?></p>
                             <p><?=$this->Form->input('total', array("type"=>"text")); ?></p>
                             <p><?=$this->Form->input('Product.0.id'); ?></p>
@@ -206,5 +262,54 @@
             </div>
         </div>		
       </div>  
+    </div>
+    
+    
+    <div id="client-modal" class="no-modal">
+        <div style="position:relative;margin:0 auto;width:1100px;top:200px">
+            <div class="block-border">
+                <div class="block-content">
+                    <h1>Buscar Cliente</h1>
+                    <?php echo $this->Form->create('Customer', array("action"=>"searchJSON"))?>
+            
+                    
+                    <?php
+                            echo $this->Form->input('busqueda');
+                    ?>
+                    </fieldset>
+                    <fieldset class="grey-bg no-margin">
+                            <?php //echo $this->Form->end(__('Submit')); ?>	
+                    </fieldset>
+                    <table class="table" cellspacing="0" width="100%">
+                        <thead>
+                            <tr>
+                                <!-- This is a special cell for loading statuses - see below for more -->
+                                <th class="black-cell"><span class="loading"></span></th>
+
+                                <th scope="col">Id</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">RFC</th>
+                                <th scope="col">Telefono</th>
+                                <th scope="col" class="table-actions">Actions</th>
+                            </tr>
+                        </thead>
+
+                        <tfoot>
+                            <tr>
+                                <td colspan="5"><img src="images/icons/fugue/arrow-curve-000-left.png" width="16" height="16" class="picto"> 
+                                </td>
+                                <td></td>
+                            </tr>
+                        </tfoot>
+                        <tbody id="rows-clients">
+                        </tbody>
+                    </table>
+                    
+                    <div class="block-footer align-right">
+                   		<button type="button" onclick="document.getElementById('client-modal').className = 'no-modal';">Close</button>
+                    </div>
+                </div>
+            </div>		
+        </div>  
     </div>
 </article>

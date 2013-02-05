@@ -163,5 +163,52 @@ $(document).ready(function()
         });
         return false;
     });
+	
+
+	
+	/*
+	* Seacrh Customer
+	*/
+	$("#CustomerSearchJSONForm").submit(function(){
+        //event.preventDefault();
+        //console.log("Aqui llego");
+        //console.log($(this).serialize());
+        $.ajax({
+          type: "POST",
+          url: $(this).attr("action"),
+          dataType: 'json',
+          data: $(this).serialize(),
+          success:function(data){
+              
+              $("#rows-clients").html('');
+                var datos = data.data;
+                
+                if(datos.length > 0){
+                  var contador = 0;
+				  var newRow = "";
+                  for(var i in  datos){
+                     //alert(datos[i].Customer.nombre);
+					 newRow += '<tr><th scope="row" class="table-check-cell"></th><td>'+datos[i].Customer.id+'</td><td>'+datos[i].Customer.nombre+'</td><td>'+datos[i].Customer.rfc+'</td><td>'+datos[i].Customer.telefono+'</td><td ><ul class="keywords"><li><a href="javascript:addCustomer('+datos[i].Customer.id+',\''+String(datos[i].Customer.nombre)+'\',\''+String(datos[i].Customer.rfc)+'\',\''+String(datos[i].Customer.telefono)+'\');" >agregar</a></li></ul></td></tr>';
+                      contador++;
+                }    
+				$("#rows-clients").html(newRow);            
+              }else{
+                  alert("No existen clientes con esas descripciones...");
+              }
+              
+              console.log('Exito');
+          } ,
+          error:function(data){
+              console.log('Error');
+              console.log(data);
+          }
+          
+        });
+        return false;
+    });
+	
+	
+	
+	
 });
 

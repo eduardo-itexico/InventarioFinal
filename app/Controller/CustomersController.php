@@ -106,4 +106,36 @@ class CustomersController extends AppController {
 		$this->Session->setFlash(__('Customer was not deleted'));
 		$this->redirect(array('action' => 'index'));
 	}
+	
+	/**
+	*
+	*/
+	
+	public function __searchCustomer($search){
+		$conditions["conditions"]["OR"]["Customer.nombre LIKE"]  	= "%$search%"; 
+		$conditions["conditions"]["OR"]["Customer.direccion LIKE"]  = "%$search%"; 
+		$conditions["conditions"]["OR"]["Customer.ciudad LIKE"]  	= "%$search%"; 
+		$conditions["conditions"]["OR"]["Customer.telefono LIKE"]  	= "%$search%";
+		$conditions["conditions"]["OR"]["Customer.rfc LIKE"]  		= "%$search%"; 
+		$products = $this->Customer->find('all',$conditions);
+		return $products;
+	}
+	/**
+	*
+	*/
+	public function searchJSON(){
+		try{
+			//var_dump($this->request->data);
+			$this->Customer->recursive = 0;
+			$campo_busqueda = isset($this->request->data["Customer"]["busqueda"])?
+											$this->request->data["Customer"]["busqueda"]:
+											"";
+			$body["data"] = $this->__searchCustomer($campo_busqueda);
+		}catch(Exception $e){
+			echo $e->getMessage();
+		}
+		return new CakeResponse(array('body' => json_encode($body)));
+    }
+	
+	
 }
