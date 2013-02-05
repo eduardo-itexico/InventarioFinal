@@ -5,7 +5,7 @@
 
 
 function Sells(){
-    
+    this.iva = 0.16;
 }
 
 
@@ -44,3 +44,13 @@ Sells.prototype.beforeSubmitCreateProducts = function(selector,placeSave){
     }
     
 }
+
+Sells.prototype.calculateSubtotal = function(){
+    var subtotal = 0;
+    var inputs = $("#rows-formulario-productos td[id^='subtotal']").each(function(){
+        subtotal += parseFloat($(this).html());
+    });
+    $("#SellSubtotal").val(subtotal.toFixed(2));
+    $("#SellIva").val((subtotal*this.iva).toFixed(2));
+    $("#SellTotal").val(((subtotal*this.iva)+subtotal).toFixed(2));
+};

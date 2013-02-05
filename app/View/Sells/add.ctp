@@ -53,7 +53,8 @@
                         <legend>Usuario</legend>
                         <?php
                         
-                        echo $this->Form->input('users_id');
+                        
+                        echo $this->Form->input('customer_id',array("value"=>1));
                         
                         
                     ?>
@@ -106,8 +107,8 @@
                     </fieldset>    
                     <fieldset>
                     <?php
-                        
-                        echo $this->Form->input('users_id');
+                        echo $this->Form->input('user_id',array("value"=>1));
+                        //echo $this->Form->input('users_id');
                         
                         
                     ?>

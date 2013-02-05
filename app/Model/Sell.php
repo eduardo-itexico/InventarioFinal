@@ -71,7 +71,7 @@ class Sell extends AppModel {
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
-		),
+		)/*,
 		'date' => array(
 			'date' => array(
 				'rule' => array('date'),
@@ -81,7 +81,7 @@ class Sell extends AppModel {
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
-		),
+		),*/    
 	);
 
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
@@ -107,12 +107,17 @@ class Sell extends AppModel {
 			'order' => ''
 		)
 	);
+        
+        public $hasMany = array(
+            'SellProduct'
+        );
 
 /**
  * hasAndBelongsToMany associations
  *
  * @var array
  */
+        /*
 	public $hasAndBelongsToMany = array(
 		'Product' => array(
 			'className' => 'Product',
@@ -130,5 +135,7 @@ class Sell extends AppModel {
 			'insertQuery' => ''
 		)
 	);
+         * *
+         */
 
 }

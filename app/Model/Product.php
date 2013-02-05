@@ -126,5 +126,9 @@ class Product extends AppModel {
 			'insertQuery' => ''
 		)
 	);
+        
+        public $hasMany = array(
+            'SellProduct'
+        );
 
 }

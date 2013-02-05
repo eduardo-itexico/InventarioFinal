@@ -45,7 +45,7 @@ $(document).ready(function()
             //console.log();
         });
         $("#SellSubtotal").val(subtotal.toFixed(2));
-        $("#SellIva").val((subtotal*0.15).toFixed(2));
+        $("#SellIva").val((subtotal*0.16).toFixed(2));
         $("#SellTotal").val(((subtotal*0.15)+subtotal).toFixed(2));
         
     };
