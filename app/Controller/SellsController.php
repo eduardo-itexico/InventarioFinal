@@ -15,7 +15,8 @@ class SellsController extends AppController {
  */
 	public function index() {
 		$this->Sell->recursive = 0;
-		$this->set('sells', $this->paginate());
+                
+		$this->set('sells', $this->paginate("Sell"));
 	}
 
 /**
@@ -77,11 +78,13 @@ class SellsController extends AppController {
                                     //$this->SellProduct->create();
                                     if($this->SellProduct->saveAll($products)){
                                         $this->Session->setFlash(__('Venta completa salvada'));   
+                                        $this->redirect(array('action' => 'index'));
                                     }else{
                                         $this->Session->setFlash(__('Problemas salvando la venta'));   
                                     }
                                 }else{
                                     $this->Session->setFlash(__('The sell has been saved'));
+                                    $this->redirect(array('action' => 'index'));
                                 }
                                  //$this->Session->setFlash(__('The sell has been saved'));
 				//$this->redirect(array('action' => 'index'));
