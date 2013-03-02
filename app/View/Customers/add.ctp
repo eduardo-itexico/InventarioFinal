@@ -21,7 +21,7 @@
 				
 				    
 				<?php echo $this->Form->create('Customer',array('class'=>"block-content form")); ?>
-				<h1>Nuevo proveedor</h1>
+				<h1>Nuevo cliente</h1>
 					<fieldset>
 						<legend><?php echo __('Clientes'); ?></legend>
 					<?php

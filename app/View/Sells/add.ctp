@@ -35,7 +35,7 @@
 	} 
 	
 	function addCustomer(_id,_name,_rfc,_phone){
-		$('#SellCustomersId').val(_id);
+		$('#SellCustomerId').val(_id);
 		$('#idC').val(_id);
 		$('#nameC').val(_name);
 		$('#rfcC').val(_rfc);
@@ -74,8 +74,8 @@
     				</fieldset>
                     <fieldset>
                         <legend>Cliente</legend>
-                        <?=$this->Form->input('customers_id',array("hidden"=>true,"label"=>false,"value"=>0,"type"=>"text")); ?>
-                        <p style="overflow:hidden"><button type="button" class="float-right" onclick="openSearchClient()">Buscar Cliente</button></p>
+                        <?=$this->Form->input('customer_id',array("hidden"=>true,"label"=>false,"value"=>0,"type"=>"text")); ?>
+                        <p style="overflow:hidden"><button type="button" class="float-right grey" onclick="openSearchClient()">Buscar Cliente</button></p>
                         
                         <div class="columns">
      
@@ -105,20 +105,11 @@
                              
                         </div>
                     </fieldset>
-                    <fieldset>
-                        <legend>Usuario</legend>
-                        <?php
-                        
-                        
-                        echo $this->Form->input('customer_id',array("value"=>1));
-                        
-                        
-                    ?>
-                    </fieldset>
+                   
                     <fieldset>
 
                         <legend>Productos</legend>
-                        <button type="button" class="modal-link"  onclick="openSearchProducts()">Agregar</button>
+                        <p style="overflow:hidden"><button type="button" class="float-right grey"  onclick="openSearchProducts()">Buscar Productos</button></p>
                          
 
                     	
@@ -138,7 +129,7 @@
                                 <th scope="col">Categor&iacute;a</th>
                                 <th scope="col">Precio</th>
                                 <th scope="col">Imagen</th>
-                                <th scope="col">Unidad</th>
+                               <!-- <th scope="col">Unidad</th>-->
                                 <th scope="col">Cantidad</th>
                                 <th scope="col">Subtotal</th>
                                 <th scope="col" class="table-actions">Actions</th>
@@ -147,7 +138,7 @@
 
                         <tfoot>
                             <tr>
-                                <td colspan="10"><img src="images/icons/fugue/arrow-curve-000-left.png" width="16" height="16" class="picto"> 
+                                <td colspan="9"><img src="images/icons/fugue/arrow-curve-000-left.png" width="16" height="16" class="picto"> 
                                 </td>
                                 <td></td>
                             </tr>
@@ -161,23 +152,27 @@
                         </tbody>
                     </table>
                     </fieldset>    
-                    <fieldset>
-                    <?php
-                        echo $this->Form->input('user_id',array("value"=>1));
-                        //echo $this->Form->input('users_id');
-                        
-                        
-                    ?>
                     
-                    
-                    <!-- Add the class 'table' -->
-                  
-                    </fieldset>
                 </div>
                 
                 <!-- Right column -->
                 <div class="colx3-right">
                     <div class="sells form">
+                        <fieldset>
+                        <legend>Usuarios</legend>
+                        <?php
+                            echo $this->Form->input('user_id',array("value"=>1));
+                            //echo $this->Form->input('users_id');
+                            
+                            
+                        ?>
+                        
+                        
+                        <!-- Add the class 'table' -->
+                      
+                        </fieldset>
+                    
+                    
                         <fieldset>
                             <legend>Desglose</legend>
                             <p><?=$this->Form->input('subtotal', array("type"=>"text")); ?></p>
@@ -185,10 +180,12 @@
                             <p><?=$this->Form->input('iva', array("type"=>"text")); ?></p>
                             <p><?=$this->Form->input('total', array("type"=>"text")); ?></p>
                             <p><?=$this->Form->input('Product.0.id'); ?></p>
+                             <button type="button" value="Submit" onclick="document.forms['SellAddForm'].submit();">Aceptar</button>
                         </fieldset>
+                       
                     </div>
                 </div>
-               <?php echo $this->Form->end(__('Submit')); ?>
+               <?php echo $this->Form->end(); ?>
             </div>
             </div>
             
@@ -214,20 +211,23 @@
     <div style="position:relative;margin:0 auto;width:1100px;top:200px">
         <div class="block-border">
             <div class="block-content">
-                <h1>Block title</h1>
+                <h1>Buscar Productos</h1>
                 
         <?php echo $this->Form->create('Product', array("action"=>"searchJSON"))?>
             
                 <fieldset>
-                        <legend><?php echo __('Productos'); ?></legend>
-                <?php
+                        
+               <p> <?php
                         echo $this->Form->input('busqueda');
-                ?>
+                ?></p>
                 </fieldset>
+                <p></p>
+                <p></p>
                 <fieldset class="grey-bg no-margin">
-                        <?php echo $this->Form->end(__('Submit')); ?>	
+                	<?php //echo $this->Form->end(__('Submit')); ?>	
+                        <?php echo $this->Form->end(); ?>	
                 </fieldset>
-                    <table class="table" cellspacing="0" width="100%">
+                    <table class="table" cellspacing="0" width="100%" style="margin-top: 20px;">
                         <thead>
                             <tr>
                                 <!-- This is a special cell for loading statuses - see below for more -->
@@ -239,7 +239,7 @@
                                 <th scope="col">Categor&iacute;a</th>
                                 <th scope="col">Precio</th>
                                 <th scope="col">Imagen</th>
-                                <th scope="col">Unidad</th>
+                                <!--<th scope="col">Unidad</th>-->
                                 <th scope="col">Cantidad</th>
                                 <th scope="col">Subtotal</th>
                                 <th scope="col" class="table-actions">Actions</th>
@@ -248,9 +248,9 @@
 
                         <tfoot>
                             <tr>
-                                <td colspan="8"><img src="images/icons/fugue/arrow-curve-000-left.png" width="16" height="16" class="picto"> 
+                                <td colspan="9"><img src="images/icons/fugue/arrow-curve-000-left.png" width="16" height="16" class="picto"> 
                                 </td>
-                                <td><a href="#" class="button"><?=$this->Html->image("icons/fugue/cross-circle.png")?> delete all</a></td>
+                                <td><!--<a href="#" class="button"><?=$this->Html->image("icons/fugue/cross-circle.png")?> delete all</a>--></td>
                             </tr>
                         </tfoot>
                         <tbody id="rows-productos">
@@ -273,9 +273,9 @@
                     <?php echo $this->Form->create('Customer', array("action"=>"searchJSON"))?>
             
                     
-                    <?php
+                    <p><?php
                             echo $this->Form->input('busqueda');
-                    ?>
+                    ?></p>
                     </fieldset>
                     <fieldset class="grey-bg no-margin">
                             <?php //echo $this->Form->end(__('Submit')); ?>	
