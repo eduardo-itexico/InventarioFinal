@@ -24,7 +24,7 @@
 	// Demo modal
 	function openSearchProducts()
 	{
-		document.getElementById('productos-modal').className = 'modal';3
+		document.getElementById('productos-modal').className = 'modal';
 		
 	}
 	
@@ -35,7 +35,7 @@
 	} 
 	
 	function addCustomer(_id,_name,_rfc,_phone){
-		$('#SellCustomerId').val(_id);
+		$('#customer_id').val(_id);
 		$('#idC').val(_id);
 		$('#nameC').val(_name);
 		$('#rfcC').val(_rfc);
@@ -74,7 +74,7 @@
     				</fieldset>
                     <fieldset>
                         <legend>Cliente</legend>
-                        <?=$this->Form->input('customer_id',array("hidden"=>true,"label"=>false,"value"=>0,"type"=>"text")); ?>
+                        <?=$this->Form->input('customer_id',array("hidden"=>true,"label"=>false,"value"=>0,"type"=>"text","id"=>"customer_id")); ?>
                         <p style="overflow:hidden"><button type="button" class="float-right grey" onclick="openSearchClient()">Buscar Cliente</button></p>
                         
                         <div class="columns">
@@ -180,11 +180,12 @@
                             <p><?=$this->Form->input('iva', array("type"=>"text")); ?></p>
                             <p><?=$this->Form->input('total', array("type"=>"text")); ?></p>
                             <p><?=$this->Form->input('Product.0.id'); ?></p>
-                             <button type="button" value="Submit" onclick="document.forms['SellAddForm'].submit();">Aceptar</button>
+                             <input type="submit" value="Aceptar" class="big-button">
                         </fieldset>
                        
                     </div>
                 </div>
+                <?php //echo $this->Form->end(__('Submit')); ?>
                <?php echo $this->Form->end(); ?>
             </div>
             </div>
