@@ -105,16 +105,7 @@
                              
                         </div>
                     </fieldset>
-                    <fieldset>
-                        <legend>Usuario</legend>
-                        <?php
-                        
-                        
-                        echo $this->Form->input('customer_id',array("value"=>1));
-                        
-                        
-                    ?>
-                    </fieldset>
+                    
                     <fieldset>
 
                         <legend>Productos</legend>

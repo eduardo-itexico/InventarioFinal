@@ -61,6 +61,12 @@ class SellsController extends AppController {
             }
             return $array_regreso;
         }
+    public function __decreaseStock($sell_id){
+    	$this->Sell->id = $sell_id;
+    	if($this->Sell->exists()){
+    		var_dump($this->Sell);
+    	}
+    }
       
 	public function add() {
 		if ($this->request->is('post')) {
@@ -77,8 +83,9 @@ class SellsController extends AppController {
                                     //debug($products);
                                     //$this->SellProduct->create();
                                     if($this->SellProduct->saveAll($products)){
+                                    	$this->__decreaseStock($this->Sell->getLastInsertID());
                                         $this->Session->setFlash(__('Venta completa salvada'));   
-                                        $this->redirect(array('action' => 'index'));
+                                        //$this->redirect(array('action' => 'index'));
                                     }else{
                                         $this->Session->setFlash(__('Problemas salvando la venta'));   
                                     }

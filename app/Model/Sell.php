@@ -15,6 +15,7 @@ class Sell extends AppModel {
  * @var string
  */
 	public $displayField = 'id';
+	
 
 /**
  * Validation rules
