@@ -46,7 +46,7 @@ $(document).ready(function()
         });
         $("#SellSubtotal").val(subtotal.toFixed(2));
         $("#SellIva").val((subtotal*0.16).toFixed(2));
-        $("#SellTotal").val(((subtotal*0.15)+subtotal).toFixed(2));
+        $("#SellTotal").val(((subtotal*0.16)+subtotal).toFixed(2));
         
     };
     
@@ -78,7 +78,7 @@ $(document).ready(function()
                       var categoria_td      = $("<td></td>");
                       var precio_td         = $("<td></td>");
                       var imagen_td         = $("<td></td>");
-                      var unidad_td         = $("<td></td>");
+                      //var unidad_td         = $("<td></td>");
                       var cantidad_td       = $("<td></td>");
                       var subtotal_td       = $("<td></td>");
                       var actions_td        = $("<td></td>");
@@ -93,7 +93,9 @@ $(document).ready(function()
                       
                       subtotal_td.attr("id","subtotal"+contador);
                       input_cantidad.attr("id","cantidad"+contador);
+					  input_cantidad.attr("style","width: 40px");
                       input_precio.attr("id","precio"+contador);
+					  input_precio.attr("style","width: 40px");
                       
                       subtotal_td.attr("indice",contador);
                       input_cantidad.attr("indice",contador);
@@ -135,15 +137,20 @@ $(document).ready(function()
                       descripcion_td.html(producto.descripcion);
                       categoria_td.html(categoria.name);
                       //precio_td.html(producto.precio);                  
-                      unidad_td.html(unidad.name);                  
+                      //unidad_td.html(unidad.name);                  
                       
                       button_add.attr("class","keywords");
                       button_add.append(li_add);
                       actions_td.html(button_add);
                       
-                      tr.append(empty_td,id_td,nombre_td,nombre_td,
+                     /* tr.append(empty_td,id_td,nombre_td,nombre_td,
                                 descripcion_td,categoria_td,precio_td,
                                 imagen_td,unidad_td,cantidad_td,
+                                subtotal_td,actions_td);*/
+								
+						tr.append(empty_td,id_td,nombre_td,nombre_td,
+                                descripcion_td,categoria_td,precio_td,
+                                imagen_td,cantidad_td,
                                 subtotal_td,actions_td);
 
                       $("#rows-productos").append(tr);

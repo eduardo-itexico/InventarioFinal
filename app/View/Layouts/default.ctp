@@ -373,7 +373,11 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 					<li><a href="#" title="Settings">Settings</a></li>
 				</ul>
 			</li>
-			<li class="stats"><a href="#" title="Stats">Stats</a></li>
+			<li class="stats"><a href="#" title="Stats">Reportes</a>
+            	<ul>
+					<li><a href="http://localhost:8888/Reports/Ventas_detail.php" title="Ventas">Ventas</a></li>
+				</ul>
+            </li>
 			<li class="settings"><a href="#" title="Settings">Settings</a></li>
 			<li class="backup"><a href="#" title="Backup">Backup</a></li>
 		</ul>
