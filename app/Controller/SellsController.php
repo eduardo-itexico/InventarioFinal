@@ -7,7 +7,7 @@ App::uses('AppController', 'Controller');
  */
 class SellsController extends AppController {
 
-        public $uses = array("Product","Sell","SellProduct");
+        public $uses = array("Product","Sell","SellProduct","Stock");
 /**
  * index method
  *
@@ -64,7 +64,18 @@ class SellsController extends AppController {
     public function __decreaseStock($sell_id){
     	$this->Sell->id = $sell_id;
     	if($this->Sell->exists()){
-    		var_dump($this->Sell);
+    		$products = $this->Sell->SellProduct->findAllBySellId($sell_id);
+    		foreach ($products as $product){
+    			$row = $this->Stock->findByProductId($product["Product"]["id"]);
+    			if($row){
+    				$this->Stock->id = $row["Stock"]["id"];
+    				$this->Stock->read();
+    				if($this->Stock->exists()){
+	    				$this->Stock->data["Stock"]["actual"]= ($this->Stock->data["Stock"]["actual"] - $product["SellProduct"]["cantidad"]);
+	    				$this->Stock->Save();
+    				}
+    			}
+    		}
     	}
     }
       
@@ -85,7 +96,7 @@ class SellsController extends AppController {
                                     if($this->SellProduct->saveAll($products)){
                                     	$this->__decreaseStock($this->Sell->getLastInsertID());
                                         $this->Session->setFlash(__('Venta completa salvada'));   
-                                        //$this->redirect(array('action' => 'index'));
+                                        $this->redirect(array('action' => 'index'));
                                     }else{
                                         $this->Session->setFlash(__('Problemas salvando la venta'));   
                                     }
@@ -93,8 +104,8 @@ class SellsController extends AppController {
                                     $this->Session->setFlash(__('The sell has been saved'));
                                     $this->redirect(array('action' => 'index'));
                                 }
-                                 //$this->Session->setFlash(__('The sell has been saved'));
-				//$this->redirect(array('action' => 'index'));
+                                 	//$this->Session->setFlash(__('The sell has been saved'));
+									//$this->redirect(array('action' => 'index'));
                             } else {
                                 $this->Session->setFlash(__('The sell could not be saved. Please, try again.'));
                                 //var_dump($this->__getLastQuery());    

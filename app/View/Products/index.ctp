@@ -73,6 +73,9 @@
                         </span>
                         <?php echo $this->Paginator->sort('precio'); ?>
                     </th>
+                    <th scope="col">
+                        Stock Actual
+                    </th>
                     <th scope="col"><?php echo $this->Paginator->sort('imagen'); ?></th>
                     <th scope="col"><?php echo $this->Paginator->sort('unities_id'); ?></th>
                     <th scope="col" class="table-actions">Actions</th>
@@ -102,6 +105,7 @@
 							<?php echo ($product["Category"]["name"])?>
 						</td>
 						<td><?php echo h($product['Product']['precio']); ?>&nbsp;</td>
+						<td><?php echo h($product['Stock']['actual']); ?>&nbsp;</td>
 						<td><?php echo h($product['Product']['imagen']); ?>&nbsp;</td>
 						<td>
 							<?php echo ($product["Unity"]["name"])?>

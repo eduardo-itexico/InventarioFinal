@@ -72,6 +72,7 @@ class Product extends AppModel {
  *
  * @var array
  */
+	public $hasOne = 'Stock';
 	public $belongsTo = array(
 		'Category' => array(
 			'className' => 'Category',
