@@ -373,9 +373,9 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 					<li><a href="#" title="Settings">Settings</a></li>
 				</ul>
 			</li>
-			<li class="stats"><a href="#" title="Stats">Reportes</a>
+			<li class="stats"><a href="#" title="Reportes">Reportes</a>
             	<ul>
-					<li><a href="http://localhost:8888/Reports/Ventas_detail.php" title="Ventas">Ventas</a></li>
+					<li><?=$this->html->link("Ventas",array("controller"=>"reports", 'action' => 'index')); ?></li>
 				</ul>
             </li>
 			<li class="settings"><a href="#" title="Settings">Settings</a></li>
