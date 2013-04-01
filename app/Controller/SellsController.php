@@ -48,15 +48,17 @@ class SellsController extends AppController {
             $array_regreso = null;
             if($productos){
                 foreach ($productos as &$producto){
-                    $producto_id = $producto["id"] ? $producto["id"] :"5";
-                    unset ($producto["id"]);
-                    $producto["product_id"]    = $producto_id;
-                    $producto["sell_id"]        = $sell_id;
-                    $array_regreso[]= array(
-                                            "SellProduct"=>
-                                                $producto
-                        
-                                            ); 
+                    $producto_id = $producto["id"];
+                    if($producto_id){
+                        unset ($producto["id"]);
+                        $producto["product_id"]    = $producto_id;
+                        $producto["sell_id"]        = $sell_id;
+                        $array_regreso[]= array(
+                                                "SellProduct"=>
+                                                    $producto
+
+                                                ); 
+                    }
                 }
             }
             return $array_regreso;
@@ -83,6 +85,7 @@ class SellsController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Sell->create();
                         //var_dump($this->request->data);
+                        //debug($_REQUEST);
                         $this->request->data["Sell"]["date"] = date("Y-m-d H:i:s");
                         if($this->Sell->validates()){
                             if ($this->Sell->save($this->request->data)){
