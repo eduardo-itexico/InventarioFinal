@@ -31,8 +31,9 @@ $(document).ready(function()
     $("tbody input").live("change",function(){
                          console.log("cghange");
                          var indice = $(this).attr("indice");
-                          var subtotal = parseFloat($("#cantidad"+indice).val()) * 
-                                         parseFloat($("#precio"+indice).val());
+                          var subtotal  = parseFloat($("#cantidad"+indice).val()) * 
+                                          parseFloat($("#precio"+indice).val()) ;
+                          subtotal 	    = subtotal - (subtotal*($("#descuento"+indice).val() / 100)); 
                           $("#subtotal"+indice).html(subtotal);
        calculateSubtotal();
     });
@@ -80,6 +81,7 @@ $(document).ready(function()
                       var imagen_td         = $("<td></td>");
                       //var unidad_td         = $("<td></td>");
                       var cantidad_td       = $("<td></td>");
+                      var descuento_td      = $("<td></td>");
                       var subtotal_td       = $("<td></td>");
                       var actions_td        = $("<td></td>");
                       var button_add        = $("<ul></ul>");
@@ -87,6 +89,7 @@ $(document).ready(function()
                       var anchor_agregar    = $("<a></a>").attr("href","#").html("Agregar");
                       var input_cantidad    = $("<input type='text'>");
                       var input_precio      = $("<input type='text'>");
+                      var input_descuento      = $("<input type='text'>");
                       
                       tr.data("producto",producto);
                       
@@ -96,17 +99,23 @@ $(document).ready(function()
 					  input_cantidad.attr("style","width: 40px");
                       input_precio.attr("id","precio"+contador);
 					  input_precio.attr("style","width: 40px");
+					  input_descuento.attr("id","descuento"+contador);
+					  input_descuento.attr("style","width: 40px");
                       
                       subtotal_td.attr("indice",contador);
                       input_cantidad.attr("indice",contador);
                       input_precio.attr("indice",contador);
+                      input_descuento.attr("indice",contador);
                       
                       input_precio.val(producto.precio);
                       input_cantidad.val(1);
+                      input_descuento.val(0);
+                      
                       subtotal_td.html(parseFloat(producto.precio) *1 );
                       
                       precio_td.append(input_precio);
                       cantidad_td.append(input_cantidad);
+                      descuento_td.append(input_descuento);
                       
                       anchor_agregar.click(function(event){
                             event.preventDefault();
@@ -150,7 +159,7 @@ $(document).ready(function()
 								
 						tr.append(empty_td,id_td,nombre_td,nombre_td,
                                 descripcion_td,categoria_td,precio_td,
-                                imagen_td,cantidad_td,
+                                imagen_td,cantidad_td,descuento_td,
                                 subtotal_td,actions_td);
 
                       $("#rows-productos").append(tr);

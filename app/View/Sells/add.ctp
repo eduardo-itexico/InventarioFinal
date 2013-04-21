@@ -105,7 +105,7 @@
                              
                         </div>
                     </fieldset>
-                   
+
                     <fieldset>
 
                         <legend>Productos</legend>
@@ -131,6 +131,7 @@
                                 <th scope="col">Imagen</th>
                                <!-- <th scope="col">Unidad</th>-->
                                 <th scope="col">Cantidad</th>
+                                <th scope="col">Descto %</th>
                                 <th scope="col">Subtotal</th>
                                 <th scope="col" class="table-actions">Actions</th>
                             </tr>
@@ -138,7 +139,7 @@
 
                         <tfoot>
                             <tr>
-                                <td colspan="9"><img src="images/icons/fugue/arrow-curve-000-left.png" width="16" height="16" class="picto"> 
+                                <td colspan="10"><img src="images/icons/fugue/arrow-curve-000-left.png" width="16" height="16" class="picto"> 
                                 </td>
                                 <td></td>
                             </tr>
@@ -242,6 +243,7 @@
                                 <th scope="col">Imagen</th>
                                 <!--<th scope="col">Unidad</th>-->
                                 <th scope="col">Cantidad</th>
+                                <th scope="col">Descto %</th>
                                 <th scope="col">Subtotal</th>
                                 <th scope="col" class="table-actions">Actions</th>
                             </tr>
@@ -249,7 +251,7 @@
 
                         <tfoot>
                             <tr>
-                                <td colspan="9"><img src="images/icons/fugue/arrow-curve-000-left.png" width="16" height="16" class="picto"> 
+                                <td colspan="10"><img src="images/icons/fugue/arrow-curve-000-left.png" width="16" height="16" class="picto"> 
                                 </td>
                                 <td><!--<a href="#" class="button"><?=$this->Html->image("icons/fugue/cross-circle.png")?> delete all</a>--></td>
                             </tr>

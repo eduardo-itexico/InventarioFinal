@@ -275,7 +275,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 	<!-- Server status -->
 	<header><div class="container_12">
 		
-		<p id="skin-name"><small>Constellation<br> Admin Skin</small> <strong>1.0</strong></p>
+		<p id="skin-name"><small>Tornillos<br> Lizar</small> <strong>1.0</strong></p>
 		<div class="server-info">Server: <strong>Apache <?php //echo apache_version(); ?></strong></div>
 		<div class="server-info">Php: <strong><?php echo phpversion(); ?></strong></div>
 		
@@ -385,7 +385,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 	<!-- End main nav -->
 	
 	<!-- Sub nav -->
-	<div id="sub-nav"><div class="container_12">
+	<div id="sub-nav"><!--<div class="container_12">
 		
 		<a href="#" title="Help" class="nav-button"><b>Help</b></a>
 	
@@ -393,16 +393,16 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 			<input type="text" name="s" id="s" value="" title="Search admin..." autocomplete="off">
 		</form>
 	
-	</div></div>
+	</div>--></div>
 	<!-- End sub nav -->
 	
 	<!-- Status bar -->
 	<div id="status-bar"><div class="container_12">
 	
 		<ul id="status-infos">
-			<li class="spaced">Logged as: <strong>Admin</strong></li>
-			<li>
-				<a href="#" class="button" title="5 messages"><?=$this->Html->image("icons/fugue/mail.png");?><!--<img src="images/icons/fugue/mail.png" width="16" height="16">--> <strong>5</strong></a>
+			<li class="spaced">Bienvenido: <strong>Admin</strong></li>
+			<!--<li>
+				<a href="#" class="button" title="5 messages"><?=$this->Html->image("icons/fugue/mail.png");?><!--<img src="images/icons/fugue/mail.png" width="16" height="16">--> <!--<strong>5</strong></a>
 				<div id="messages-list" class="result-block">
 					<span class="arrow"><span></span></span>
 					
@@ -431,9 +431,9 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 					
 					<p id="messages-info" class="result-info"><a href="#">Go to inbox &raquo;</a></p>
 				</div>
-			</li>
-			<li>
-				<a href="#" class="button" title="25 comments"><?=$this->Html->image("icons/fugue/balloon.png");?><!--<img src="images/icons/fugue/balloon.png" width="16" height="16">--> <strong>25</strong></a>
+			</li>-->
+			<!--<li>
+				<a href="#" class="button" title="25 comments"><?=$this->Html->image("icons/fugue/balloon.png");?><!--<img src="images/icons/fugue/balloon.png" width="16" height="16">--> <!--<strong>25</strong></a>
 				<div id="comments-list" class="result-block">
 					<span class="arrow"><span></span></span>
 					
@@ -542,8 +542,8 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 					
 					<p id="comments-info" class="result-info"><a href="#">Manage comments &raquo;</a></p>
 				</div>
-			</li>
-			<li><a href="login.php" class="button red" title="Logout"><span class="smaller">LOGOUT</span></a></li>
+			</li>-->
+			<li><a href="login.php" class="button red" title="Logout"><span class="smaller">Salir</span></a></li>
 		</ul>
 		
 		<ul id="breadcrumb">
@@ -570,13 +570,13 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
     
 	<footer>
 		
-		<div class="float-left">
+		<!--<div class="float-left">
 			<a href="#" class="button">Help</a>
 			<a href="#" class="button">About</a>
-		</div>
+		</div>-->
 		
 		<div class="float-right">
-			<a href="#top" class="button"><?=$this->Html->image("icons/fugue/navigation-090.png");?><!--<img src="images/icons/fugue/navigation-090.png" width="16" height="16">--> Page top</a>
+			<a href="#top" class="button"><?=$this->Html->image("icons/fugue/navigation-090.png");?><!--<img src="images/icons/fugue/navigation-090.png" width="16" height="16">--> Ir Arriba</a>
 		</div>
 		
 	</footer>

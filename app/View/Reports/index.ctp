@@ -36,7 +36,7 @@
           	
                 <p class="input-height grey-bg">
                 		<input type="radio" name="field17" id="format" value="yy-mm-dd" checked="checked" onClick="tipo = 1;"> <label for="field17-1"> Imprimir por dia </label>
-                        <input type="radio" name="field17" id="format2" value="yy-mm-dd" onClick="tipo = 2;"> <label for="field17-1"> Imprimir por semana </label>
+                        <input type="radio" name="field17" id="format2" value="yy-mm" onClick="tipo = 2;"> <label for="field17-1"> Imprimir por semana </label>
                         <input type="radio" name="field17" id="format3" value="yy-mm" onClick="tipo = 3;"> <label for="field17-0"> Imprimir por mes </label>
                         <input type="radio" name="field17" id="format4" value="yy" onClick="tipo = 4;"> <label for="field17-0"> Imprimir por año </label>
                     </p>
