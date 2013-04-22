@@ -67,16 +67,16 @@
                             <?php echo $this->Paginator->sort('total'); ?>
                         </th>
                         <th scope="col"><?php echo $this->Paginator->sort('customers_id'); ?></th>
-                        <th scope="col"><?php echo $this->Paginator->sort('users_id'); ?></th>
+                        
                         <th scope="col"><?php echo $this->Paginator->sort('date'); ?></th>
-                        <th scope="col"><?php echo $this->Paginator->sort('facturado'); ?></th>
+                        
                         <th scope="col" class="table-actions">Actions</th>
                     </tr>
                 </thead>
              
                 <tfoot>
                     <tr>
-                        <td colspan="9"><?=$this->Html->image("icons/fugue/arrow-curve-000-left.png",array("class"=>"picto"))?> <?php
+                        <td colspan="8"><?=$this->Html->image("icons/fugue/arrow-curve-000-left.png",array("class"=>"picto"))?> <?php
                 echo $this->Paginator->counter(array(
                 'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
                 ));
@@ -89,23 +89,21 @@
                  <?php
                     foreach ($orders as $order): ?>
                     <tr>
-					
+			
                         <th scope="row" class="table-check-cell"><input type="checkbox" name="selected[]" id="table-selected-1" value="1"></th>
-                        <td><?php echo h($order['order']['id']); ?>&nbsp;</td>
-                        <td><?php echo h($order['order']['subtotal']); ?>&nbsp;</td>
-                        <td><?php echo h($order['order']['iva']); ?>&nbsp;</td>
-                        <td><?php echo h($order['order']['total']); ?>&nbsp;</td>
+                        <td><?php echo h($order['Order']['id']); ?>&nbsp;</td>
+                        <td><?php echo h($order['Order']['subtotal']); ?>&nbsp;</td>
+                        <td><?php echo h($order['Order']['iva']); ?>&nbsp;</td>
+                        <td><?php echo h($order['Order']['total']); ?>&nbsp;</td>
                         <td>
-                            <?php echo ($order["Customer"]["nombre"])?>
+                            <?php echo ($order["Suplier"]["nombre"])?>
                         </td>
-                        <td>
-                            <?php echo ($order["User"]["nombre"])?>
-                        </td>
-                        <td><?php echo h($order['order']['date']); ?>&nbsp;</td>
-                        <td><?php echo h($order['order']['facturado']); ?>&nbsp;</td>
+                        
+                        <td><?php echo h($order['Order']['fecha']); ?>&nbsp;</td>
+                        
                         <!-- The class table-actions is designed for action icons -->
                         <td class="table-actions">
-                        <?php echo $this->Html->link("View", array('action' => 'view', $order['order']['id']),array("class"=>"with-tip")); ?>
+                        <?php echo $this->Html->link("View", array('action' => 'view', $order['Order']['id']),array("class"=>"with-tip")); ?>
                             <?php //echo $this->Html->link($this->Html->image("icons/fugue/pencil.png"), array('action' => 'edit', $order['order']['id']),array("class"=>"with-tip")); ?>
                             <?php //echo $this->Form->postLink($this->Html->image("icons/fugue/cross-circle.png"), array('action' => 'delete', $order['order']['id']),array("class"=>"with-tip"), __('Are you sure you want to delete # %s?', $order['order']['id'])); ?>
 							

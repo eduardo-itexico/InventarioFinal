@@ -4,6 +4,7 @@
 <?php echo $this->Html->script('standard')?>
 <?php echo $this->Html->script('jquery.modal')?>
 <?php echo $this->Html->script('orders/orders')?>
+<?php echo $this->Html->script('orders/add/add')?>
 
 <style>
 	.modal {
@@ -35,11 +36,15 @@
 	} 
 	
 	function addCustomer(_id,_name,_rfc,_phone){
-		$('#customer_id').val(_id);
+                //console.log(_id)
+		$('#suplier_id').val(_id);
+                console.log("VALOR");
+                console.log($('#suplier_id').val());
 		$('#idC').val(_id);
 		$('#nameC').val(_name);
 		$('#rfcC').val(_rfc);
 		$('#phoneC').val(_phone);
+                
 		document.getElementById('suplier-modal').className = 'no-modal';
 			
 	}
@@ -53,7 +58,7 @@
             <div class="columns">
      			
                 <!-- Left column -->
-                <?php echo $this->Form->create('Sell'); ?>
+                <?php echo $this->Form->create('Order'); ?>
                 <div class="colx3-left-double">
                     <fieldset>
                         <legend>Factura</legend>
@@ -192,19 +197,7 @@
             
             
     
-            <div class="actions">
-                <h3><?php echo __('Actions'); ?></h3>
-                <ul>
-            
-                    <li><?php echo $this->Html->link(__('List Sells'), array('action' => 'index')); ?></li>
-                    <li><?php echo $this->Html->link(__('List Customers'), array('controller' => 'customers', 'action' => 'index')); ?> </li>
-                    <li><?php echo $this->Html->link(__('New Customers'), array('controller' => 'customers', 'action' => 'add')); ?> </li>
-                    <li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>
-                    <li><?php echo $this->Html->link(__('New Users'), array('controller' => 'users', 'action' => 'add')); ?> </li>
-                    <li><?php echo $this->Html->link(__('List Products'), array('controller' => 'products', 'action' => 'index')); ?> </li>
-                    <li><?php echo $this->Html->link(__('New Product'), array('controller' => 'products', 'action' => 'add')); ?> </li>
-                </ul>
-            </div>
+          
 		</div>
 	</div>
     
