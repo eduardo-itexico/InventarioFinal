@@ -26,12 +26,12 @@ Orders.prototype.beforeSubmitCreateProducts = function(selector,placeSave){
         
         var cantidad_hidden     = input_hidden.clone().attr("name","data[Product]["+index+"][cantidad]");
         var precio_hidden       = input_hidden.clone().attr("name","data[Product]["+index+"][precio]");
-        var product_id_hidden   = input_hidden.clone().attr("name","data[Product]["+index+"][id]");
+        var product_id_hidden   = input_hidden.clone().attr("name","data[Product]["+index+"][product_id]");
         var descto_hidden       = input_hidden.clone().attr("name","data[Product]["+index+"][descuento]");
         
         cantidad_hidden.attr("id","Product"+index+"Cantidad");
         precio_hidden.attr("id","Product"+index+"Precio");
-        product_id_hidden.attr("id","Product"+index+"Id");
+        product_id_hidden.attr("id","Product"+index+"ProductId");
         product_id_hidden.attr("id","Product"+index+"Descuento");
         
         cantidad_hidden.val(cantidad);

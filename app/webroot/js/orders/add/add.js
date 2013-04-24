@@ -7,9 +7,9 @@ $(document).ready(function()
     
         var orders = new Orders();
     
-    $("OrderAddForm").submit(function(){
+    $("#OrderAddForm").submit(function(){
         orders.beforeSubmitCreateProducts("#rows-formulario-productos tr","#rows-formulario-productos");
-        //return false;
+        return false;
     });
     
     $('.modal-link').click(function(event)

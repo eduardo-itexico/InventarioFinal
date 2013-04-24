@@ -113,30 +113,5 @@ class Sell extends AppModel {
             'SellProduct'
         );
 
-/**
- * hasAndBelongsToMany associations
- *
- * @var array
- */
-        /*
-	public $hasAndBelongsToMany = array(
-		'Product' => array(
-			'className' => 'Product',
-			'joinTable' => 'sells_products',
-			'foreignKey' => 'sell_id',
-			'associationForeignKey' => 'product_id',
-			'unique' => 'keepExisting',
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'finderQuery' => '',
-			'deleteQuery' => '',
-			'insertQuery' => ''
-		)
-	);
-         * *
-         */
-
+      
 }

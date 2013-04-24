@@ -7,6 +7,7 @@ App::uses('AppController', 'Controller');
  */
 class OrdersController extends AppController {
 
+     public $uses = array("Product","OrderProduct","Stock","Order");
 /**
  * index method
  *
@@ -31,6 +32,13 @@ class OrdersController extends AppController {
 		}
 		$this->set('order', $this->Order->read(null, $id));
 	}
+        
+        public function __add2Products($order_id){
+            $this->Order->id = $order_id;
+            $this->Order->read();
+            Debugger::dump($this->Order->data);
+            //var_dump($this->Order->data);
+        }
 
 /**
  * add method
@@ -40,9 +48,19 @@ class OrdersController extends AppController {
 	public function add() {
 		if ($this->request->is('post')) {
 			$this->Order->create();
-			if ($this->Order->save($this->request->data)) {
-				$this->Session->setFlash(__('The order has been saved'));
-				$this->redirect(array('action' => 'index'));
+                        $this->request->data["Order"]["date"] = date("Y-m-d H:i:s");
+			if ($this->Order->validates()) {
+                            if($this->Order->save($this->request->data)){  
+                                Debugger::dump($this->request->data);
+                                if($this->OrderProduct->saveAll($this->request->data["Product"])){
+                                    $this->__add2Products($this->Order->id);
+                                    $this->Session->setFlash(__('Orden completa salvada'));   
+                                    $this->redirect(array('action' => 'index'));
+                                }
+                            }else{
+                                 $this->Session->setFlash(__('Problemas salvando la venta'));   
+                            }
+				//$this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The order could not be saved. Please, try again.'));
 			}
