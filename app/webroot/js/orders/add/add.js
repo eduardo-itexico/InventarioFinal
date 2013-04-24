@@ -9,7 +9,7 @@ $(document).ready(function()
     
     $("#OrderAddForm").submit(function(){
         orders.beforeSubmitCreateProducts("#rows-formulario-productos tr","#rows-formulario-productos");
-        return false;
+        //return false;
     });
     
     $('.modal-link').click(function(event)
