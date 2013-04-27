@@ -6,6 +6,7 @@
 <?php echo $this->Html->script('orders/orders')?>
 <?php echo $this->Html->script('orders/add/add')?>
 
+
 <style>
 	.modal {
 		background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
@@ -66,13 +67,11 @@
      
                             <!-- Left column -->
                             <div class="colx3-left-double">
-                                <?=$this->Form->input('date'); ?>
+                                <?=$this->Form->input('fecha', array("class"=>"datepicker","type"=>"text")); ?>
                             </div>
                              
                             <!-- Right column -->
-                            <div class="colx3-right">
-                                <?=$this->Form->input('facturado'); ?>
-                            </div>
+                           
                               
         				</div>
                         
@@ -164,19 +163,7 @@
                 <!-- Right column -->
                 <div class="colx3-right">
                     <div class="sells form">
-                        <fieldset>
-                        <legend>Usuarios</legend>
-                        <?php
-                            echo $this->Form->input('user_id',array("value"=>1));
-                            //echo $this->Form->input('users_id');
-                            
-                            
-                        ?>
                         
-                        
-                        <!-- Add the class 'table' -->
-                      
-                        </fieldset>
                     
                     
                         <fieldset>

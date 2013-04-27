@@ -87,7 +87,10 @@
                  
                 <tbody>
                  <?php
-                    foreach ($orders as $order): ?>
+                    //var_dump($orders );
+                    foreach ($orders as $order): 
+                        
+                        ?>
                     <tr>
 			
                         <th scope="row" class="table-check-cell"><input type="checkbox" name="selected[]" id="table-selected-1" value="1"></th>
@@ -103,12 +106,13 @@
                         
                         <!-- The class table-actions is designed for action icons -->
                         <td class="table-actions">
-                        <?php echo $this->Html->link("View", array('action' => 'view', $order['Order']['id']),array("class"=>"with-tip")); ?>
+                        <?php //echo $this->Html->link("View", array('action' => 'view', $order['Order']['id']),array("class"=>"with-tip")); ?>
                             <?php //echo $this->Html->link($this->Html->image("icons/fugue/pencil.png"), array('action' => 'edit', $order['order']['id']),array("class"=>"with-tip")); ?>
-                            <?php //echo $this->Form->postLink($this->Html->image("icons/fugue/cross-circle.png"), array('action' => 'delete', $order['order']['id']),array("class"=>"with-tip"), __('Are you sure you want to delete # %s?', $order['order']['id'])); ?>
-							
-							<a href="#" title="Edit" class="with-tip"><?=$this->Html->image("icons/fugue/pencil.png")?></a>
-                        <a href="#" title="Delete" class="with-tip"><?=$this->Html->image("icons/fugue/cross-circle.png")?></a>
+                            <?php echo $this->Form->postLink($this->Html->image("icons/fugue/cross-circle.png"), 
+                                                             array('action' => 'delete', $order['Order']['id']),
+                                                             array("class"=>"with-tip",'escape' => false), 
+                                                             __('Are you sure you want to delete # %s?', $order['Order']['id']));?>
+                        
                             
                         </td>
             
