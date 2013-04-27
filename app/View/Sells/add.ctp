@@ -43,6 +43,7 @@
 		document.getElementById('client-modal').className = 'no-modal';
 			
 	}
+	document.getElementById("id_home").className = "home current";
 </script>
 <article class="container_12">
     
@@ -179,8 +180,7 @@
                             <p><?=$this->Form->input('subtotal', array("type"=>"text")); ?></p>
                            
                             <p><?=$this->Form->input('iva', array("type"=>"text")); ?></p>
-                            <p><?=$this->Form->input('total', array("type"=>"text")); ?></p>
-                            <p><?=$this->Form->input('Product.0.id'); ?></p>
+                            <p><?=$this->Form->input('total', array("type"=>"text")); ?></p>                            
                              <input type="submit" value="Aceptar" class="big-button">
                         </fieldset>
                        

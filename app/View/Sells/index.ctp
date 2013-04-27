@@ -1,3 +1,6 @@
+<script>
+document.getElementById("id_home").className = "home current";
+</script>
 <!-- Content -->
 	<article class="container_12">
     

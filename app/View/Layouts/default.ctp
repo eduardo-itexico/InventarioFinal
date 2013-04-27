@@ -286,14 +286,16 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 	<nav id="main-nav">
 		
 		<ul class="container_12">
-			<li class="home current"><?=$this->html->link("Nueva Venta",array("controller"=>"sells", 'action' => 'index')); ?>
+			<li id="id_home" class="home"><a href="#" title="Ventas">Ventas</a>
 				<ul>
+                	<li><?=$this->html->link("Ventas",array("controller"=>"sells", 'action' => 'index')); ?></li>
 					<li><?=$this->html->link("Nueva Venta",array("controller"=>"sells","action"=>"add"));?><!--<a href="#" title="Dashboard">Dashboard</a>--></li>
-					<li><?=$this->html->link("Clientes",array("controller"=>"customers", 'action' => 'index'));?></li>
-                    <li><?=$this->html->link("Nuevos Cliente",array("controller"=>"customers","action"=>"add"));?></li>
-                    <li><?=$this->html->link("Usuarios",array("controller"=>"users", 'action' => 'index'));?></li>
-                    <li><?=$this->html->link("Nuevos Usuario",array("controller"=>"users","action"=>"add"));?></li>
-                    <li class="with-menu"><?=$this->html->link("Productos",array("controller"=>"products", 'action' => 'index'));?>
+                    
+				</ul>
+			</li>
+            <li id="id_products" class="products"><a href="#" title="Productos">Productos</a>
+				<ul>
+					<li class="with-menu"><?=$this->html->link("Productos",array("controller"=>"products", 'action' => 'index'));?>
                     <div class="menu">
 							<?=$this->Html->image("menu-open-arrow.png");?><!--<img src="images/menu-open-arrow.png" width="16" height="16">-->
 							<ul>
@@ -344,15 +346,23 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
                     <li><?=$this->html->link("Nuevos Productos",array("controller"=>"products","action"=>"add"));?></li>
 				</ul>
 			</li>
-			<li class="write"><a href="#" title="Write">Write</a>
+            <li id="id_customer" class="customer"><a href="#" title="Clientes">Clientes</a>
 				<ul>
-					<li><a href="#" title="Articles">Articles</a></li>
-					<li><a href="#" title="Add article">Add article</a></li>
-					<li><a href="#" title="Posts">Posts</a></li>
-					<li><a href="#" title="Add post">Add post</a></li>
+               	 	<li><?=$this->html->link("Clientes",array("controller"=>"customers", 'action' => 'index'));?></li>
+					<li><?=$this->html->link("Nuevos Cliente",array("controller"=>"customers","action"=>"add"));?></li>
 				</ul>
 			</li>
-			<li class="comments"><?=$this->html->link("Ordenes",array("controller"=>"orders", 'action' => 'index')); ?>
+            <li id="id_users" class="users"><a href="#" title="Usuarios">Usuarios</a>
+				<ul>
+					<li><?=$this->html->link("Usuarios",array("controller"=>"users", 'action' => 'index'));?></li>
+					<li><?=$this->html->link("Nuevos Usuario",array("controller"=>"users","action"=>"add"));?></li>
+				</ul>
+			</li>
+			<li class="write"><a href="#" title="Facturacion">Facturacion</a>
+				<ul>
+				</ul>
+			</li>
+			<!--<li class="comments"><?=$this->html->link("Ordenes",array("controller"=>"orders", 'action' => 'index')); ?>
 				<ul>
 					<li><a href="#" title="Manage">Manage</a></li>
 					<li><a href="#" title="Spams">Spams</a></li>
@@ -365,21 +375,15 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 					<li><a href="#" title="Manage">Manage</a></li>
 					<li><a href="#" title="Settings">Settings</a></li>
 				</ul>
-			</li>
-			<li class="users"><a href="#" title="Users">Users</a>
-				<ul>
-					<li><a href="#" title="Browse">List</a></li>
-					<li><a href="#" title="Add user">Add user</a></li>
-					<li><a href="#" title="Settings">Settings</a></li>
-				</ul>
-			</li>
-			<li class="stats"><a href="#" title="Reportes">Reportes</a>
+			</li>-->
+			
+			<li id="id_stats" class="stats"><a href="#" title="Reportes">Reportes</a>
             	<ul>
 					<li><?=$this->html->link("Ventas",array("controller"=>"reports", 'action' => 'index')); ?></li>
 				</ul>
             </li>
-			<li class="settings"><a href="#" title="Settings">Settings</a></li>
-			<li class="backup"><a href="#" title="Backup">Backup</a></li>
+			<!--<li class="settings"><a href="#" title="Settings">Settings</a></li>
+			<li class="backup"><a href="#" title="Backup">Backup</a></li>-->
 		</ul>
 	</nav>
 	<!-- End main nav -->
@@ -546,10 +550,10 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 			<li><a href="login.php" class="button red" title="Logout"><span class="smaller">Salir</span></a></li>
 		</ul>
 		
-		<ul id="breadcrumb">
+		<!--<ul id="breadcrumb">
 			<li><a href="#" title="Home">Home</a></li>
 			<li><a href="#" title="Dashboard">Dashboard</a></li>
-		</ul>
+		</ul>-->
 	
 	</div></div>
 	<!-- End status bar -->

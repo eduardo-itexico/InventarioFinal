@@ -26,6 +26,9 @@
 		}
 	}
 	</script>
+	<script>
+document.getElementById("id_stats").className = "stats current";
+</script>
 	<!-- Content -->
 <article class="container_12">
     

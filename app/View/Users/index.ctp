@@ -1,4 +1,6 @@
-
+<script>
+document.getElementById("id_users").className = "users current";
+</script>
 	<!-- Content -->
 <article class="container_12">
     

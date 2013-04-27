@@ -236,6 +236,8 @@ nav {
 				transition: opacity 2s;
 			}
 			nav > ul > li.home, nav > ul > li.home > a { background-image: url(../img/icons/home_2states.png); }
+			nav > ul > li.products, nav > ul > li.products > a { background-image: url(../img/icons/ok_catalogo.png); }
+			nav > ul > li.customer, nav > ul > li.customer > a { background-image: url(../img/icons/ok_clientes.png); }
 			nav > ul > li.write, nav > ul > li.write > a { background-image: url(../img/icons/write_2states.png); }
 			nav > ul > li.comments, nav > ul > li.comments > a { background-image: url(../img/icons/comments_2states.png); }
 			nav > ul > li.medias, nav > ul > li.medias > a { background-image: url(../img/icons/medias_2states.png); }

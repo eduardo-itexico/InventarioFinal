@@ -1,4 +1,6 @@
-
+<script>
+document.getElementById("id_customer").className = "customer current";
+</script>
 	<article class="container_12">
 		<section class="grid_4">
 			<div class="block-border">

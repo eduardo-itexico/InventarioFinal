@@ -102,4 +102,31 @@ class SupliersController extends AppController {
 		$this->Session->setFlash(__('Suplier was not deleted'));
 		$this->redirect(array('action' => 'index'));
 	}
+        
+        
+        public function __searchSuplier($search){
+		$conditions["conditions"]["OR"]["Suplier.nombre LIKE"]  	= "%$search%"; 
+		$conditions["conditions"]["OR"]["Suplier.direccion LIKE"]  = "%$search%"; 
+		$conditions["conditions"]["OR"]["Suplier.ciudad LIKE"]  	= "%$search%"; 
+		$conditions["conditions"]["OR"]["Suplier.telefono LIKE"]  	= "%$search%";
+		$conditions["conditions"]["OR"]["Suplier.rfc LIKE"]  		= "%$search%"; 
+		$products = $this->Suplier->find('all',$conditions);
+		return $products;
+	}
+	/**
+	*
+	*/
+	public function searchJSON(){
+		try{
+			//var_dump($this->request->data);
+			$this->Suplier->recursive = 0;
+			$campo_busqueda = isset($this->request->data["Suplier"]["busqueda"])?
+											$this->request->data["Suplier"]["busqueda"]:
+											"";
+			$body["data"] = $this->__searchSuplier($campo_busqueda);
+		}catch(Exception $e){
+			echo $e->getMessage();
+		}
+		return new CakeResponse(array('body' => json_encode($body)));
+    }
 }

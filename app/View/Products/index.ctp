@@ -1,5 +1,6 @@
-
-	
+<script>
+document.getElementById("id_products").className = "products current";
+</script>
 <!-- Content -->
 <article class="container_12">
     
