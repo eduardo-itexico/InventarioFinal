@@ -19,8 +19,18 @@ class SupliersController extends AppController {
  * @return void
  */
 	public function index() {
-		$this->Suplier->recursive = 0;
-		$this->set('supliers', $this->paginate());
+            $this->Suplier->recursive = 0;
+            $supliers = $this->paginate();
+            if ($this->request->is('post')) {
+			$search = $this->request->data["simple-search"];
+			$conditions["conditions"]["OR"]["Suplier.nombre LIKE"]  	= "%$search%"; 
+			$conditions["conditions"]["OR"]["Suplier.direccion LIKE"]  = "%$search%"; 
+			$conditions["conditions"]["OR"]["Suplier.ciudad LIKE"]  	= "%$search%"; 
+			$conditions["conditions"]["OR"]["Suplier.telefono LIKE"]  	= "%$search%";
+			$conditions["conditions"]["OR"]["Suplier.rfc LIKE"]  		= "%$search%"; 
+			$supliers = $this->Suplier->find('all',$conditions);
+            }
+            $this->set('supliers',$supliers );
 	}
 
 /**

@@ -54,6 +54,7 @@ Sells.prototype.calculateSubtotal = function(){
         subtotal += parseFloat($(this).html());
     });
     $("#SellSubtotal").val(subtotal.toFixed(2));
+    //$("#SellDescuentoSell").val(subtotal.toFixed(2));
     $("#SellIva").val((subtotal*this.iva).toFixed(2));
     $("#SellTotal").val(((subtotal*this.iva)+subtotal).toFixed(2));
 };

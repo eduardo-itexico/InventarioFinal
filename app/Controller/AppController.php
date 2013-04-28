@@ -59,14 +59,15 @@ class AppController extends Controller {
         } 
     } 
     */
-    public function delete($id = null) {
-        
+    public function delete($id = null,$redirect = true) {
+            $direccion  = null;
+            $regreso    = true;
             if (!$this->request->is('post')) {
                     throw new MethodNotAllowedException();
             }
             //var_dump($this->uses);
             if(!empty($this->uses)){
-                $this->loadModel($this->uses[0]);
+                $model ? $this->loadModel($model) : $this->loadModel($this->uses[0]);
                 $modelo = $this->uses[0];
                 $modelo = $this->$modelo;
                 $modelo->id = $id;
@@ -80,13 +81,24 @@ class AppController extends Controller {
                 //exit(1);
                 if ($modelo->save($this->request->data)){
                     $this->Session->setFlash(__('Registro eliminado'));
-                    $this->redirect(array('action' => 'index'));
+                    $direccion = array('action' => 'index');
+                    //$this->redirect(array('action' => 'index'));
+                }else{
+                    $this->Session->setFlash(__('El registro no fue eliminado'));
+                    $direccion  = array('action' => 'index');
+                    $regreso    = false;
+                    //$this->redirect(array('action' => 'index'));
                 }
 
+            }else{
+                $this->Session->setFlash(__('El registro no fue eliminado'));
+                $direccion  = array('action' => 'index');
+                $regreso    = false;
+                //$this->redirect(array('action' => 'index'));
             }
-            $this->Session->setFlash(__('El registro no fue eliminado'));
-            $this->redirect(array('action' => 'index'));
-                     
+            
+            $redirect && $this->redirect($direccion);
+            return $regreso;         
                      
     }
 }

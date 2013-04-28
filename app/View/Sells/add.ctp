@@ -63,6 +63,7 @@
                             <!-- Left column -->
                             <div class="colx3-left-double">
                                 <?=$this->Form->input('date',array("type"=>"text","value"=>date("d-m-Y"),"disabled"=>"true")); ?>
+                                <?=$this->Form->input('status',array("type"=>"hidden","value"=>1)); ?>
                             </div>
                              
                             <!-- Right column -->
@@ -70,7 +71,7 @@
                                 <?=$this->Form->input('facturado'); ?>
                             </div>
                               
-        				</div>
+        		</div>
                         
     				</fieldset>
                     <fieldset>
@@ -178,7 +179,7 @@
                         <fieldset>
                             <legend>Desglose</legend>
                             <p><?=$this->Form->input('subtotal', array("type"=>"text")); ?></p>
-                           
+                            <!--<p><?php //echo$this->Form->input('descuento_sell', array("type"=>"text","label"=>"Descuento %")); ?></p>-->
                             <p><?=$this->Form->input('iva', array("type"=>"text")); ?></p>
                             <p><?=$this->Form->input('total', array("type"=>"text")); ?></p>                            
                              <input type="submit" value="Aceptar" class="big-button">

@@ -21,7 +21,7 @@ document.getElementById("id_supliers").className = "backup current";
 	</section>-->
 	<div class="block-border">
 	
-	    <div class="block-content no-padding">
+	    <div class="block-content">
 	        <h1>Proveedores</h1>
 	             
 	        <div class="block-controls">
@@ -37,7 +37,29 @@ document.getElementById("id_supliers").className = "backup current";
 				</li>
 	            </ul>
 	        </div>
-	    </div>
+                
+                <?php echo $this->Form->create('Suplier', array("id"=>"simple-list-form",'class'=>"form","action"=>"")); ?>
+                    
+                
+                <div class="columns">
+                    <div class="colx3-left-double">
+                        <label for="field16">Buscar</label>
+                        <p class="input-type-text">
+                            <input id="simple-search" type="text" title="Filter results" style="width:90%" value="" name="simple-search" >
+                            <?php echo $this->Html->image("icons/fugue/magnifier.png");
+                            ?>
+                        </p>
+              
+                    </div>
+                    <div class="colx3-right">
+                    	<?php echo $this->Form->end(__('Submit'), array("margin"=>"30px")); ?>
+                    </div>
+                </div>
+                <p></p>
+                
+                
+                
+	    
 		<table cellpadding="0" cellspacing="0" class="table" width="100%">
         <thead >
 		 <tr>
@@ -119,6 +141,7 @@ document.getElementById("id_supliers").className = "backup current";
 	<?php endforeach; ?>
 		</tbody>
 		</table>
+          </div>
 	</div>
 </article>
 

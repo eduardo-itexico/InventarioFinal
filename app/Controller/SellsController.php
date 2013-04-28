@@ -7,16 +7,38 @@ App::uses('AppController', 'Controller');
  */
 class SellsController extends AppController {
 
-        public $uses = array("Product","Sell","SellProduct","Stock");
+        public $uses = array("Sell","Product","SellProduct","Stock");
 /**
  * index method
  *
  * @return void
  */
 	public function index() {
-		$this->Sell->recursive = 0;
-         $this->paginate = array("order"=>array("Sell.id"=>"desc"));        
-		$this->set('sells', $this->paginate("Sell"));
+            $this->Sell->recursive = 0;
+            //$this->paginate = array("order"=>array("Sell.id"=>"desc"));        
+            $sells      = null;
+            $conditions = array();
+            $conditions["conditions"]["AND"]["Sell.status "]     = "1"; 
+            $conditions["order"]                                     = array("Sell.id"=>"desc");
+             if ($this->request->is('post')) {
+			$search = $this->request->data["simple-search"];
+			$conditions["conditions"]["OR"]["Customer.nombre LIKE"]     = "%$search%"; 
+			$conditions["conditions"]["OR"]["Customer.direccion LIKE"]  = "%$search%"; 
+			$conditions["conditions"]["OR"]["Customer.ciudad LIKE"]     = "%$search%"; 
+			$conditions["conditions"]["OR"]["Customer.telefono LIKE"]   = "%$search%";
+			$conditions["conditions"]["OR"]["Customer.rfc LIKE"]        = "%$search%"; 
+                        $conditions["conditions"]["OR"]["Sell.date >="]        = "$search"; 
+                        
+                        $conditions["order"]                                        = array("Sell.id"=>"desc");
+                        $this->paginate = $conditions;
+			$sells = $this->paginate('Sell');
+            }else{
+                
+                //$this->paginate = array("order"=>array("Sell.id"=>"desc"));   
+                $this->paginate = $conditions;   
+                $sells = $this->paginate("Sell");
+            }
+            $this->set('sells', $sells);
 	}
 
 /**
@@ -87,9 +109,10 @@ class SellsController extends AppController {
                         //var_dump($this->request->data);
                         //debug($_REQUEST);
                         $this->request->data["Sell"]["date"] = date("Y-m-d H:i:s");
+                        $this->request->data["Sell"]["status"] = '1';
                         if($this->Sell->validates()){
                             if ($this->Sell->save($this->request->data)){
-                                
+                                //Debugger::dump($this->__getLastQuery());
                                 $products = $this->__reorderProducts($this->request->data["Product"],
                                                                     $this->Sell->getLastInsertID());
                                 
@@ -97,8 +120,10 @@ class SellsController extends AppController {
                                     //debug($products);
                                     //$this->SellProduct->create();
                                     if($this->SellProduct->saveAll($products)){
+                                        //Debugger::dump($this->__getLastQuery());
                                     	$this->__decreaseStock($this->Sell->getLastInsertID());
                                         $this->Session->setFlash(__('Venta completa salvada'));   
+                                        
                                         $this->redirect(array('action' => 'index'));
                                     }else{
                                         $this->Session->setFlash(__('Problemas salvando la venta'));   
@@ -162,20 +187,58 @@ class SellsController extends AppController {
  * @param string $id
  * @return void
  */
-	public function delete($id = null) {
+        
+        public function delete($id = null) {
+            $dataSource = $this->Sell->getDataSource();
+            try{
+                $dataSource->begin();
+                
 		if (!$this->request->is('post')) {
 			throw new MethodNotAllowedException();
 		}
 		$this->Sell->id = $id;
 		if (!$this->Sell->exists()) {
-			throw new NotFoundException(__('Invalid sell'));
+			throw new NotFoundException(__('Invalid order'));
 		}
-		if ($this->Sell->delete()) {
-			$this->Session->setFlash(__('Sell deleted'));
-			$this->redirect(array('action' => 'index'));
-		}
-		$this->Session->setFlash(__('Sell was not deleted'));
+		if ($this->__increaseStock() && parent::delete($id,false)){
+                    $this->Session->setFlash(__('Venta eliminada'));
+                    $dataSource->commit();
+                    $this->redirect(array('action' => 'index'));
+		}else{
+                    $this->Session->setFlash(__('Problemas al eliminar la venta...'));
+                    $dataSource->rollback();  
+                    $this->redirect(array('action' => 'index'));
+                }
+            }catch(Exception $e){
+                
+                $this->Session->setFlash(__('No fue posible eliminar la venta'.$e->getMessage()));
+                $dataSource->rollback();    
 		$this->redirect(array('action' => 'index'));
+                
+            }
 	}
+        
+        public function __increaseStock(){
+            $retorno = true;
+            if($this->Sell->exists()){
+                $this->Sell->read();
+                //Debugger::dump($this->Order->data);
+                    $products = $this->Sell->data["SellProduct"];
+                    foreach ($products as $product){
+                            $row = $this->Stock->findByProductId($product["product_id"]);
+                            if($row){
+                                    $this->Stock->id = $row["Stock"]["id"];
+                                    $this->Stock->read();
+                                    if($this->Stock->exists()){
+                                            $this->Stock->data["Stock"]["actual"]= ($this->Stock->data["Stock"]["actual"] + $product["cantidad"]);
+                                            if(!$this->Stock->Save()){
+                                                $retorno = false;
+                                            }
+                                    }
+                            }
+                    }
+            }
+            return $retorno;
+        }
 	
 }

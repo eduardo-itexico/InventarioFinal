@@ -32,6 +32,11 @@ App::uses('Model', 'Model');
  */
 class AppModel extends Model {
     
+    public function getDataSource() {
+        return parent::getDataSource();
+    }
+    
+    
     public function getLastQuery() {
       $dbo = $this->getDatasource();
       $logs = $dbo->getLog();

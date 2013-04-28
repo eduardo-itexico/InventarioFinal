@@ -24,7 +24,7 @@ document.getElementById("id_home").className = "home current";
 	            </ul>
 	        </div>
             
-        	 <?php echo $this->Form->create('Unity', array("id"=>"simple-list-form",'class'=>"form","action"=>"")); ?>
+        	 <?php echo $this->Form->create('Sell', array("id"=>"simple-list-form",'class'=>"form","action"=>"")); ?>
                     
                 
                 <div class="columns">
@@ -144,9 +144,12 @@ document.getElementById("id_home").className = "home current";
                         <?php //echo $this->Html->link("View", array('action' => 'view', $sell['Sell']['id']),array("class"=>"with-tip")); ?>
                             <?php //echo $this->Html->link($this->Html->image("icons/fugue/pencil.png"), array('action' => 'edit', $sell['Sell']['id']),array("class"=>"with-tip")); ?>
                             <?php //echo $this->Form->postLink($this->Html->image("icons/fugue/cross-circle.png"), array('action' => 'delete', $sell['Sell']['id']),array("class"=>"with-tip"), __('Are you sure you want to delete # %s?', $sell['Sell']['id'])); ?>
+				 <?php echo $this->Form->postLink($this->Html->image("icons/fugue/cross-circle.png"), 
+                                                             array('action' => 'delete', $sell['Sell']['id']),
+                                                             array("class"=>"with-tip",'escape' => false), 
+                                                             __('Are you sure you want to delete # %s?', $sell['Sell']['id']));?>			
 							
-							<!--<a href="#" title="Edit" class="with-tip"><?=$this->Html->image("icons/fugue/pencil.png")?></a>-->
-                        <a href="#" title="Delete" class="with-tip"><?=$this->Html->image("icons/fugue/cross-circle.png")?></a>
+                        
                             
                         </td>
             

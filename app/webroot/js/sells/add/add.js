@@ -50,7 +50,11 @@ $(document).ready(function()
         $("#SellTotal").val(((subtotal*0.16)+subtotal).toFixed(2));
         
     };
-    
+    /*
+    $("#SellDescuentoSell").change(function(){
+           
+    });
+    */
     $("#ProductSearchJSONForm").submit(function(){
         //event.preventDefault();
         //console.log("Aqui llego");
@@ -180,7 +184,7 @@ $(document).ready(function()
         return false;
     });
 	
-
+      
 	
 	/*
 	* Seacrh Customer
