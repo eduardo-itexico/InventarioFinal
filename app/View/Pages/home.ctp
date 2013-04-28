@@ -212,7 +212,7 @@
 
 	<section id="message">
 		<div class="block-border"><div class="block-content no-title dark-bg">
-			<p class="mini-infos">For demo website, use <b>admin</b> / <b>admin</b></p>
+			<p class="mini-infos">Sistema - <b>Tornillos Lizar</b></p>
 		</div></div>
 	</section>
 	

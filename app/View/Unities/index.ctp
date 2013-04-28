@@ -52,15 +52,37 @@ document.getElementById("id_products").className = "products current";
                          
                             <!-- Table sorting arrows -->
                             <span class="column-sort">
-                                <a href="#" title="Sort up" class="sort-up active"></a>
-                                <a href="#" title="Sort down" class="sort-down"></a>
+                                <?php echo $this->Paginator->sort('id','<span>',array('sort'=>'id','direction' => 'asc',
+	                															"escape"=>false,
+	                															"class"=> 
+	                															($this->Paginator->sortDir() == "asc" && 
+	                															 $this->Paginator->sortKey() == 'id' ? "active " : "") . "sort-up" ))?>
+						<?php echo $this->Paginator->sort('id','<span>',array('sort'=>'id','direction' => 'desc',
+	                															"escape"=>false,
+																				"class"=>
+																				($this->Paginator->sortDir() == "desc"&&
+																				$this->Paginator->sortKey() == 'id' ? "active " : "") . "sort-down" ))?>
                             </span>
                              
-                            <?php echo $this->Paginator->sort('id'); ?>
+                            <?php echo "ID";//$this->Paginator->sort('id'); ?>
                         </th>
-                        <th scope="col"><?php echo $this->Paginator->sort('Name'); ?></th>
+                        <th scope="col">
+                        <span class="column-sort">
+                                <?php echo $this->Paginator->sort('Name','<span>',array('sort'=>'Name','direction' => 'asc',
+	                															"escape"=>false,
+	                															"class"=> 
+	                															($this->Paginator->sortDir() == "asc" && 
+	                															 $this->Paginator->sortKey() == 'Name' ? "active " : "") . "sort-up" ))?>
+						<?php echo $this->Paginator->sort('Name','<span>',array('sort'=>'Name','direction' => 'desc',
+	                															"escape"=>false,
+																				"class"=>
+																				($this->Paginator->sortDir() == "desc"&&
+																				$this->Paginator->sortKey() == 'Name' ? "active " : "") . "sort-down" ))?>
+                            </span>
+						<?php echo "Nombre";//$this->Paginator->sort('Name'); ?>
+                        </th>
                         
-                        <th scope="col" class="table-actions">Actions</th>
+                        <th scope="col" class="table-actions">Acciones</th>
                     </tr>
                 </thead>
              
@@ -68,10 +90,10 @@ document.getElementById("id_products").className = "products current";
                     <tr>
                         <td colspan="3"><img src="images/icons/fugue/arrow-curve-000-left.png" width="16" height="16" class="picto"> <?php
 	echo $this->Paginator->counter(array(
-	'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
+	'format' => __('Pagina {:page} de {:pages}, mostrando {:current} unidades de {:count} en total')
 	));
 	?></td>
-                        <td><a href="#" class="button"><?=$this->Html->image("icons/fugue/cross-circle.png")?> delete all</a></td>
+                        <td></td>
                     </tr>
                 </tfoot>
                  
@@ -84,10 +106,10 @@ document.getElementById("id_products").className = "products current";
 						<td><?php echo h($unity['Unity']['name']); ?>&nbsp;</td>
                         <!-- The class table-actions is designed for action icons -->
                         <td class="table-actions">
-                        <?php echo $this->Html->link(__('View'), array('action' => 'view', $unity['Unity']['id'])); ?>
+                        <?php //echo $this->Html->link(__('View'), array('action' => 'view', $unity['Unity']['id'])); ?>
 							<?php // echo $this->Html->link(__('Edit'), array('action' => 'edit', $unity['Unity']['id'])); ?>
 							<?php //echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $unity['Unity']['id']), null, __('Are you sure you want to delete # %s?', $unity['Unity']['id'])); ?>
-                            <a href="#" title="Edit" class="with-tip"><?=$this->Html->image("icons/fugue/pencil.png")?></a>
+                            <!--<a href="#" title="Edit" class="with-tip"><?=$this->Html->image("icons/fugue/pencil.png")?></a>-->
                             <a href="#" title="Delete" class="with-tip"><?=$this->Html->image("icons/fugue/cross-circle.png")?></a>
                         </td>
 						

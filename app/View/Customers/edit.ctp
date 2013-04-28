@@ -1,5 +1,8 @@
+<script>
+document.getElementById("id_customer").className = "customer current";
+</script>
 <article class="container_12">
-		<section class="grid_4">
+		<!--<section class="grid_4">
                     <div class="block-border">
 			<div class="block-content">
 				<h1><?php echo __('Acciones'); ?></h1>
@@ -14,15 +17,14 @@
 				</ul>
 			</div>
                     </div>
-		</section>
-		<section class="grid_8">
+		</section>-->
 			<div class="block-border">
 				
 				    
 				<?php echo $this->Form->create('Customer',array('class'=>"block-content form")); ?>
-				<h1>Nuevo proveedor</h1>
+				<h1>Editar Cliente</h1>
 					<fieldset>
-						<legend><?php echo __('Proveedor'); ?></legend>
+						
 					<?php
 						echo $this->Form->input('id',array("type"=>"hidden"));
 						echo $this->Form->input('nombre',array("type"=>"textarea"));
@@ -38,5 +40,4 @@
 				
 				
 			</div>
-		</section>
 	</article>

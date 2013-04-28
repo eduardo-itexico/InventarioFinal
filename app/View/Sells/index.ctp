@@ -54,26 +54,59 @@ document.getElementById("id_home").className = "home current";
                          
                             <!-- Table sorting arrows -->
                             <span class="column-sort">
-                                <a href="#" title="Sort up" class="sort-up active"></a>
-                                <a href="#" title="Sort down" class="sort-down"></a>
+                                <?php echo $this->Paginator->sort('id','<span>',array('sort'=>'id','direction' => 'asc',
+	                															"escape"=>false,
+	                															"class"=> 
+	                															($this->Paginator->sortDir() == "asc" && 
+	                															 $this->Paginator->sortKey() == 'id' ? "active " : "") . "sort-up" ))?>
+						<?php echo $this->Paginator->sort('id','<span>',array('sort'=>'id','direction' => 'desc',
+	                															"escape"=>false,
+																				"class"=>
+																				($this->Paginator->sortDir() == "desc"&&
+																				$this->Paginator->sortKey() == 'id' ? "active " : "") . "sort-down" ))?>
                             </span>
                              
-                            <?php echo $this->Paginator->sort('id'); ?>
+                            <?php echo "ID" ?>
                         </th>
-                        <th scope="col"><?php echo $this->Paginator->sort('subtotal'); ?></th>
-                        <th scope="col"><?php echo $this->Paginator->sort('iva'); ?></th>
+                        <th scope="col"><?php echo "Sub-Total";//$this->Paginator->sort('subtotal'); ?></th>
+                        <th scope="col"><?php echo "IVA";//$this->Paginator->sort('iva'); ?></th>
                         <th scope="col">
                             <span class="column-sort">
-                                <a href="#" title="Sort up" class="sort-up"></a>
-                                <a href="#" title="Sort down" class="sort-down"></a>
+                                <?php echo $this->Paginator->sort('total','<span>',array('sort'=>'total','direction' => 'asc',
+	                															"escape"=>false,
+	                															"class"=> 
+	                															($this->Paginator->sortDir() == "asc" && 
+	                															 $this->Paginator->sortKey() == 'total' ? "active " : "") . "sort-up" ))?>
+						<?php echo $this->Paginator->sort('total','<span>',array('sort'=>'total','direction' => 'desc',
+	                															"escape"=>false,
+																				"class"=>
+																				($this->Paginator->sortDir() == "desc"&&
+																				$this->Paginator->sortKey() == 'total' ? "active " : "") . "sort-down" ))?>
                             </span>
-                            <?php echo $this->Paginator->sort('total'); ?>
+                            <?php echo "Total";//$this->Paginator->sort('total'); ?>
                         </th>
-                        <th scope="col"><?php echo $this->Paginator->sort('customers_id'); ?></th>
-                        <th scope="col"><?php echo $this->Paginator->sort('users_id'); ?></th>
-                        <th scope="col"><?php echo $this->Paginator->sort('date'); ?></th>
-                        <th scope="col"><?php echo $this->Paginator->sort('facturado'); ?></th>
-                        <th scope="col" class="table-actions">Actions</th>
+                        <th scope="col">
+	
+						<?php echo "Cliente";//$this->Paginator->sort('customers_id'); ?>
+                        </th>
+                        <th scope="col"><?php echo "Usuario";//$this->Paginator->sort('users_id'); ?></th>
+                        <th scope="col">
+                         <span class="column-sort">
+                                <?php echo $this->Paginator->sort('date','<span>',array('sort'=>'date','direction' => 'asc',
+	                															"escape"=>false,
+	                															"class"=> 
+	                															($this->Paginator->sortDir() == "asc" && 
+	                															 $this->Paginator->sortKey() == 'date' ? "active " : "") . "sort-up" ))?>
+						<?php echo $this->Paginator->sort('date','<span>',array('sort'=>'date','direction' => 'desc',
+	                															"escape"=>false,
+																				"class"=>
+																				($this->Paginator->sortDir() == "desc"&&
+																				$this->Paginator->sortKey() == 'date' ? "active " : "") . "sort-down" ))?>
+                            </span>
+							<?php echo "Fecha";//$this->Paginator->sort('date'); ?>
+                        </th>
+                        <th scope="col"><?php echo "Facturado";//$this->Paginator->sort('facturado'); ?></th>
+                        <th scope="col" class="table-actions">Acciones</th>
                     </tr>
                 </thead>
              
@@ -81,10 +114,10 @@ document.getElementById("id_home").className = "home current";
                     <tr>
                         <td colspan="9"><?=$this->Html->image("icons/fugue/arrow-curve-000-left.png",array("class"=>"picto"))?> <?php
                 echo $this->Paginator->counter(array(
-                'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
+                'format' => __('Pagina {:page} de {:pages}, mostrando {:current} ventas de {:count} en total')
                 ));
                 ?></td>
-                        <td><a href="#" class="button"><?=$this->Html->image("icons/fugue/cross-circle.png")?> delete all</a></td>
+                        <td><!--<a href="#" class="button"><?=$this->Html->image("icons/fugue/cross-circle.png")?> delete all</a>--></td>
                     </tr>
                 </tfoot>
                  
@@ -108,11 +141,11 @@ document.getElementById("id_home").className = "home current";
                         <td><?php echo h($sell['Sell']['facturado']); ?>&nbsp;</td>
                         <!-- The class table-actions is designed for action icons -->
                         <td class="table-actions">
-                        <?php echo $this->Html->link("View", array('action' => 'view', $sell['Sell']['id']),array("class"=>"with-tip")); ?>
+                        <?php //echo $this->Html->link("View", array('action' => 'view', $sell['Sell']['id']),array("class"=>"with-tip")); ?>
                             <?php //echo $this->Html->link($this->Html->image("icons/fugue/pencil.png"), array('action' => 'edit', $sell['Sell']['id']),array("class"=>"with-tip")); ?>
                             <?php //echo $this->Form->postLink($this->Html->image("icons/fugue/cross-circle.png"), array('action' => 'delete', $sell['Sell']['id']),array("class"=>"with-tip"), __('Are you sure you want to delete # %s?', $sell['Sell']['id'])); ?>
 							
-							<a href="#" title="Edit" class="with-tip"><?=$this->Html->image("icons/fugue/pencil.png")?></a>
+							<!--<a href="#" title="Edit" class="with-tip"><?=$this->Html->image("icons/fugue/pencil.png")?></a>-->
                         <a href="#" title="Delete" class="with-tip"><?=$this->Html->image("icons/fugue/cross-circle.png")?></a>
                             
                         </td>

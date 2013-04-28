@@ -1,5 +1,8 @@
+<script>
+document.getElementById("id_supliers").className = "backup current";
+</script>
 <article class="container_12">
-	<section class="grid_4">
+	<!--<section class="grid_4">
 	<div class="block-border">
             <div class="block-content">
                 <h1><?php echo __('Acciones'); ?></h1>
@@ -15,8 +18,7 @@
 		
             </div>
 	</div>
-	</section>
-<section class="grid_8">
+	</section>-->
 	<div class="block-border">
 	
 	    <div class="block-content no-padding">
@@ -37,6 +39,7 @@
 	        </div>
 	    </div>
 		<table cellpadding="0" cellspacing="0" class="table" width="100%">
+        <thead >
 		 <tr>
 	            <!-- This is a special cell for loading statuses - see below for more -->
 	            <th class="black-cell"><span class="loading"></span></th>
@@ -78,7 +81,7 @@
 	            <?php endforeach; ?>
 	
 	            
-	            <th scope="col" class="table-actions">Actions</th>
+	            <th scope="col" class="table-actions">Acciones</th>
 	        </tr>
 	    </thead>
 	    
@@ -86,10 +89,10 @@
 	        <tr>
 	            <td colspan="7"><?= $this->Html->image("icons/fugue/arrow-curve-000-left.png", array("class"=>"picto"))?><b>Total:</b> <?php
 		echo $this->Paginator->counter(array(
-		'format' => __('Page {:page} of {:pages} ')
+		'format' => __('Pagina {:page} de {:pages}, mostrando {:current} proveedores de {:count} en total ')
 		));
 		?></td>
-	            <td><a href="#" class="button"><?= $this->Html->image("icons/fugue/cross-circle.png")?> delete all</a></td>
+	            <td></td>
 	        </tr>
 	    </tfoot>
 	    <tbody>
@@ -117,6 +120,5 @@
 		</tbody>
 		</table>
 	</div>
-</section>
 </article>
 

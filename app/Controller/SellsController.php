@@ -15,7 +15,7 @@ class SellsController extends AppController {
  */
 	public function index() {
 		$this->Sell->recursive = 0;
-                
+         $this->paginate = array("order"=>array("Sell.id"=>"desc"));        
 		$this->set('sells', $this->paginate("Sell"));
 	}
 

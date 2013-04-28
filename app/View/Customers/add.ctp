@@ -2,7 +2,7 @@
 document.getElementById("id_customer").className = "customer current";
 </script>
 	<article class="container_12">
-		<section class="grid_4">
+		<!--<section class="grid_4">
 			<div class="block-border">
 				<div class="block-content">
 					<h1><?php echo __('Acciones'); ?></h1>
@@ -17,15 +17,13 @@ document.getElementById("id_customer").className = "customer current";
 					</ul>
 				</div>
 				</div>
-		</section>
-		<section class="grid_8">
+		</section>-->
 			<div class="block-border">
 				
 				    
 				<?php echo $this->Form->create('Customer',array('class'=>"block-content form")); ?>
-				<h1>Nuevo cliente</h1>
-					<fieldset>
-						<legend><?php echo __('Clientes'); ?></legend>
+				<h1>Nuevo Cliente</h1>
+					
 					<?php
 						echo $this->Form->input('nombre',array("type"=>"textarea"));
 						echo $this->Form->input('direccion',array("type"=>"textarea"));
@@ -33,12 +31,10 @@ document.getElementById("id_customer").className = "customer current";
 						echo $this->Form->input('rfc');
 						echo $this->Form->input('ciudad');
 					?>
-					</fieldset>
 					<fieldset class="grey-bg no-margin">
 						<?php echo $this->Form->end(__('Submit')); ?>	
 					</fieldset>
 				
 				
 			</div>
-		</section>
 	</article>

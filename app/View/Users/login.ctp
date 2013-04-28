@@ -14,11 +14,11 @@
 		// Check fields
 		if (!isset($_POST['login']) or strlen($_POST['login']) == 0)
 		{
-			$error = 'Please enter your user name';
+			$error = 'por favor introdusca su usuario';
 		}
 		elseif (!isset($_POST['pass']) or strlen($_POST['pass']) == 0)
 		{
-			$error = 'Please enter your password';
+			$error = 'Por favor introdusco su password';
 		}
 		else
 		{
@@ -29,7 +29,7 @@
 			
 			if (!$valid)
 			{
-				$error = 'Wrong user/password, please try again';
+				$error = 'Datos inválidos, por favor intente de nuevo';
 			}
 		}
 		
@@ -118,11 +118,11 @@
 				
 				if (!login || login.length == 0)
 				{
-					$('#login-block').removeBlockMessages().blockMessage('Please enter your user name', {type: 'warning'});
+					$('#login-block').removeBlockMessages().blockMessage('Por favor introdusca su usuario', {type: 'warning'});
 				}
 				else if (!pass || pass.length == 0)
 				{
-					$('#login-block').removeBlockMessages().blockMessage('Please enter your password', {type: 'warning'});
+					$('#login-block').removeBlockMessages().blockMessage('Por favor introdusca su password', {type: 'warning'});
 				}
 				else
 				{
@@ -197,7 +197,7 @@
 					});
 					
 					// Message
-					$('#login-block').removeBlockMessages().blockMessage('Please wait, cheking login...', {type: 'loading'});
+					$('#login-block').removeBlockMessages().blockMessage('Por favor espere, validando datos...', {type: 'loading'});
 				}
 			});
 		});
@@ -214,7 +214,7 @@
 
 	<section id="message">
 		<div class="block-border"><div class="block-content no-title dark-bg">
-			<p class="mini-infos">For demo website, use <b>admin</b> / <b>admin</b></p>
+			<p class="mini-infos">Sistema - <b>Tornillos Lizar</b></p>
 		</div></div>
 	</section>
 	
@@ -225,8 +225,8 @@
 			IE7 compatibility: if you want to remove the <h1>, 
 			add style="zoom:1" to the above .block-content div
 			-->
-			<h1>Admin</h1>
-			<div class="block-header">Please login</div>
+			<h1>Iniciar Sesion</h1>
+			<div class="block-header">Favor de introducir sus datos</div>
 				
 			<?php
 			
@@ -249,22 +249,22 @@
 				}
 				
 				?><p class="inline-small-label">
-					<label for="login"><span class="big">User name</span></label>
+					<label for="login"><span class="big">Usuario</span></label>
 					<input type="text" name="login" id="login" class="full-width" value="<?php if (isset($_POST['login'])) { echo htmlspecialchars($_POST['login']); } ?>">
 				</p>
 				<p class="inline-small-label">
-					<label for="pass"><span class="big">Password</span></label>
+					<label for="pass"><span class="big">Contraseña</span></label>
 					<input type="password" name="pass" id="pass" class="full-width" value="">
 				</p>
 				
-				<button type="submit" class="float-right">Login</button>
+				<button type="submit" class="float-right">Entrar</button>
 				<p class="input-height">
-					<input type="checkbox" name="keep-logged" id="keep-logged" value="1" class="mini-switch"<?php if (!isset($_POST['keep-logged']) or $_POST['keep-logged'] == 1) { echo ' checked="checked"'; } ?>>
-					<label for="keep-logged" class="inline">Keep me logged in</label>
+				<!--<input type="checkbox" name="keep-logged" id="keep-logged" value="1" class="mini-switch"<?php if (!isset($_POST['keep-logged']) or $_POST['keep-logged'] == 1) { echo ' checked="checked"'; } ?>>
+					<label for="keep-logged" class="inline">Keep me logged in</label>-->
 				</p>
 			</form>
 			
-			<form class="form" id="password-recovery" method="post" action="">
+			<!--<form class="form" id="password-recovery" method="post" action="">
 				<fieldset class="grey-bg no-margin collapse">
 					<legend><a href="#">Lost password?</a></legend>
 					<p class="input-with-button">
@@ -273,7 +273,7 @@
 						<button type="button">Send</button>
 					</p>
 				</fieldset>
-			</form>
+			</form>-->
 		</div></div>
 	</section>
 

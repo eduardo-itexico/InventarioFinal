@@ -245,6 +245,7 @@ nav {
 			nav > ul > li.stats, nav > ul > li.stats > a { background-image: url(../img/icons/stats_2states.png); }
 			nav > ul > li.settings, nav > ul > li.settings > a { background-image: url(../img/icons/settings_2states.png); }
 			nav > ul > li.backup, nav > ul > li.backup > a { background-image: url(../img/icons/backup_2states.png); }
+			nav > ul > li.orders, nav > ul > li.orders > a { background-image: url(../img/icons/ok-order.png); }
 			
 			nav > ul > li.current {
 				padding: 0 8px 13px 8px;

@@ -49,7 +49,7 @@
     
     <div class="block-border">
         <div class="block-content">
-            <h1>Ventas</h1>
+            <h1>Nueva Venta</h1>
             <div class="sells form">
             <div class="columns">
      			
@@ -62,7 +62,7 @@
      
                             <!-- Left column -->
                             <div class="colx3-left-double">
-                                <?=$this->Form->input('date'); ?>
+                                <?=$this->Form->input('date',array("type"=>"text","value"=>date("d-m-Y"),"disabled"=>"true")); ?>
                             </div>
                              
                             <!-- Right column -->
@@ -134,7 +134,7 @@
                                 <th scope="col">Cantidad</th>
                                 <th scope="col">Descto %</th>
                                 <th scope="col">Subtotal</th>
-                                <th scope="col" class="table-actions">Actions</th>
+                                <th scope="col" class="table-actions">Acciones</th>
                             </tr>
                         </thead>
 
@@ -191,21 +191,6 @@
             </div>
             </div>
             
-            
-    
-            <div class="actions">
-                <h3><?php echo __('Actions'); ?></h3>
-                <ul>
-            
-                    <li><?php echo $this->Html->link(__('List Sells'), array('action' => 'index')); ?></li>
-                    <li><?php echo $this->Html->link(__('List Customers'), array('controller' => 'customers', 'action' => 'index')); ?> </li>
-                    <li><?php echo $this->Html->link(__('New Customers'), array('controller' => 'customers', 'action' => 'add')); ?> </li>
-                    <li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>
-                    <li><?php echo $this->Html->link(__('New Users'), array('controller' => 'users', 'action' => 'add')); ?> </li>
-                    <li><?php echo $this->Html->link(__('List Products'), array('controller' => 'products', 'action' => 'index')); ?> </li>
-                    <li><?php echo $this->Html->link(__('New Product'), array('controller' => 'products', 'action' => 'add')); ?> </li>
-                </ul>
-            </div>
 		</div>
 	</div>
     
@@ -245,7 +230,7 @@
                                 <th scope="col">Cantidad</th>
                                 <th scope="col">Descto %</th>
                                 <th scope="col">Subtotal</th>
-                                <th scope="col" class="table-actions">Actions</th>
+                                <th scope="col" class="table-actions">Acciones</th>
                             </tr>
                         </thead>
 
@@ -293,7 +278,7 @@
                                 <th scope="col">Nombre</th>
                                 <th scope="col">RFC</th>
                                 <th scope="col">Telefono</th>
-                                <th scope="col" class="table-actions">Actions</th>
+                                <th scope="col" class="table-actions">Acciones</th>
                             </tr>
                         </thead>
 

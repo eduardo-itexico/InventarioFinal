@@ -1,9 +1,13 @@
+<script>
+document.getElementById("id_orders").className = "orders current";
+</script>
 <!-- Content -->
 <?php echo $this->Html->css('orders/add/add')?>
 <?php echo $this->Html->script('common')?>
 <?php echo $this->Html->script('standard')?>
 <?php echo $this->Html->script('jquery.modal')?>
 <?php echo $this->Html->script('orders/orders')?>
+<?php echo $this->Html->script('orders/add/add')?>
 
 <style>
 	.modal {
@@ -54,7 +58,7 @@
     
     <div class="block-border">
         <div class="block-content">
-            <h1>Ventas</h1>
+            <h1>Nueva Orden</h1>
             <div class="sells form">
             <div class="columns">
      			

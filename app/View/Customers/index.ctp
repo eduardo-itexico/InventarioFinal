@@ -3,7 +3,7 @@ document.getElementById("id_customer").className = "customer current";
 </script>
 <article class="container_12">
 
-	<section class="grid_4">
+	<!--<section class="grid_4">
 	<div class="block-border">
             <div class="block-content">
                 <h1><?php echo __('Acciones'); ?></h1>
@@ -19,8 +19,8 @@ document.getElementById("id_customer").className = "customer current";
 		
             </div>
 	</div>
-	</section>
-<section class="grid_8">
+	</section>-->
+
 	<div class="block-border">
 
 	
@@ -63,6 +63,7 @@ document.getElementById("id_customer").className = "customer current";
                 <p></p>
                 
 		<table cellpadding="0" cellspacing="0" class="table" width="100%">
+        <thead>
 		 <tr>
 	            <!-- This is a special cell for loading statuses - see below for more -->
 	            <th class="black-cell"><span class="loading"></span></th>
@@ -104,7 +105,7 @@ document.getElementById("id_customer").className = "customer current";
 	            <?php endforeach; ?>
 	
 	            
-	            <th scope="col" class="table-actions">Actions</th>
+	            <th scope="col" class="table-actions">Acciones</th>
 	        </tr>
 	    </thead>
 	    
@@ -112,10 +113,10 @@ document.getElementById("id_customer").className = "customer current";
 	        <tr>
 	            <td colspan="7"><?= $this->Html->image("icons/fugue/arrow-curve-000-left.png", array("class"=>"picto"))?><b>Total:</b> <?php
 		echo $this->Paginator->counter(array(
-		'format' => __('Page {:page} of {:pages} ')
+		'format' => __('Pagina {:page} de {:pages}, mostrando {:current} clientes de {:count} en total')
 		));
 		?></td>
-	            <td><a href="#" class="button"><?= $this->Html->image("icons/fugue/cross-circle.png")?> delete all</a></td>
+	            <td></td>
 	        </tr>
 	    </tfoot>
 	    <tbody>
@@ -144,7 +145,7 @@ document.getElementById("id_customer").className = "customer current";
 		</table>
         </div>
 	</div>
-</section>
+
 </article>
 
 <!-- End content -->

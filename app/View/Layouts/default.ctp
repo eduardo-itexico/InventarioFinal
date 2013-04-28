@@ -383,6 +383,20 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 					<li><?=$this->html->link("Ventas",array("controller"=>"reports", 'action' => 'index')); ?></li>
 				</ul>
             </li>
+            
+            <li id="id_orders" class="orders"><a href="#" title="Ordenes">Ordenes</a>
+            	<ul>
+					<li><?=$this->html->link("Ordenes",array("controller"=>"orders", 'action' => 'index')); ?></li>
+					<li><?=$this->html->link("Nueva Orden",array("controller"=>"orders", "action"=>"add"));?></li>
+				</ul>
+            </li>
+            
+            <li id="id_supliers" class="backup"><a href="#" title="Proveedores">Proveedores</a>
+            	<ul>
+					<li><?=$this->html->link("Proveedores",array("controller"=>"supliers", 'action' => 'index')); ?></li>
+					<li><?=$this->html->link("Nuevo Proveedor",array("controller"=>"supliers", "action"=>"add"));?></li>
+				</ul>
+            </li>
 			<!--<li class="settings"><a href="#" title="Settings">Settings</a></li>
 			<li class="backup"><a href="#" title="Backup">Backup</a></li>-->
 		</ul>
@@ -595,7 +609,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 			?>
 	
 	</div>
-	<?php echo $this->element('sql_dump'); ?>
+	<?php //echo $this->element('sql_dump'); ?>
 <!--[if lt IE 8]></div><![endif]-->
 <!--[if lt IE 9]></div><![endif]-->
 </body>

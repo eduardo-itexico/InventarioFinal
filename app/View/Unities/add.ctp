@@ -6,7 +6,7 @@ document.getElementById("id_products").className = "products current";
     
     <div class="block-border">
         <div class="block-content">
-            <h1>Nueva Categoria</h1>
+            <h1>Nueva Unidad</h1>
             <div class="unities form">
             <?php echo $this->Form->create('Unity'); ?>
                 <fieldset>

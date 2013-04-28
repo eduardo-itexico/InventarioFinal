@@ -51,47 +51,81 @@ document.getElementById("id_users").className = "users current";
                      
                         <!-- Table sorting arrows -->
                         <span class="column-sort">
-                            <a href="#" title="Sort up" class="sort-up active"></a>
-                            <a href="#" title="Sort down" class="sort-down"></a>
-                        </span>
+                                <?php echo $this->Paginator->sort('id','<span>',array('sort'=>'id','direction' => 'asc',
+	                															"escape"=>false,
+	                															"class"=> 
+	                															($this->Paginator->sortDir() == "asc" && 
+	                															 $this->Paginator->sortKey() == 'id' ? "active " : "") . "sort-up" ))?>
+						<?php echo $this->Paginator->sort('id','<span>',array('sort'=>'id','direction' => 'desc',
+	                															"escape"=>false,
+																				"class"=>
+																				($this->Paginator->sortDir() == "desc"&&
+																				$this->Paginator->sortKey() == 'id' ? "active " : "") . "sort-down" ))?>
+                            </span>
                          
-                        <?php echo $this->Paginator->sort('id'); ?>
-                    </th>
-                    <th scope="col"><?php echo $this->Paginator->sort('username'); ?></th>
-                    <th scope="col"><?php echo $this->Paginator->sort('pass'); ?></th>
-                    <th scope="col">
-                        <span class="column-sort">
-                            <a href="#" title="Sort up" class="sort-up"></a>
-                            <a href="#" title="Sort down" class="sort-down"></a>
-                        </span>
-                        <?php echo $this->Paginator->sort('nombre'); ?>
+                        <?php echo "ID";//$this->Paginator->sort('id'); ?>
                     </th>
                     <th scope="col">
-                        <span class="column-sort">
-                            <a href="#" title="Sort up" class="sort-up"></a>
-                            <a href="#" title="Sort down" class="sort-down"></a>
-                        </span>
-                        <?php echo $this->Paginator->sort('status'); ?>
+                    <span class="column-sort">
+                                <?php echo $this->Paginator->sort('username','<span>',array('sort'=>'username','direction' => 'asc',
+	                															"escape"=>false,
+	                															"class"=> 
+	                															($this->Paginator->sortDir() == "asc" && 
+	                															 $this->Paginator->sortKey() == 'username' ? "active " : "") . "sort-up" ))?>
+						<?php echo $this->Paginator->sort('username','<span>',array('sort'=>'username','direction' => 'desc',
+	                															"escape"=>false,
+																				"class"=>
+																				($this->Paginator->sortDir() == "desc"&&
+																				$this->Paginator->sortKey() == 'username' ? "active " : "") . "sort-down" ))?>
+                            </span>
+					<?php echo "Usuario";//$this->Paginator->sort('username'); ?>
+                    </th>
+                    <th scope="col">
+                       <span class="column-sort">
+                                <?php echo $this->Paginator->sort('nombre','<span>',array('sort'=>'nombre','direction' => 'asc',
+	                															"escape"=>false,
+	                															"class"=> 
+	                															($this->Paginator->sortDir() == "asc" && 
+	                															 $this->Paginator->sortKey() == 'nombre' ? "active " : "") . "sort-up" ))?>
+						<?php echo $this->Paginator->sort('nombre','<span>',array('sort'=>'nombre','direction' => 'desc',
+	                															"escape"=>false,
+																				"class"=>
+																				($this->Paginator->sortDir() == "desc"&&
+																				$this->Paginator->sortKey() == 'nombre' ? "active " : "") . "sort-down" ))?>
+                            </span>
+                        <?php echo "Nombre";// $this->Paginator->sort('nombre'); ?>
+                    </th>
+                    <th scope="col">
+                      
+                        <?php echo "Estatus";//$this->Paginator->sort('status'); ?>
                     </th>
                     <th scope="col">
                         <span class="column-sort">
-                            <a href="#" title="Sort up" class="sort-up"></a>
-                            <a href="#" title="Sort down" class="sort-down"></a>
-                        </span>
-                        <?php echo $this->Paginator->sort('email'); ?>
+                                <?php echo $this->Paginator->sort('email','<span>',array('sort'=>'email','direction' => 'asc',
+	                															"escape"=>false,
+	                															"class"=> 
+	                															($this->Paginator->sortDir() == "asc" && 
+	                															 $this->Paginator->sortKey() == 'email' ? "active " : "") . "sort-up" ))?>
+						<?php echo $this->Paginator->sort('email','<span>',array('sort'=>'email','direction' => 'desc',
+	                															"escape"=>false,
+																				"class"=>
+																				($this->Paginator->sortDir() == "desc"&&
+																				$this->Paginator->sortKey() == 'email' ? "active " : "") . "sort-down" ))?>
+                            </span>
+                        <?php echo "Correo";//$this->Paginator->sort('email'); ?>
                     </th>
-                    <th scope="col" class="table-actions">Actions</th>
+                    <th scope="col" class="table-actions">Acciones</th>
                 </tr>
             </thead>
          
             <tfoot>
                 <tr>
-                    <td colspan="7"><img src="images/icons/fugue/arrow-curve-000-left.png" width="16" height="16" class="picto"> <?php
+                    <td colspan="6"><img src="images/icons/fugue/arrow-curve-000-left.png" width="16" height="16" class="picto"> <?php
 	echo $this->Paginator->counter(array(
-	'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
+	'format' => __('Pagina {:page} de {:pages}, mostrando {:current} usuarios de {:count} en total')
 	));
 	?>	</td>
-                    <td><a href="#" class="button"><?=$this->Html->image("icons/fugue/cross-circle.png")?> delete all</a></td>
+                    <td></td>
                 </tr>
             </tfoot>
              
@@ -102,16 +136,15 @@ document.getElementById("id_users").className = "users current";
                     <th scope="row" class="table-check-cell"><input type="checkbox" name="selected[]" id="table-selected-1" value="1"></th>
                     <td><?php echo h($user['User']['id']); ?></td>
                     <td><?php echo h($user['User']['username']); ?></td>
-                    <td><?php echo h($user['User']['pass']); ?></td>
                     <td><?php echo h($user['User']['nombre']); ?></td>
                     <td><?php echo h($user['User']['status']); ?></td>
                      <td><?php echo h($user['User']['email']); ?>&nbsp;</td>
                     <!-- The class table-actions is designed for action icons -->
                     <td class="table-actions">
-                    <?php echo $this->Html->link(__('View'), array('action' => 'view', $user['User']['id'])); ?>
+                    <?php //echo $this->Html->link(__('View'), array('action' => 'view', $user['User']['id'])); ?>
 						<?php //echo $this->Html->link(__('Edit'), array('action' => 'edit', $user['User']['id'])); ?>
 						<?php //echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $user['User']['id']), null, __('Are you sure you want to delete # %s?', $user['User']['id'])); ?>
-                        <a href="#" title="Edit" class="with-tip"><?=$this->Html->image("icons/fugue/pencil.png")?></a>
+                        <!--<a href="#" title="Edit" class="with-tip"><?=$this->Html->image("icons/fugue/pencil.png")?></a>-->
                         <a href="#" title="Delete" class="with-tip"><?=$this->Html->image("icons/fugue/cross-circle.png")?></a>
                     </td>
                 </tr>

@@ -113,8 +113,19 @@ class UsersController extends AppController {
 	}
 	
 	public function loginJSON(){
-		$body = array("valid"=>true,
-					  "redirect"=>"sells/index");
+		
+		$user = $this->request->data["login"];
+		$pass = $this->request->data["pass"];
+		$parametros = array("conditions"=>array("User.username"=>$user,"User.pass"=>$pass));
+		$usuario = $this->User->find("first",$parametros);
+		if($usuario){
+			$body = array("valid"=>true,
+					  "redirect"=>"sells/index");	
+		}else{
+			$body = array("valid"=>false,
+						  "error"=>"Datos inválidos, por favor intente de nuevo");
+		}
+		
 		return new CakeResponse(array("body"=>json_encode($body)));
 	}
 	
