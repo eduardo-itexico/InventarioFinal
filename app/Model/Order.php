@@ -89,6 +89,11 @@ class Order extends AppModel {
 			'order' => ''
 		)
 	);
+        
+          
+        public $hasMany = array(
+            'OrderProduct'
+        );
 
 /**
  * hasAndBelongsToMany associations

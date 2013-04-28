@@ -209,9 +209,10 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 			 * Thanks to sbkyle! http://themeforest.net/user/sbkyle
 			 */
 			$('.datepicker').datepick({
-				alignment: 'bottom',
+				alignment: 'right',
 				showOtherMonths: true,
 				selectOtherMonths: true,
+                                 dateFormat:$.datepick.W3C,
 				renderer: {
 					picker: '<div class="datepick block-border clearfix form"><div class="mini-calendar clearfix">' +
 							'{months}</div></div>',

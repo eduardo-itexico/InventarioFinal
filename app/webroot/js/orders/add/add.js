@@ -5,10 +5,12 @@
 $(document).ready(function()
 {
     
-    var sells = new Sells();
+
+        var orders = new Orders();
     
-    $("#SellAddForm").submit(function(){
-        sells.beforeSubmitCreateProducts("#rows-formulario-productos tr","#rows-formulario-productos");
+    $("#OrderAddForm").submit(function(){
+        orders.beforeSubmitCreateProducts("#rows-formulario-productos tr","#rows-formulario-productos");
+
         //return false;
     });
     
@@ -45,9 +47,11 @@ $(document).ready(function()
             subtotal += parseFloat($(this).html());
             //console.log();
         });
-        $("#SellSubtotal").val(subtotal.toFixed(2));
-        $("#SellIva").val((subtotal*0.16).toFixed(2));
-        $("#SellTotal").val(((subtotal*0.16)+subtotal).toFixed(2));
+
+        $("#OrderSubtotal").val(subtotal.toFixed(2));
+        $("#OrderIva").val((subtotal*0.16).toFixed(2));
+        $("#OrderTotal").val(((subtotal*0.16)+subtotal).toFixed(2));
+
         
     };
     
@@ -187,10 +191,9 @@ $(document).ready(function()
 	*/
 	$("#SuplierSearchJSONForm").submit(function(event){
         event.preventDefault();
-        alert("aqui");
-        //console.log("Aqui llego");
-        //console.log($(this).serialize());
-        /*
+
+        
+
         $.ajax({
           type: "POST",
           url: $(this).attr("action"),
@@ -206,7 +209,9 @@ $(document).ready(function()
 				  var newRow = "";
                   for(var i in  datos){
                      //alert(datos[i].Customer.nombre);
-					 newRow += '<tr><th scope="row" class="table-check-cell"></th><td>'+datos[i].Customer.id+'</td><td>'+datos[i].Customer.nombre+'</td><td>'+datos[i].Customer.rfc+'</td><td>'+datos[i].Customer.telefono+'</td><td ><ul class="keywords"><li><a href="javascript:addCustomer('+datos[i].Customer.id+',\''+String(datos[i].Customer.nombre)+'\',\''+String(datos[i].Customer.rfc)+'\',\''+String(datos[i].Customer.telefono)+'\');" >agregar</a></li></ul></td></tr>';
+
+					 newRow += '<tr><th scope="row" class="table-check-cell"></th><td>'+datos[i].Suplier.id+'</td><td>'+datos[i].Suplier.nombre+'</td><td>'+datos[i].Suplier.rfc+'</td><td>'+datos[i].Suplier.telefono+'</td><td ><ul class="keywords"><li><a href="javascript:addCustomer('+datos[i].Suplier.id+',\''+String(datos[i].Suplier.nombre)+'\',\''+String(datos[i].Suplier.rfc)+'\',\''+String(datos[i].Suplier.telefono)+'\');" >agregar</a></li></ul></td></tr>';
+
                       contador++;
                 }    
 				$("#rows-clients").html(newRow);            
@@ -222,7 +227,7 @@ $(document).ready(function()
           }
           
         });
-        */
+
         return false;
     });
 	
