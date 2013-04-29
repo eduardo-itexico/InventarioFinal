@@ -88,7 +88,7 @@ class UnitiesController extends AppController {
  * @param string $id
  * @return void
  */
-	public function delete($id = null) {
+	public function delete($id = null, $redirect = true) {
 		if (!$this->request->is('post')) {
 			throw new MethodNotAllowedException();
 		}

@@ -6,7 +6,7 @@
 		echo $this->Form->input('minimo');
 		echo $this->Form->input('maximo');
 		echo $this->Form->input('actual');
-		echo $this->Form->input('products_id');
+		echo $this->Form->input('product_id');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>
