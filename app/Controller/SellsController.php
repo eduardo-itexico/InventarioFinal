@@ -188,7 +188,7 @@ class SellsController extends AppController {
  * @return void
  */
         
-        public function delete($id = null) {
+        public function delete($id = null, $redirect = true) {
             $dataSource = $this->Sell->getDataSource();
             try{
                 $dataSource->begin();
