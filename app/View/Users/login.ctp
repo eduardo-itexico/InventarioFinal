@@ -1,86 +1,4 @@
-<?php
-
-	$error = false;
-	
-	// Lib to enable support for json_encode for php < 5.2.0 - remove if your version is 5.2.0 or upper
-	//require('_errors/libError.php');
-	
-	// If login form submitted
-	if (isset($_POST['a']))
-	{
-		$valid = false;
-		$redirect = isset($_REQUEST['redirect']) ? $_REQUEST['redirect'] : 'index.php';
-		
-		// Check fields
-		if (!isset($_POST['login']) or strlen($_POST['login']) == 0)
-		{
-			$error = 'por favor introdusca su usuario';
-		}
-		elseif (!isset($_POST['pass']) or strlen($_POST['pass']) == 0)
-		{
-			$error = 'Por favor introdusco su password';
-		}
-		else
-		{
-			/*
-			 * Do whatever here to check user login
-			 */
-			$valid = ($_POST['login'] == 'admin' and $_POST['pass'] == 'admin');
-			
-			if (!$valid)
-			{
-				$error = 'Datos inválidos, por favor intente de nuevo';
-			}
-		}
-		
-		// Check if AJAX request
-		$ajax = (isset($_SERVER['HTTP_X_REQUESTED_WITH']) and strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest');
-		
-		// If user valid
-		if ($valid)
-		{
-			// Handle the keep-logged option
-			if (isset($_POST['keep-logged']) and $_POST['keep-logged'] == 1)
-			{
-				// Set cookie or whatever here
-			}
-			
-			if ($ajax)
-			{
-				header('Cache-Control: no-cache, must-revalidate');
-				header('Expires: '.date('r', time()+(86400*365)));
-				header('Content-type: application/json');
-				
-				echo json_encode(array(
-					'valid' => true,
-					'redirect' => $redirect
-				));
-				exit();
-			}
-			else
-			{
-				header('Location: '.$redirect);
-				exit();
-			}
-		}
-		else
-		{
-			if ($ajax)
-			{
-				header('Cache-Control: no-cache, must-revalidate');
-				header('Expires: '.date('r', time()+(86400*365)));
-				header('Content-type: application/json');
-				
-				echo json_encode(array(
-					'valid' => false,
-					'error' => $error
-				));
-				exit();
-			}
-		}
-	}
-
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 
@@ -106,6 +24,7 @@
 	
 		$(document).ready(function()
 		{
+                    /*
 			// We'll catch form submission to do it in AJAX, but this works also with JS disabled
 			$('#login-form').submit(function(event)
 			{
@@ -200,6 +119,7 @@
 					$('#login-block').removeBlockMessages().blockMessage('Por favor espere, validando datos...', {type: 'loading'});
 				}
 			});
+                        */
 		});
 	
 	</script>
@@ -228,33 +148,20 @@
 			<h1>Iniciar Sesion</h1>
 			<div class="block-header">Favor de introducir sus datos</div>
 				
-			<?php
-			
-			if ($error)
-			{
-				?><p class="message error no-margin"><?php echo htmlspecialchars($error); ?></p>
-			
-			<?php
-			}
-			
-			?><form class="form with-margin" name="login-form" id="login-form" method="post" action="<? echo  $this->Html->url(array("controller"=>"users","action"=>"loginJSON")) ?>">
-				<input type="hidden" name="a" id="a" value="send">
-				<?php
+                        <?php echo $this->Session->flash();?>
+                        
+
+                        
+<?php echo $this->Form->create('User',array("class"=>"form with-margin")); ?>
 				
-				// Check if a redirect page has been forwarded
-				if (isset($_REQUEST['redirect']))
-				{
-					?><input type="hidden" name="redirect" id="redirect" value="<?php echo htmlspecialchars($_REQUEST['redirect']); ?>">
-				<?php
-				}
-				
-				?><p class="inline-small-label">
+				<p class="inline-small-label">
 					<label for="login"><span class="big">Usuario</span></label>
-					<input type="text" name="login" id="login" class="full-width" value="<?php if (isset($_POST['login'])) { echo htmlspecialchars($_POST['login']); } ?>">
+                                         <?php echo $this->Form->input('username', array("class"=>"full-width","label"=>false));?>
 				</p>
 				<p class="inline-small-label">
 					<label for="pass"><span class="big">Contraseña</span></label>
-					<input type="password" name="pass" id="pass" class="full-width" value="">
+                                         <?php echo $this->Form->input('pass', array("type"=>"password",
+                                                                                     "class"=>"full-width","label"=>false));?>
 				</p>
 				
 				<button type="submit" class="float-right">Entrar</button>

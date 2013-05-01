@@ -2469,3 +2469,8 @@ ul.side-tabs {
 .side-tabs {
 	display: block;
 }
+
+.rojo{
+    background: #e46f6f !important;
+    
+}

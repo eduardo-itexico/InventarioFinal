@@ -8,7 +8,7 @@ document.getElementById("id_products").className = "products current";
         <div class="block-content">
             <h1>Nuevo Producto</h1>
             <div class="products form">
-            <?php echo $this->Form->create('Product'); ?>
+            <?php echo $this->Form->create('Product', array('enctype' => 'multipart/form-data')); ?>
                 <fieldset>
                 <?php
                     echo $this->Form->input('nombre');
@@ -16,6 +16,7 @@ document.getElementById("id_products").className = "products current";
                     echo $this->Form->input('category_id');
                     echo $this->Form->input('precio');
                     echo $this->Form->input('imagen',array('type'=>'file'));
+                    echo $this->Form->input('imagen_dir',array('type'=>'hidden'));
                     echo $this->Form->input('unity_id');
                     //echo $this->Form->input('Order');
                     //echo $this->Form->input('Sell');

@@ -59,14 +59,35 @@ class AppController extends Controller {
         } 
     } 
     */
+     public function beforeRender() {
+         parent::beforeRender();
+        $this->set('name_user', $this->Auth->user("nombre"));
+    }
     
     public $components = array(
         'Session',
+        'RequestHandler', 
+        
         'Auth' => array(
-            'loginRedirect' => array('controller' => 'posts', 'action' => 'index'),
-            'logoutRedirect' => array('controller' => 'pages', 'action' => 'display', 'home')
+           
+            'authenticate' => array(
+                                    "Form"=>array(
+                                        "userModel" =>"User",
+                                        "fields"    =>array(
+                                                "username" => "username",
+                                                "password" => "pass")
+                                    )),
+          'loginRedirect' => array('controller' => 'sells', 'action' => 'index'),
+          'logoutRedirect' => array('controller' => 'pages', 'action' => 'display', 'home'),
         )
     );
+    
+    
+    public function beforeFilter(){
+        $this->Auth->allow('login',"add");
+        //parent::beforeFilter();
+        //$this->Auth->fields = array('username' => 'username', 'password' => 'pass');
+    }
     
     public function delete($id = null,$redirect = true) {
             $direccion  = null;

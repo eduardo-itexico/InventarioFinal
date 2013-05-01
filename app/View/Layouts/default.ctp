@@ -419,8 +419,9 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 	<div id="status-bar"><div class="container_12">
 	
 		<ul id="status-infos">
-			<li class="spaced">Bienvenido: <strong>Admin</strong></li>
+			<li class="spaced">Bienvenido: <strong><?php echo $name_user ?></strong></li>
 			<!--<li>
+                                
 				<a href="#" class="button" title="5 messages"><?=$this->Html->image("icons/fugue/mail.png");?><!--<img src="images/icons/fugue/mail.png" width="16" height="16">--> <!--<strong>5</strong></a>
 				<div id="messages-list" class="result-block">
 					<span class="arrow"><span></span></span>
@@ -562,7 +563,12 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 					<p id="comments-info" class="result-info"><a href="#">Manage comments &raquo;</a></p>
 				</div>
 			</li>-->
-			<li><a href="login.php" class="button red" title="Logout"><span class="smaller">Salir</span></a></li>
+			<li>
+                            <?php echo $this->Html->link("Salir", array("controller" => "users",
+                                                                        'action' => 'logout'),
+                                                                        array("class"=>"button red")); ?>
+                            
+                            </li>
 		</ul>
 		
 		<!--<ul id="breadcrumb">

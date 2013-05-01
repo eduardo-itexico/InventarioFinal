@@ -8,6 +8,7 @@ App::uses('AppController', 'Controller');
 class SellsController extends AppController {
 
         public $uses = array("Sell","Product","SellProduct","Stock");
+        public $actual_error  = "";
 /**
  * index method
  *
@@ -102,6 +103,32 @@ class SellsController extends AppController {
     		}
     	}
     }
+    
+    public function __verifyExistencia($productos){
+        //Debugger::dump($productos);
+        $regreso = true;
+        if($productos){
+            foreach ($productos as $producto) {
+                $row = $this->Stock->findByProductId($producto["id"]);
+                if($row){
+                    $this->Stock->id = $row["Stock"]["id"];
+                    $this->Stock->read();
+                    if($this->Stock->exists()){
+                        if(($this->Stock->data["Stock"]["actual"] - $producto["cantidad"]) < 0 ){
+                           $regreso = false;
+                           $this->actual_error = "No puedes vender mas unidades de las del stock de este producto: ".$this->Stock->data["Product"]["nombre"];
+                           //Debugger::dump($this->Stock->data);
+                           break;
+                        }
+                    }
+                    
+                }else{
+                    $regreso = false;
+                }
+            }
+        }
+        return $regreso;
+    }
       
 	public function add() {
 		if ($this->request->is('post')) {
@@ -111,32 +138,36 @@ class SellsController extends AppController {
                         $this->request->data["Sell"]["date"] = date("Y-m-d H:i:s");
                         $this->request->data["Sell"]["status"] = '1';
                         if($this->Sell->validates()){
-                            if ($this->Sell->save($this->request->data)){
-                                //Debugger::dump($this->__getLastQuery());
-                                $products = $this->__reorderProducts($this->request->data["Product"],
-                                                                    $this->Sell->getLastInsertID());
-                                
-                                if($products){
-                                    //debug($products);
-                                    //$this->SellProduct->create();
-                                    if($this->SellProduct->saveAll($products)){
-                                        //Debugger::dump($this->__getLastQuery());
-                                    	$this->__decreaseStock($this->Sell->getLastInsertID());
-                                        $this->Session->setFlash(__('Venta completa salvada'));   
-                                        
-                                        $this->redirect(array('action' => 'index'));
+                            if($this->__verifyExistencia($this->request->data["Product"])){
+                                if ($this->Sell->save($this->request->data)){
+                                    //Debugger::dump($this->__getLastQuery());
+                                    $products = $this->__reorderProducts($this->request->data["Product"],
+                                                                        $this->Sell->getLastInsertID());
+
+                                    if($products){
+                                        //debug($products);
+                                        //$this->SellProduct->create();
+                                        if($this->SellProduct->saveAll($products)){
+                                            //Debugger::dump($this->__getLastQuery());
+                                            $this->__decreaseStock($this->Sell->getLastInsertID());
+                                            $this->Session->setFlash(__('Venta completa salvada'));   
+
+                                            $this->redirect(array('action' => 'index'));
+                                        }else{
+                                            $this->Session->setFlash(__('Problemas salvando la venta'));   
+                                        }
                                     }else{
-                                        $this->Session->setFlash(__('Problemas salvando la venta'));   
+                                        $this->Session->setFlash(__('The sell has been saved'));
+                                        $this->redirect(array('action' => 'index'));
                                     }
-                                }else{
-                                    $this->Session->setFlash(__('The sell has been saved'));
-                                    $this->redirect(array('action' => 'index'));
+                                            //$this->Session->setFlash(__('The sell has been saved'));
+                                                                            //$this->redirect(array('action' => 'index'));
+                                } else {
+                                    $this->Session->setFlash(__('The sell could not be saved. Please, try again.'));
+                                    //var_dump($this->__getLastQuery());    
                                 }
-                                 	//$this->Session->setFlash(__('The sell has been saved'));
-									//$this->redirect(array('action' => 'index'));
-                            } else {
-                                $this->Session->setFlash(__('The sell could not be saved. Please, try again.'));
-                                //var_dump($this->__getLastQuery());    
+                            }else{
+                                $this->Session->setFlash($this->actual_error);
                             }
                         }else{
                             $this->Session->setFlash(__('Erorres de validacion') .print_r($this->Sell->invalidFields()));

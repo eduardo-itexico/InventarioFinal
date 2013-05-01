@@ -12,6 +12,9 @@ class ProductsController extends AppController {
  *
  * @return void
  */
+    
+    public $ruta_imagenes = "/files/product/imagen/";
+    
 	public function index() {
 		$this->Product->recursive = 0;
 		//$this->set('products', $this->paginate());
@@ -24,6 +27,8 @@ class ProductsController extends AppController {
 			$products = $this->Product->find('all',$conditions);
 		}
 		$this->set('products', $products);
+                $this->set('ruta_imagenes', $this->ruta_imagenes);
+                $this->set('fondo', "rojo");
 	}
 
 /**

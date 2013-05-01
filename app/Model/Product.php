@@ -63,7 +63,25 @@ class Product extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
+             'imagen' => array(
+                    'rule' => 'isFileUpload',
+                    'message' => 'File was missing from submission'
+                )
 	);
+        
+        var $actsAs = array(
+		'Upload.Upload' => array(
+			'imagen' => array(
+				'fields' => array(
+					'dir' => 'imagen_dir'
+				),
+				'thumbsizes' => array(
+					'80x80' => '80x80'
+				),
+				'thumbnailMethod'	=> 'php',
+			)
+		)
+	);	
 
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 

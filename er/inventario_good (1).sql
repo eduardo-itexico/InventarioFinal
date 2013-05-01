@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 28-04-2013 a las 14:09:46
+-- Tiempo de generación: 01-05-2013 a las 18:21:00
 -- Versión del servidor: 5.5.16
 -- Versión de PHP: 5.3.8
 
@@ -225,20 +225,28 @@ CREATE TABLE IF NOT EXISTS `products` (
   `category_id` int(11) NOT NULL,
   `precio` varchar(45) DEFAULT NULL,
   `imagen` mediumtext,
+  `imagen_dir` mediumtext,
   `unity_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_products_categories` (`category_id`),
   KEY `fk_products_unidades1` (`unity_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
 
 --
 -- Volcado de datos para la tabla `products`
 --
 
-INSERT INTO `products` (`id`, `nombre`, `descripcion`, `category_id`, `precio`, `imagen`, `unity_id`) VALUES
-(5, 'tcxn120', 'tornillo mastro triple', 9, '2.54', '', 3),
-(6, 'tcxn130', 'hEXAGONAL 1/2 *3', 9, '10', '', 3),
-(7, 'THEX412', 'ALLEN 1/2 *5', 9, '12.5', '', 3);
+INSERT INTO `products` (`id`, `nombre`, `descripcion`, `category_id`, `precio`, `imagen`, `imagen_dir`, `unity_id`) VALUES
+(5, 'tcxn120', 'tornillo mastro triple', 9, '2.54', '', NULL, 3),
+(6, 'tcxn130', 'hEXAGONAL 1/2 *3', 9, '10', '', NULL, 3),
+(7, 'THEX412', 'ALLEN 1/2 *5', 9, '12.5', '', NULL, 3),
+(8, 'Tuerca de seguridad', '', 2, '25', 'agobio.jpg', NULL, 1),
+(9, 'otro', '', 1, '23', '3559335-conjunto-de-6-de-casa-icono-de-variaciones.jpg', NULL, 1),
+(10, 'otro mas', '', 3, '36', 'agenda-365-dias.jpg', '', 1),
+(11, 'asdasd', '', 1, '2', 'agobio.jpg', '', 1),
+(12, 'asdasd', '', 1, '3', 'casa_koi.jpg', '', 1),
+(13, 'New', '', 1, '44', 'casa-01.gif', '13', 1),
+(14, 'MAriposa', '', 3, '26', 'llaves_de_casa_nueva_en _orlando.jpg', '14', 1);
 
 -- --------------------------------------------------------
 
@@ -260,7 +268,7 @@ CREATE TABLE IF NOT EXISTS `sells` (
   PRIMARY KEY (`id`),
   KEY `fk_ventas_clientes1` (`customer_id`),
   KEY `fk_ventas_users1` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=101 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=103 ;
 
 --
 -- Volcado de datos para la tabla `sells`
@@ -356,7 +364,9 @@ INSERT INTO `sells` (`id`, `subtotal`, `iva`, `total`, `descuento_sell`, `custom
 (97, 2.54, 0.41, 2.95, NULL, 1, 1, '2013-04-28 13:46:12', 0, 0),
 (98, 2.54, 0.41, 2.95, NULL, 1, 1, '2013-04-28 13:46:12', 0, 1),
 (99, 12.54, 2.01, 14.55, NULL, 1, 1, '2013-04-28 14:04:51', 0, 0),
-(100, 12.50, 2.00, 14.50, NULL, 3, 1, '2013-04-28 14:05:36', 0, 1);
+(100, 12.50, 2.00, 14.50, NULL, 3, 1, '2013-04-28 14:05:36', 0, 1),
+(101, 22.70, 3.63, 26.33, NULL, 1, 1, '2013-05-01 18:00:46', 0, 1),
+(102, 60.00, 9.60, 69.60, NULL, 1, 1, '2013-05-01 18:09:06', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -374,7 +384,7 @@ CREATE TABLE IF NOT EXISTS `sells_products` (
   PRIMARY KEY (`id`),
   KEY `fk_ventas_has_products_products1` (`product_id`),
   KEY `fk_ventas_has_products_ventas1` (`sell_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=143 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=146 ;
 
 --
 -- Volcado de datos para la tabla `sells_products`
@@ -501,7 +511,10 @@ INSERT INTO `sells_products` (`id`, `sell_id`, `product_id`, `cantidad`, `precio
 (139, 96, 5, 1.00, 2.54, 0),
 (140, 99, 5, 1.00, 2.54, 0),
 (141, 99, 6, 1.00, 10.00, 0),
-(142, 100, 7, 1.00, 12.50, 0);
+(142, 100, 7, 1.00, 12.50, 0),
+(143, 101, 5, 5.00, 2.54, 0),
+(144, 101, 6, 1.00, 10.00, 0),
+(145, 102, 6, 6.00, 10.00, 0);
 
 -- --------------------------------------------------------
 
@@ -524,8 +537,8 @@ CREATE TABLE IF NOT EXISTS `stocks` (
 --
 
 INSERT INTO `stocks` (`id`, `minimo`, `maximo`, `actual`, `product_id`) VALUES
-(1, 10.00, 100.00, 30.00, 5),
-(2, 10.00, 100.00, 11.00, 6),
+(1, 10.00, 100.00, 25.00, 5),
+(2, 15.00, 100.00, 4.00, 6),
 (3, 10.00, 100.00, 11.00, 7);
 
 -- --------------------------------------------------------
@@ -587,16 +600,18 @@ CREATE TABLE IF NOT EXISTS `users` (
   `status` enum('0','1') DEFAULT NULL,
   `email` mediumtext,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Volcado de datos para la tabla `users`
 --
 
 INSERT INTO `users` (`id`, `username`, `pass`, `nombre`, `status`, `email`) VALUES
-(1, 'tomas', 'abc123', 'tomas anderson', NULL, NULL),
+(1, 'tomas', '123', 'tomas anderson', NULL, NULL),
 (2, 'pedro', 'abc123', 'pedro enrique', NULL, 'pedro@pedro.com'),
-(3, 'geringa', 'abc123', 'gerardo', NULL, 'gegeeg@geeg.com');
+(3, 'geringa', 'abc123', 'gerardo', NULL, 'gegeeg@geeg.com'),
+(4, 'tom', 'aefe265f2d81f20e674633c49b1cd17eb71ea0cd', 'Tomas Garc{ia Areavalo', NULL, 'tgarcia@hotmail.com'),
+(5, 'tor', '3ebc304b2b9299b090d3880eec78d358ebfb6eea', 'TOr', '0', 'asdasd@hotmail.com');
 
 --
 -- Restricciones para tablas volcadas

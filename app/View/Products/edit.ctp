@@ -1,5 +1,5 @@
 <div class="products form">
-<?php echo $this->Form->create('Product'); ?>
+<?php echo $this->Form->create('Product', array('enctype' => 'multipart/form-data')); ?>
 	<fieldset>
 		<legend><?php echo __('Edit Product'); ?></legend>
 	<?php
@@ -8,7 +8,8 @@
 		echo $this->Form->input('descripcion');
 		echo $this->Form->input('categories_id');
 		echo $this->Form->input('precio');
-		echo $this->Form->input('imagen');
+		echo $this->Form->input('imagen',array('type'=>'file'));
+                echo $this->Form->input('imagen_dir',array('type'=>'hidden'));
 		echo $this->Form->input('unities_id');
 		echo $this->Form->input('Order');
 		echo $this->Form->input('Sell');

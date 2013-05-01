@@ -66,6 +66,7 @@ document.getElementById("id_products").className = "products current";
                          
                         <?php echo "ID";//$this->Paginator->sort('id'); ?>
                     </th>
+                    <th scope="col"><?php echo "Imagen";//$this->Paginator->sort('imagen'); ?></th>
                     <th scope="col">
                     <span class="column-sort">
                                 <?php echo $this->Paginator->sort('nombre','<span>',array('sort'=>'nombre','direction' => 'asc',
@@ -118,7 +119,7 @@ document.getElementById("id_products").className = "products current";
                     <th scope="col">
                         Stock Actual
                     </th>
-                    <th scope="col"><?php echo "Imagen";//$this->Paginator->sort('imagen'); ?></th>
+                    
                     <th scope="col"><?php echo "Unidad";//$this->Paginator->sort('unities_id'); ?></th>
                     <th scope="col" class="table-actions">Acciones</th>
                 </tr>
@@ -139,17 +140,20 @@ document.getElementById("id_products").className = "products current";
                  <?php
 					foreach ($products as $product): ?>
 					<tr>
-						<th scope="row" class="table-check-cell"><input type="checkbox" name="selected[]" id="table-selected-1" value="1"></th>
-						<td><?php echo h($product['Product']['id']); ?>&nbsp;</td>
-						<td><?php echo h($product['Product']['nombre']); ?>&nbsp;</td>
-						<td><?php echo h($product['Product']['descripcion']); ?>&nbsp;</td>
-						<td>
+						<th scope="row" class="table-check-cell "><input type="checkbox" name="selected[]" id="table-selected-1" value="1"></th>
+						<td class="<?php echo $product['Stock']['actual'] <= $product['Stock']['minimo'] ? $fondo :"";?>"><?php echo h($product['Product']['id']); ?>&nbsp;</td>
+                                                <td class="<?php echo $product['Stock']['actual'] <= $product['Stock']['minimo'] ? $fondo :"";?>"><?php echo $product['Product']['imagen'] ? 
+                                                           $this->Html->image($ruta_imagenes .$product['Product']['imagen_dir']."/80X80_".$product['Product']['imagen']):
+                                                           $this->Html->image($ruta_imagenes ."/default.jpg"); ?>&nbsp;</td>
+						<td class="<?php echo $product['Stock']['actual'] <= $product['Stock']['minimo'] ? $fondo :"";?>"><?php echo h($product['Product']['nombre']); ?>&nbsp;</td>
+						<td class="<?php echo $product['Stock']['actual'] <= $product['Stock']['minimo'] ? $fondo :"";?>"><?php echo h($product['Product']['descripcion']); ?>&nbsp;</td>
+						<td class="<?php echo $product['Stock']['actual'] <= $product['Stock']['minimo'] ? $fondo :"";?>">
 							<?php echo ($product["Category"]["name"])?>
 						</td>
-						<td><?php echo h($product['Product']['precio']); ?>&nbsp;</td>
-						<td><?php echo h($product['Stock']['actual']); ?>&nbsp;</td>
-						<td><?php echo h($product['Product']['imagen']); ?>&nbsp;</td>
-						<td>
+						<td class="<?php echo $product['Stock']['actual'] <= $product['Stock']['minimo'] ? $fondo:"";?>"><?php echo h($product['Product']['precio']); ?>&nbsp;</td>
+						<td class="<?php echo $product['Stock']['actual'] <= $product['Stock']['minimo'] ? $fondo :"";?>"><?php echo h($product['Stock']['actual']); ?>&nbsp;</td>
+						
+						<td class="<?php echo $product['Stock']['actual'] <= $product['Stock']['minimo'] ? $fondo :"";?>">
 							<?php echo ($product["Unity"]["name"])?>
 						</td>
                             <!-- The class table-actions is designed for action icons -->

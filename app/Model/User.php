@@ -12,6 +12,13 @@ class User extends AppModel {
  * @var string
  */
 	public $displayField = 'nombre';
+        
+        public function beforeSave($options = array()) {
+            if (isset($this->data[$this->alias]['pass'])) {
+                $this->data[$this->alias]['pass'] = AuthComponent::password($this->data[$this->alias]['pass']);
+            }
+            return true;
+        }
 
 /**
  * Validation rules
@@ -60,4 +67,6 @@ class User extends AppModel {
 			),
 		),
 	);
+        
+        
 }

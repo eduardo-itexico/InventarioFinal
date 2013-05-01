@@ -109,10 +109,8 @@ class UsersController extends AppController {
 		$this->redirect(array('action' => 'index'));
 	}
 	
-	public function login(){
-		$this->layout = null;
-	}
 	
+	/*
 	public function loginJSON(){
 		
 		$user = $this->request->data["login"];
@@ -129,7 +127,34 @@ class UsersController extends AppController {
 		
 		return new CakeResponse(array("body"=>json_encode($body)));
 	}
-	
+	*/
+        public function login() {
+            $this->layout = null;
+            $this->Auth->logout();
+            if ($this->request->is('post')) {
+                
+                
+                //Debugger::dump($this->request->data);
+                //Debugger::dump(AuthComponent::password($this->request->data["User"]['pass']));
+                //Debugger::dump($this->Auth->login());
+                
+                
+                
+                if ($this->Auth->login()) {
+                    $this->redirect($this->Auth->redirect());
+                } else {
+                    //$this->Session->setFlash(__('Username or password is incorrect'), 'default', array(), 'auth');
+                    $this->Session->setFlash(__('Credenciales inválidas, inténtalo de nuevo'));
+                }
+                
+                
+            }
+        }
+        
+        
+        public function logout() {
+            $this->redirect($this->Auth->logout());
+        }
 	
 /**
  * home method
