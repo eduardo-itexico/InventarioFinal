@@ -7,6 +7,7 @@ App::uses('AppController', 'Controller');
  */
 class UsersController extends AppController {
 
+    
 /**
  * index method
  *

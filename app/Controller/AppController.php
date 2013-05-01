@@ -59,6 +59,15 @@ class AppController extends Controller {
         } 
     } 
     */
+    
+    public $components = array(
+        'Session',
+        'Auth' => array(
+            'loginRedirect' => array('controller' => 'posts', 'action' => 'index'),
+            'logoutRedirect' => array('controller' => 'pages', 'action' => 'display', 'home')
+        )
+    );
+    
     public function delete($id = null,$redirect = true) {
             $direccion  = null;
             $regreso    = true;
