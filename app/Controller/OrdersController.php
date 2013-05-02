@@ -50,6 +50,13 @@ class OrdersController extends AppController {
                             $this->Stock->data["Stock"]["actual"]= ($this->Stock->data["Stock"]["actual"] + $producto["cantidad"]);
                             $this->Stock->Save();
     			}
+                    }else{
+                        $this->Stock->create();
+                        $this->Stock->data["Stock"]["actual"] = $producto["cantidad"];
+                        $this->Stock->data["Stock"]["minimo"] = $producto["cantidad"] - 5;
+                        $this->Stock->data["Stock"]["maximo"] = $producto["cantidad"] + 10;
+                        $this->Stock->data["Stock"]["product_id"] = $producto["product_id"];
+                        $this->Stock->Save();
                     }
                     
                 }

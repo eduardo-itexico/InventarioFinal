@@ -18,6 +18,9 @@ document.getElementById("id_products").className = "products current";
                     echo $this->Form->input('imagen',array('type'=>'file'));
                     echo $this->Form->input('imagen_dir',array('type'=>'hidden'));
                     echo $this->Form->input('unity_id');
+                    echo $this->Form->input('Stock.minimo');
+                    echo $this->Form->input('Stock.maximo');
+                    echo $this->Form->input('Stock.actual');
                     //echo $this->Form->input('Order');
                     //echo $this->Form->input('Sell');
                 ?>

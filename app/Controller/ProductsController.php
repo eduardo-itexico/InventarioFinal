@@ -18,14 +18,21 @@ class ProductsController extends AppController {
 	public function index() {
 		$this->Product->recursive = 0;
 		//$this->set('products', $this->paginate());
-		$products = $this->paginate();
+		$products = null;
+                $conditions = array();
+                $conditions["order"]                                     = array("Product.id"=>"desc");
 		if ($this->request->is('post')) {
 			$search = $this->request->data["simple-search"];
 			$conditions["conditions"]["OR"]["Product.nombre LIKE"]  	= "%$search%"; 
 			$conditions["conditions"]["OR"]["Product.descripcion LIKE"]  	= "%$search%"; 
-			$conditions["conditions"]["OR"]["Product.precio LIKE"]  	= "%$search%"; 
-			$products = $this->Product->find('all',$conditions);
-		}
+			$conditions["conditions"]["OR"]["Product.precio LIKE"]  	= "%$search%";                         
+			//$products = $this->Product->find('all',$conditions);
+                        $this->paginate = $conditions;
+			$products = $this->paginate('Product');
+		}else{
+                     $this->paginate = $conditions;   
+                     $products = $this->paginate("Product");
+                }
 		$this->set('products', $products);
                 $this->set('ruta_imagenes', $this->ruta_imagenes);
                 $this->set('fondo', "rojo");
@@ -54,7 +61,7 @@ class ProductsController extends AppController {
 	public function add() {
 		if ($this->request->is('post')) {
 			$this->Product->create();
-			if ($this->Product->save($this->request->data)) {
+			if ($this->Product->saveAll($this->request->data)) {
 				$this->Session->setFlash(__('The product has been saved'));
 				$this->redirect(array('action' => 'index'));
 			} else {

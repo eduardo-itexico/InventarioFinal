@@ -12335,3 +12335,101 @@
 #1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
 #2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2013-05-01 18:27:39 Error: [MissingActionException] Action ProductsController::favicon-large.png() could not be found.
+#0 C:\xampp\htdocs\InventarioFinal\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\InventarioFinal\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\InventarioFinal\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-01 18:27:39 Error: [MissingActionException] Action ProductsController::favicon.ico() could not be found.
+#0 C:\xampp\htdocs\InventarioFinal\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\InventarioFinal\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\InventarioFinal\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-01 18:27:56 Error: [MissingActionException] Action ProductsController::favicon-large.png() could not be found.
+#0 C:\xampp\htdocs\InventarioFinal\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\InventarioFinal\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\InventarioFinal\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-01 18:27:56 Error: [MissingActionException] Action ProductsController::favicon.ico() could not be found.
+#0 C:\xampp\htdocs\InventarioFinal\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\InventarioFinal\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\InventarioFinal\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-01 18:30:35 Error: [MissingActionException] Action ProductsController::favicon-large.png() could not be found.
+#0 C:\xampp\htdocs\InventarioFinal\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\InventarioFinal\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\InventarioFinal\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-01 18:30:35 Error: [MissingActionException] Action ProductsController::favicon.ico() could not be found.
+#0 C:\xampp\htdocs\InventarioFinal\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\InventarioFinal\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\InventarioFinal\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-01 18:31:01 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 C:\xampp\htdocs\InventarioFinal\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-01 18:31:01 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 C:\xampp\htdocs\InventarioFinal\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-01 18:31:01 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 C:\xampp\htdocs\InventarioFinal\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-01 18:31:01 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 C:\xampp\htdocs\InventarioFinal\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-01 18:31:01 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 C:\xampp\htdocs\InventarioFinal\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-01 18:35:09 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 C:\xampp\htdocs\InventarioFinal\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-01 18:35:09 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 C:\xampp\htdocs\InventarioFinal\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-01 18:35:09 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 C:\xampp\htdocs\InventarioFinal\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-01 18:35:09 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 C:\xampp\htdocs\InventarioFinal\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-01 18:35:09 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 C:\xampp\htdocs\InventarioFinal\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-01 20:21:39 Error: [MissingActionException] Action OrdersController::images() could not be found.
+#0 C:\xampp\htdocs\InventarioFinal\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\InventarioFinal\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(OrdersController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\InventarioFinal\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-01 20:25:22 Error: [MissingActionException] Action OrdersController::images() could not be found.
+#0 C:\xampp\htdocs\InventarioFinal\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\InventarioFinal\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(OrdersController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\InventarioFinal\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-01 20:26:50 Error: [MissingActionException] Action OrdersController::images() could not be found.
+#0 C:\xampp\htdocs\InventarioFinal\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\InventarioFinal\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(OrdersController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\InventarioFinal\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-01 20:27:33 Error: [MissingActionException] Action OrdersController::images() could not be found.
+#0 C:\xampp\htdocs\InventarioFinal\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\InventarioFinal\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(OrdersController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\InventarioFinal\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-01 20:28:54 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 C:\xampp\htdocs\InventarioFinal\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-01 20:28:54 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 C:\xampp\htdocs\InventarioFinal\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-01 20:28:54 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 C:\xampp\htdocs\InventarioFinal\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-01 20:28:54 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 C:\xampp\htdocs\InventarioFinal\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-01 20:28:54 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 C:\xampp\htdocs\InventarioFinal\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-01 20:29:13 Error: [MissingControllerException] Controller class StockController could not be found.
+#0 C:\xampp\htdocs\InventarioFinal\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
