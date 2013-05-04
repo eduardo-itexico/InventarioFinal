@@ -88,12 +88,18 @@ class ProductsController extends AppController {
 			throw new NotFoundException(__('Invalid product'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
-			if ($this->Product->save($this->request->data)) {
-				$this->Session->setFlash(__('The product has been saved'));
-				$this->redirect(array('action' => 'index'));
+                        if($this->request->data["Product"]["imagen"]["size"] == 0){
+                             unset($this->request->data["Product"]["imagen"]);
+                        }
+                        //Debugger::dump($this->request->data);
+                        
+			if ($this->Product->saveAll($this->request->data)) {
+                            $this->Session->setFlash(__('The product has been saved'));
 			} else {
-				$this->Session->setFlash(__('The product could not be saved. Please, try again.'));
+                            $this->Session->setFlash(__('The product could not be saved. Please, try again.'));
 			}
+                        $this->redirect(array('action' => 'index'));
+                        
 		} else {
 			$this->request->data = $this->Product->read(null, $id);
 		}

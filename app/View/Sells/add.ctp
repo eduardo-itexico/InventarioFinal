@@ -62,6 +62,7 @@
      
                             <!-- Left column -->
                             <div class="colx3-left-double">
+                                <?=$this->Form->input('full_base',array("type"=>"hidden","value"=>Router::url('/', true))); ?>
                                 <?=$this->Form->input('date',array("type"=>"text","value"=>date("d-m-Y"),"disabled"=>"true")); ?>
                                 <?=$this->Form->input('status',array("type"=>"hidden","value"=>1)); ?>
                             </div>
@@ -126,11 +127,13 @@
                                 <th class="black-cell"><span class="loading"></span></th>
 
                                 <th scope="col">Id</th>
+                                <th scope="col">Imagen</th>
                                 <th scope="col">Nombre</th>
                                 <th scope="col">Descripci&oacute;n</th>
                                 <th scope="col">Categor&iacute;a</th>
                                 <th scope="col">Precio</th>
-                                <th scope="col">Imagen</th>
+                                <th scope="col">Stock</th>
+                                
                                <!-- <th scope="col">Unidad</th>-->
                                 <th scope="col">Cantidad</th>
                                 <th scope="col">Descto %</th>
@@ -141,7 +144,7 @@
 
                         <tfoot>
                             <tr>
-                                <td colspan="10"><img src="images/icons/fugue/arrow-curve-000-left.png" width="16" height="16" class="picto"> 
+                                <td colspan="11"><img src="images/icons/fugue/arrow-curve-000-left.png" width="16" height="16" class="picto"> 
                                 </td>
                                 <td></td>
                             </tr>
@@ -222,11 +225,13 @@
                                 <th class="black-cell"><span class="loading"></span></th>
 
                                 <th scope="col">Id</th>
+                                <th scope="col">Imagen</th>
                                 <th scope="col">Nombre</th>
                                 <th scope="col">Descripci&oacute;n</th>
                                 <th scope="col">Categor&iacute;a</th>
                                 <th scope="col">Precio</th>
-                                <th scope="col">Imagen</th>
+                                <th scope="col">Stock</th>
+                                
                                 <!--<th scope="col">Unidad</th>-->
                                 <th scope="col">Cantidad</th>
                                 <th scope="col">Descto %</th>
@@ -237,7 +242,7 @@
 
                         <tfoot>
                             <tr>
-                                <td colspan="10"><img src="images/icons/fugue/arrow-curve-000-left.png" width="16" height="16" class="picto"> 
+                                <td colspan="11"><img src="images/icons/fugue/arrow-curve-000-left.png" width="16" height="16" class="picto"> 
                                 </td>
                                 <td><!--<a href="#" class="button"><?=$this->Html->image("icons/fugue/cross-circle.png")?> delete all</a>--></td>
                             </tr>

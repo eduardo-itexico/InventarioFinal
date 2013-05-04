@@ -134,11 +134,6 @@ class UsersController extends AppController {
             if ($this->request->is('post')) {
                 
                 
-                //Debugger::dump($this->request->data);
-                //Debugger::dump(AuthComponent::password($this->request->data["User"]['pass']));
-                //Debugger::dump($this->Auth->login());
-                
-                
                 
                 if ($this->Auth->login()) {
                     $this->redirect($this->Auth->redirect());

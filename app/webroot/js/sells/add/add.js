@@ -72,9 +72,13 @@ $(document).ready(function()
                 if(datos.length > 0){
                   var contador = 0;
                   for(var i in  datos){
-                      var producto  = datos[i].Product;
-                      var categoria = datos[i].Category;
-                      var unidad    = datos[i].Unity;
+                      console.log(datos);
+                      var producto      = datos[i].Product;
+                      var categoria     = datos[i].Category;
+                      var unidad        = datos[i].Unity;
+                      var stock         = datos[i].Stock;
+                      var red_class     = parseFloat(stock.actual) <= parseFloat(stock.minimo) ? "red" : "";
+                      
                       var tr                = $("<tr></tr>");
                       var empty_td          = $("<td></td>");
                       var id_td             = $("<td></td>");
@@ -83,6 +87,8 @@ $(document).ready(function()
                       var categoria_td      = $("<td></td>");
                       var precio_td         = $("<td></td>");
                       var imagen_td         = $("<td></td>");
+                      var img_src           = $("<img />");
+                      var stock_td          = $("<td></td>");    
                       //var unidad_td         = $("<td></td>");
                       var cantidad_td       = $("<td></td>");
                       var descuento_td      = $("<td></td>");
@@ -90,11 +96,13 @@ $(document).ready(function()
                       var actions_td        = $("<td></td>");
                       var button_add        = $("<ul></ul>");
                       var li_add            = $("<li></li>");
+                      
                       var anchor_agregar    = $("<a></a>").attr("href","#").html("Agregar");
                       var input_cantidad    = $("<input type='text'>");
                       var input_precio      = $("<input type='text'>");
                       var input_descuento      = $("<input type='text'>");
                       
+                      stock_td.html(stock.actual + '/' +stock.minimo);
                       tr.data("producto",producto);
                       
                       
@@ -110,6 +118,8 @@ $(document).ready(function()
                       input_cantidad.attr("indice",contador);
                       input_precio.attr("indice",contador);
                       input_descuento.attr("indice",contador);
+                      img_src.attr("src",$("#SellFullBase").val()+"/files/product/imagen/"+producto.imagen_dir +'/80X80_'+producto.imagen);
+                      
                       
                       input_precio.val(producto.precio);
                       input_cantidad.val(1);
@@ -120,6 +130,8 @@ $(document).ready(function()
                       precio_td.append(input_precio);
                       cantidad_td.append(input_cantidad);
                       descuento_td.append(input_descuento);
+                      
+                      imagen_td.append(img_src);
                       
                       anchor_agregar.click(function(event){
                             event.preventDefault();
@@ -161,11 +173,11 @@ $(document).ready(function()
                                 imagen_td,unidad_td,cantidad_td,
                                 subtotal_td,actions_td);*/
 								
-						tr.append(empty_td,id_td,nombre_td,nombre_td,
-                                descripcion_td,categoria_td,precio_td,
-                                imagen_td,cantidad_td,descuento_td,
+                        tr.append(empty_td,id_td,imagen_td,nombre_td,nombre_td,
+                                descripcion_td,categoria_td,precio_td,stock_td,
+                                cantidad_td,descuento_td,
                                 subtotal_td,actions_td);
-
+                      red_class && tr.find("td").addClass("rojo");
                       $("#rows-productos").append(tr);
                       contador++;
                 }                

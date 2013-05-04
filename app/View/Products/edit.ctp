@@ -1,35 +1,42 @@
 <div class="products form">
 <?php echo $this->Form->create('Product', array('enctype' => 'multipart/form-data')); ?>
-	<fieldset>
-		<legend><?php echo __('Edit Product'); ?></legend>
-	<?php
-		echo $this->Form->input('id');
-		echo $this->Form->input('nombre');
-		echo $this->Form->input('descripcion');
-		echo $this->Form->input('categories_id');
-		echo $this->Form->input('precio');
-		echo $this->Form->input('imagen',array('type'=>'file'));
-                echo $this->Form->input('imagen_dir',array('type'=>'hidden'));
-		echo $this->Form->input('unities_id');
-		echo $this->Form->input('Order');
-		echo $this->Form->input('Sell');
-	?>
-	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
-</div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
+	<fieldset><script>
+document.getElementById("id_products").className = "products current";
+</script>
+<!-- Content -->
+<article class="container_12">
+    
+    <div class="block-border">
+        <div class="block-content">
+            <h1>Nuevo Producto</h1>
+            <div class="products form">
+            <?php echo $this->Form->create('Product', array('enctype' => 'multipart/form-data')); ?>
+                <fieldset>
+                <?php
+                    echo $this->Form->input('id',array("type"=>"hidden"));
+                    echo $this->Form->input('nombre');
+                    echo $this->Form->input('descripcion',array('type'=>'textarea'));
+                    echo $this->Form->input('category_id');
+                    echo $this->Form->input('precio');
+                    echo $this->Form->input('imagen',array('type'=>'file'));
+                    //echo $this->Form->input('imagen_dir',array('type'=>'hidden'));
+                    echo $this->Form->input('unity_id');
+                    
+                    echo $this->Form->input('Stock.id',array('type'=>'hidden'));
+                    echo $this->Form->input('Stock.minimo');
+                    echo $this->Form->input('Stock.maximo');
+                    echo $this->Form->input('Stock.actual');
+                    
+                    //echo $this->Form->input('Order');
+                    //echo $this->Form->input('Sell');
+                ?>
+                </fieldset>
+            <?php echo $this->Form->end(__('Submit')); ?>
+            </div>
 
-		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $this->Form->value('Product.id')), null, __('Are you sure you want to delete # %s?', $this->Form->value('Product.id'))); ?></li>
-		<li><?php echo $this->Html->link(__('List Products'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Categories'), array('controller' => 'categories', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Categories'), array('controller' => 'categories', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Unities'), array('controller' => 'unities', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Unities'), array('controller' => 'unities', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Orders'), array('controller' => 'orders', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Order'), array('controller' => 'orders', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Sells'), array('controller' => 'sells', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Sell'), array('controller' => 'sells', 'action' => 'add')); ?> </li>
-	</ul>
-</div>
+		</div>
+	</div>
+    
+    
+</article>
+<!-- End content -->

@@ -117,7 +117,7 @@ document.getElementById("id_products").className = "products current";
                         <?php echo "Precio";//$this->Paginator->sort('precio'); ?>
                     </th>
                     <th scope="col">
-                        Stock Actual
+                        Stock (Actual/Minimo)
                     </th>
                     
                     <th scope="col"><?php echo "Unidad";//$this->Paginator->sort('unities_id'); ?></th>
@@ -151,7 +151,7 @@ document.getElementById("id_products").className = "products current";
 							<?php echo ($product["Category"]["name"])?>
 						</td>
 						<td class="<?php echo $product['Stock']['actual'] <= $product['Stock']['minimo'] ? $fondo:"";?>"><?php echo h($product['Product']['precio']); ?>&nbsp;</td>
-						<td class="<?php echo $product['Stock']['actual'] <= $product['Stock']['minimo'] ? $fondo :"";?>"><?php echo h($product['Stock']['actual']); ?>&nbsp;</td>
+						<td class="<?php echo $product['Stock']['actual'] <= $product['Stock']['minimo'] ? $fondo :"";?>"><?php echo h($product['Stock']['actual']) . '/'.$product['Stock']['minimo']; ?>&nbsp;</td>
 						
 						<td class="<?php echo $product['Stock']['actual'] <= $product['Stock']['minimo'] ? $fondo :"";?>">
 							<?php echo ($product["Unity"]["name"])?>
@@ -159,7 +159,9 @@ document.getElementById("id_products").className = "products current";
                             <!-- The class table-actions is designed for action icons -->
                         <td class="table-actions">
                         <?php //echo $this->Html->link(__('View'), array('action' => 'view', $product['Product']['id'])); ?>
-							<?php //echo $this->Html->link(__('Edit'), array('action' => 'edit', $product['Product']['id'])); ?>
+							<?php echo $this->Html->link($this->Html->image("icons/fugue/pencil.png"), 
+                                                                                     array('action' => 'edit', $product['Product']['id']),
+                                                                                     array("escape"=>false)); ?>
 							<?php //echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $product['Product']['id']), null, __('Are you sure you want to delete # %s?', $product['Product']['id'])); ?>
                             <!--<a href="#" title="Edit" class="with-tip"><?=$this->Html->image("icons/fugue/pencil.png")?></a>-->
                             <a href="#" title="Delete" class="with-tip"><?=$this->Html->image("icons/fugue/cross-circle.png")?></a>
