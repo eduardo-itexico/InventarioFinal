@@ -1,6 +1,14 @@
 <script>
 document.getElementById("id_products").className = "products current";
 </script>
+<style>
+div input, div select{
+	margin-bottom:10px
+	}
+div .number label {
+	color:#FFF
+	}
+</style>
 <!-- Content -->
 <article class="container_12">
     
@@ -12,7 +20,7 @@ document.getElementById("id_products").className = "products current";
                 <fieldset>
                 <?php
                     echo $this->Form->input('nombre');
-                    echo $this->Form->input('descripcion',array('type'=>'textarea'));
+                    echo $this->Form->input('descripcion',array("type"=>"text"));
                     echo $this->Form->input('category_id');
                     echo $this->Form->input('precio');
                     echo $this->Form->input('imagen',array('type'=>'file'));

@@ -1,6 +1,12 @@
 <script>
 document.getElementById("id_customer").className = "customer current";
 </script>
+<style>
+div input, div select, div .textarea{
+	margin-bottom:10px
+	}
+
+</style>
 	<article class="container_12">
 		<!--<section class="grid_4">
 			<div class="block-border">
@@ -25,7 +31,7 @@ document.getElementById("id_customer").className = "customer current";
 				<h1>Nuevo Cliente</h1>
 					
 					<?php
-						echo $this->Form->input('nombre',array("type"=>"textarea"));
+						echo $this->Form->input('nombre',array("type"=>"text"));
 						echo $this->Form->input('direccion',array("type"=>"textarea"));
 						echo $this->Form->input('telefono');
 						echo $this->Form->input('rfc');

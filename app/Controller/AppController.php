@@ -84,7 +84,7 @@ class AppController extends Controller {
     
     
     public function beforeFilter(){
-        $this->Auth->allow('login',"add");
+        $this->Auth->allow('login'/*,"add"*/);
         //parent::beforeFilter();
         //$this->Auth->fields = array('username' => 'username', 'password' => 'pass');
     }

@@ -165,10 +165,12 @@
                 <div class="colx3-right">
                     <div class="sells form">
                         <fieldset>
-                        <legend>Usuarios</legend>
+                        <legend>Usuario</legend>
+                        <label ><?=$name_user?></label>
                         <?php
-                            echo $this->Form->input('user_id',array("value"=>1));
+                            //echo $this->Form->input('user_id',array("value"=>1));
                             //echo $this->Form->input('users_id');
+							// echo $name_user 
                             
                             
                         ?>

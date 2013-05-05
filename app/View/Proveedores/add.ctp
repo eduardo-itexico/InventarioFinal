@@ -1,3 +1,9 @@
+<style>
+div input, div select, div .textarea{
+	margin-bottom:10px
+	}
+
+</style>
 <div class="proveedores form">
 <?php echo $this->Form->create('Proveedor'); ?>
 	<fieldset>

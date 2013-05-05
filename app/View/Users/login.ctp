@@ -123,6 +123,11 @@
 		});
 	
 	</script>
+	<style>
+		div .input{
+			padding-left:130px
+		}
+	</style>
 	
 </head>
 

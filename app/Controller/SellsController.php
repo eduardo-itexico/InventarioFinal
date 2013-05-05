@@ -131,10 +131,12 @@ class SellsController extends AppController {
     }
       
 	public function add() {
+		
 		if ($this->request->is('post')) {
 			$this->Sell->create();
                         //var_dump($this->request->data);
                         //debug($_REQUEST);
+						$this->request->data["Sell"]["user_id"] = $this->Auth->user("id");
                         $this->request->data["Sell"]["date"] = date("Y-m-d H:i:s");
                         $this->request->data["Sell"]["status"] = '1';
                         if($this->Sell->validates()){
@@ -180,6 +182,7 @@ class SellsController extends AppController {
 		$users = $this->Sell->User->find('list');
 		$products = $this->Product->find('list');
 		$this->set(compact('customers', 'users', 'products'));
+		$this->set('name_user', $this->Auth->user("nombre"));
 	}
 
 /**

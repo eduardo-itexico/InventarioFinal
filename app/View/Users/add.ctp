@@ -15,8 +15,8 @@ document.getElementById("id_users").className = "users current";
                     echo $this->Form->input('username');
                     echo $this->Form->input('pass');
                     echo $this->Form->input('nombre');
-                    echo $this->Form->input('status');
-                    echo $this->Form->input('email');
+                    //echo $this->Form->input('status');
+                    echo $this->Form->input('email',array("type"=>"text"));
                 ?>
                 </fieldset>
             <?php echo $this->Form->end(__('Submit')); ?>
