@@ -12433,3 +12433,1141 @@
 2013-05-01 20:29:13 Error: [MissingControllerException] Controller class StockController could not be found.
 #0 C:\xampp\htdocs\InventarioFinal\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-05-02 04:03:24 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Model/Datasource/DboSource.php(261): Mysql->connect()
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Model/ConnectionManager.php(101): DboSource->__construct(Array)
+#2 /Applications/MAMP/htdocs/inventario/lib/Cake/Model/Model.php(3157): ConnectionManager::getDataSource('default')
+#3 /Applications/MAMP/htdocs/inventario/lib/Cake/Model/Model.php(1092): Model->setDataSource('default')
+#4 /Applications/MAMP/htdocs/inventario/lib/Cake/Model/Model.php(3179): Model->setSource('customers')
+#5 /Applications/MAMP/htdocs/inventario/app/Model/AppModel.php(36): Model->getDataSource()
+#6 /Applications/MAMP/htdocs/inventario/lib/Cake/Model/Model.php(2630): AppModel->getDataSource()
+#7 /Applications/MAMP/htdocs/inventario/app/Controller/SellsController.php(179): Model->find('list')
+#8 [internal function]: SellsController->add()
+#9 /Applications/MAMP/htdocs/inventario/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(SellsController), Array)
+#10 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#12 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-05-02 04:04:53 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Model/Datasource/DboSource.php(261): Mysql->connect()
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Model/ConnectionManager.php(101): DboSource->__construct(Array)
+#2 /Applications/MAMP/htdocs/inventario/lib/Cake/Model/Model.php(3157): ConnectionManager::getDataSource('default')
+#3 /Applications/MAMP/htdocs/inventario/lib/Cake/Model/Model.php(1092): Model->setDataSource('default')
+#4 /Applications/MAMP/htdocs/inventario/lib/Cake/Model/Model.php(3179): Model->setSource('customers')
+#5 /Applications/MAMP/htdocs/inventario/app/Model/AppModel.php(36): Model->getDataSource()
+#6 /Applications/MAMP/htdocs/inventario/lib/Cake/Model/Model.php(2630): AppModel->getDataSource()
+#7 /Applications/MAMP/htdocs/inventario/app/Controller/SellsController.php(179): Model->find('list')
+#8 [internal function]: SellsController->add()
+#9 /Applications/MAMP/htdocs/inventario/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(SellsController), Array)
+#10 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#12 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-05-02 04:04:56 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Model/Datasource/DboSource.php(261): Mysql->connect()
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Model/ConnectionManager.php(101): DboSource->__construct(Array)
+#2 /Applications/MAMP/htdocs/inventario/lib/Cake/Model/Model.php(3157): ConnectionManager::getDataSource('default')
+#3 /Applications/MAMP/htdocs/inventario/lib/Cake/Model/Model.php(1092): Model->setDataSource('default')
+#4 /Applications/MAMP/htdocs/inventario/lib/Cake/Model/Model.php(3179): Model->setSource('customers')
+#5 /Applications/MAMP/htdocs/inventario/app/Model/AppModel.php(36): Model->getDataSource()
+#6 /Applications/MAMP/htdocs/inventario/lib/Cake/Model/Model.php(2630): AppModel->getDataSource()
+#7 /Applications/MAMP/htdocs/inventario/app/Controller/SellsController.php(179): Model->find('list')
+#8 [internal function]: SellsController->add()
+#9 /Applications/MAMP/htdocs/inventario/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(SellsController), Array)
+#10 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#12 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-05-02 04:04:57 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Model/Datasource/DboSource.php(261): Mysql->connect()
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Model/ConnectionManager.php(101): DboSource->__construct(Array)
+#2 /Applications/MAMP/htdocs/inventario/lib/Cake/Model/Model.php(3157): ConnectionManager::getDataSource('default')
+#3 /Applications/MAMP/htdocs/inventario/lib/Cake/Model/Model.php(1092): Model->setDataSource('default')
+#4 /Applications/MAMP/htdocs/inventario/lib/Cake/Model/Model.php(3179): Model->setSource('customers')
+#5 /Applications/MAMP/htdocs/inventario/app/Model/AppModel.php(36): Model->getDataSource()
+#6 /Applications/MAMP/htdocs/inventario/lib/Cake/Model/Model.php(2630): AppModel->getDataSource()
+#7 /Applications/MAMP/htdocs/inventario/app/Controller/SellsController.php(179): Model->find('list')
+#8 [internal function]: SellsController->add()
+#9 /Applications/MAMP/htdocs/inventario/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(SellsController), Array)
+#10 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#12 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-05-02 04:04:59 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Model/Datasource/DboSource.php(261): Mysql->connect()
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Model/ConnectionManager.php(101): DboSource->__construct(Array)
+#2 /Applications/MAMP/htdocs/inventario/lib/Cake/Model/Model.php(3157): ConnectionManager::getDataSource('default')
+#3 /Applications/MAMP/htdocs/inventario/lib/Cake/Model/Model.php(1092): Model->setDataSource('default')
+#4 /Applications/MAMP/htdocs/inventario/lib/Cake/Model/Model.php(3179): Model->setSource('customers')
+#5 /Applications/MAMP/htdocs/inventario/app/Model/AppModel.php(36): Model->getDataSource()
+#6 /Applications/MAMP/htdocs/inventario/lib/Cake/Model/Model.php(2630): AppModel->getDataSource()
+#7 /Applications/MAMP/htdocs/inventario/app/Controller/SellsController.php(179): Model->find('list')
+#8 [internal function]: SellsController->add()
+#9 /Applications/MAMP/htdocs/inventario/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(SellsController), Array)
+#10 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#12 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-05-02 04:05:28 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 04:05:30 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 04:05:35 Error: [MissingControllerException] Controller class Favicon-large.pngController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:07:12 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 04:07:13 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 04:12:50 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 04:12:51 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 04:15:06 Error: [MissingActionException] Action CustomersController::favicon-large.png() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(CustomersController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 04:15:06 Error: [MissingActionException] Action CustomersController::favicon.ico() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(CustomersController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 04:19:42 Error: Fatal Error (4): syntax error, unexpected '"label"' (T_CONSTANT_ENCAPSED_STRING) in [/Applications/MAMP/htdocs/inventario/app/View/Users/login.ctp, line 159]
+2013-05-02 04:19:42 Error: [FatalErrorException] syntax error, unexpected '"label"' (T_CONSTANT_ENCAPSED_STRING)
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 159)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 159, Array)
+#2 /Applications/MAMP/htdocs/inventario/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 159, Array)
+#3 /Applications/MAMP/htdocs/inventario/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-02 04:38:14 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 04:38:14 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 04:38:20 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 04:38:21 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 04:39:59 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 04:39:59 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 04:40:06 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 04:40:06 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 04:41:17 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 04:41:18 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 04:42:38 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 04:42:38 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 04:42:47 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 04:42:48 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 04:43:03 Error: [MissingActionException] Action UsersController::favicon-large.png() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 04:43:03 Error: [MissingActionException] Action UsersController::favicon.ico() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 04:44:02 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 04:44:02 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 04:46:13 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 04:46:13 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 04:48:19 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:48:19 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:48:19 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:48:19 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:48:19 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:48:19 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:48:19 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:48:19 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:48:19 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:48:19 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:48:36 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 04:48:36 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 04:49:52 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:49:52 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:49:52 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:49:52 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:49:52 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:49:52 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:49:52 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:49:52 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:49:52 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:49:52 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:50:26 Error: [MissingActionException] Action ProductsController::favicon.ico() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 04:50:27 Error: [MissingActionException] Action ProductsController::favicon-large.png() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 04:50:51 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:50:51 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:50:51 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:50:51 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:50:51 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:50:51 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:50:51 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:50:51 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:50:51 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:50:51 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:51:01 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:51:01 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:51:01 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:51:01 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:51:01 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:51:01 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:51:01 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:51:01 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:51:01 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:51:01 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:51:03 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:51:03 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:51:03 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:51:03 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:51:03 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:51:03 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:51:03 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:51:03 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:51:03 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:51:03 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:51:12 Error: [MissingActionException] Action ProductsController::stock() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 04:51:14 Error: [MissingControllerException] Controller class StockController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:51:41 Error: [MissingActionException] Action StocksController::favicon-large.png() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(StocksController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 04:51:41 Error: [MissingActionException] Action StocksController::favicon.ico() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(StocksController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 04:52:53 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:52:53 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:52:53 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:52:53 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:52:53 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:52:54 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:52:54 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:52:54 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:52:54 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:52:54 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:54:01 Error: Fatal Error (1): Allowed memory size of 33554432 bytes exhausted (tried to allocate 12960 bytes) in [/Applications/MAMP/htdocs/inventario/app/Plugin/Upload/Model/Behavior/UploadBehavior.php, line 1017]
+2013-05-02 04:54:01 Error: [FatalErrorException] Allowed memory size of 33554432 bytes exhausted (tried to allocate 12960 bytes)
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Allowed memory ...', '/Applications/M...', 1017)
+#1 [internal function]: ErrorHandler::handleError(1, 'Allowed memory ...', '/Applications/M...', 1017, Array)
+#2 /Applications/MAMP/htdocs/inventario/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Allowed memory ...', '/Applications/M...', 1017, Array)
+#3 /Applications/MAMP/htdocs/inventario/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-02 04:54:24 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:54:24 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:54:24 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:54:24 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:54:24 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:54:24 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:54:24 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:54:24 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:54:24 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:54:24 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:54:59 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 04:55:00 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 04:55:45 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:55:45 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:55:45 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:55:45 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:55:45 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:55:45 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:55:45 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:55:45 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:55:45 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:55:45 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:56:06 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 04:56:06 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 04:56:31 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 04:56:32 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 04:57:39 Error: [MissingActionException] Action SupliersController::favicon-large.png() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SupliersController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 04:57:39 Error: [MissingActionException] Action SupliersController::favicon.ico() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SupliersController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 04:57:49 Error: [MissingActionException] Action OrdersController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(OrdersController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 04:57:49 Error: [MissingActionException] Action OrdersController::favicon.ico() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(OrdersController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 04:57:49 Error: [MissingActionException] Action OrdersController::favicon-large.png() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(OrdersController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 04:57:49 Error: [MissingActionException] Action OrdersController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(OrdersController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 04:58:21 Error: [MissingActionException] Action OrdersController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(OrdersController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 04:58:21 Error: [MissingActionException] Action OrdersController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(OrdersController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 04:58:45 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:58:45 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:58:45 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:58:45 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:58:46 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:58:46 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:58:46 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:58:46 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:58:46 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:58:46 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:59:35 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 04:59:35 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 04:59:37 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:59:37 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:59:37 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:59:37 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:59:37 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:59:38 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:59:38 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:59:38 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:59:38 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 04:59:38 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 05:00:14 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 05:00:15 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 05:00:17 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 05:00:18 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 05:00:20 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 05:00:20 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 05:00:32 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 05:00:32 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 05:00:35 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 05:00:36 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 05:00:38 Error: [MissingActionException] Action CategoriesController::favicon.ico() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(CategoriesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 05:00:38 Error: [MissingActionException] Action CategoriesController::favicon-large.png() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(CategoriesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 05:00:40 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 05:00:40 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 05:00:41 Error: [MissingActionException] Action UnitiesController::favicon.ico() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UnitiesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 05:00:41 Error: [MissingActionException] Action UnitiesController::favicon-large.png() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UnitiesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 05:03:49 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 05:03:50 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 05:03:53 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 05:03:54 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 05:09:07 Error: [MissingControllerException] Controller class AddController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 05:14:36 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 05:14:37 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 05:15:11 Error: Fatal Error (1): Call to a member function user() on a non-object in [/Applications/MAMP/htdocs/inventario/app/Controller/SellsController.php, line 138]
+2013-05-02 05:15:11 Error: [FatalErrorException] Call to a member function user() on a non-object
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 138)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 138, Array)
+#2 /Applications/MAMP/htdocs/inventario/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 138, Array)
+#3 /Applications/MAMP/htdocs/inventario/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-02 05:15:37 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 05:15:38 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 05:15:49 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Model/Datasource/DboSource.php(459): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Model/Datasource/DboSource.php(425): DboSource->_execute('INSERT INTO `in...', Array)
+#2 /Applications/MAMP/htdocs/inventario/lib/Cake/Model/Datasource/DboSource.php(1007): DboSource->execute('INSERT INTO `in...')
+#3 /Applications/MAMP/htdocs/inventario/lib/Cake/Model/Model.php(1730): DboSource->create(Object(Sell), Array, Array)
+#4 /Applications/MAMP/htdocs/inventario/app/Controller/SellsController.php(143): Model->save(Array)
+#5 [internal function]: SellsController->add()
+#6 /Applications/MAMP/htdocs/inventario/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(SellsController), Array)
+#7 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#8 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#9 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-05-02 05:18:34 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 05:18:34 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 05:22:49 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 05:22:50 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 05:24:49 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 05:24:49 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 05:24:49 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 05:24:49 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 05:24:49 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 05:24:49 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 05:24:49 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 05:24:49 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 05:24:49 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 05:24:49 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 05:26:12 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 05:26:12 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 05:26:12 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 05:26:12 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 05:26:12 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 05:26:13 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 05:26:13 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 05:26:13 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 05:26:13 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 05:26:13 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 05:27:01 Error: [NotFoundException] Invalid product
+#0 [internal function]: ProductsController->edit()
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(ProductsController), Array)
+#2 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-02 05:27:46 Error: [MissingActionException] Action ProductsController::stocks() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 05:27:55 Error: [NotFoundException] Invalid stock
+#0 [internal function]: StocksController->edit('favicon.ico')
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(StocksController), Array)
+#2 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(StocksController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-02 05:27:55 Error: [NotFoundException] Invalid stock
+#0 [internal function]: StocksController->edit('favicon-large.p...')
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(StocksController), Array)
+#2 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(StocksController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-02 05:28:08 Error: [NotFoundException] Invalid stock
+#0 [internal function]: StocksController->edit()
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(StocksController), Array)
+#2 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(StocksController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-02 05:28:27 Error: [NotFoundException] Invalid stock
+#0 [internal function]: StocksController->edit('10')
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(StocksController), Array)
+#2 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(StocksController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-05-02 05:41:29 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 05:41:30 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 05:42:14 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 05:42:15 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-01 23:00:48 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-01 23:00:49 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-01 23:00:53 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-01 23:00:53 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-01 23:00:53 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-01 23:00:53 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-01 23:00:53 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-01 23:00:53 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-01 23:00:53 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-01 23:00:53 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-01 23:00:53 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-01 23:02:52 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-01 23:02:52 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-01 23:02:52 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-01 23:02:52 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-01 23:02:52 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-01 23:02:52 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-01 23:02:52 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-01 23:02:52 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-01 23:02:52 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-01 23:02:52 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-01 23:03:07 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-01 23:03:07 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-01 23:03:32 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-01 23:03:32 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-01 23:03:45 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-01 23:03:45 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-01 23:12:35 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-01 23:12:36 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-01 23:15:54 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-01 23:15:54 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-01 23:19:45 Error: [MissingActionException] Action OrdersController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(OrdersController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-01 23:19:46 Error: [MissingActionException] Action OrdersController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(OrdersController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-01 23:22:11 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-01 23:22:12 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 00:10:46 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 00:10:47 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 00:11:44 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 00:11:44 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 00:12:02 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 00:12:02 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 00:12:02 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 00:12:02 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 00:12:02 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 00:12:02 Error: [MissingControllerException] Controller class ImagesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 00:12:02 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 00:12:02 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 00:12:02 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 00:12:02 Error: [MissingControllerException] Controller class FilesController could not be found.
+#0 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-02 00:12:21 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 00:12:22 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 00:38:51 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 00:38:52 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 00:40:23 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 00:40:24 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 00:43:14 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 00:43:14 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 00:48:41 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 00:48:43 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 00:50:01 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-02 00:50:03 Error: [MissingActionException] Action SellsController::images() could not be found.
+#0 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/inventario/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SellsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/inventario/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}

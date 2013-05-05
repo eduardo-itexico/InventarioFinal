@@ -64,9 +64,9 @@ class DATABASE_CONFIG {
 		'persistent' => false,
 		'host' => 'localhost',
 		'login' => 'root',
-		'password' => '',
+		'password' => 'root',
 		//'port' =>'8889',
-		'database' => 'inventario_good',
+		'database' => 'inventarios',
 		'prefix' => '',
 		//'encoding' => 'utf8',
 	);
