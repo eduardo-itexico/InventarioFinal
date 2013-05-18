@@ -384,10 +384,10 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 				</ul>
             </li>
             
-            <li id="id_orders" class="orders"><a href="#" title="Ordenes">Ordenes</a>
+            <li id="id_orders" class="orders"><a href="#" title="Compras">Compras</a>
             	<ul>
-					<li><?=$this->html->link("Ordenes",array("controller"=>"orders", 'action' => 'index')); ?></li>
-					<li><?=$this->html->link("Nueva Orden",array("controller"=>"orders", "action"=>"add"));?></li>
+					<li><?=$this->html->link("Compras",array("controller"=>"orders", 'action' => 'index')); ?></li>
+					<li><?=$this->html->link("Nueva Compra",array("controller"=>"orders", "action"=>"add"));?></li>
 				</ul>
             </li>
             

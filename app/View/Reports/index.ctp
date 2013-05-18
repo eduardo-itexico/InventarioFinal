@@ -8,19 +8,24 @@
 		if(document.getElementById('datepicker').value == "" || document.getElementById('datepicker2').value == "")
 			alert("Favor de verificar las fechas.");
 		else{
+			if(document.getElementById('chckbx_customer').checked){
+				var tempCustomer_id = document.getElementById('customer_id').value;
+			}else{
+				var tempCustomer_id = 0;
+			}
 			
 			switch(tipo){
 					case 1:
-						window.open("http://localhost:8888/Reports/Ventas_detail.php?ini="+document.getElementById('datepicker').value+"&fin="+document.getElementById('datepicker2').value);
+						window.open("http://localhost:8888/Reports/Ventas_detail.php?ini="+document.getElementById('datepicker').value+"&fin="+document.getElementById('datepicker2').value+"&c_id="+tempCustomer_id);
 					break;
 					case 2:
-						window.open("http://localhost:8888/Reports/Ventas_general_sem.php?ini="+document.getElementById('datepicker').value+"&fin="+document.getElementById('datepicker2').value);
+						window.open("http://localhost:8888/Reports/Ventas_general_sem.php?ini="+document.getElementById('datepicker').value+"&fin="+document.getElementById('datepicker2').value+"&c_id="+tempCustomer_id);
 					break;
 					case 3:
-						window.open("http://localhost:8888/Reports/Ventas_general_mes.php?ini="+document.getElementById('datepicker').value+"&fin="+document.getElementById('datepicker2').value);
+						window.open("http://localhost:8888/Reports/Ventas_general_mes.php?ini="+document.getElementById('datepicker').value+"&fin="+document.getElementById('datepicker2').value+"&c_id="+tempCustomer_id);
 					break;
 					case 4:
-						window.open("http://localhost:8888/Reports/Ventas_general_year.php?ini="+document.getElementById('datepicker').value+"&fin="+document.getElementById('datepicker2').value);
+						window.open("http://localhost:8888/Reports/Ventas_general_year.php?ini="+document.getElementById('datepicker').value+"&fin="+document.getElementById('datepicker2').value+"&c_id="+tempCustomer_id);
 					break;
 				}
 		}
@@ -36,7 +41,7 @@ document.getElementById("id_stats").className = "stats current";
         <div class="block-content align-center">
             <h1>Reportes</h1>
             <form class="form">
-          	
+			
                 <p class="input-height grey-bg">
                 		<input type="radio" name="field17" id="format" value="yy-mm-dd" checked="checked" onClick="tipo = 1;"> <label for="field17-1"> Imprimir por dia </label>
                         <input type="radio" name="field17" id="format2" value="yy-mm" onClick="tipo = 2;"> <label for="field17-1"> Imprimir por semana </label>
@@ -115,9 +120,15 @@ document.getElementById("id_stats").className = "stats current";
                             </div>
                              
 						</div>
-                        
-                                
-                        
+						<p>
+							<div style="width: 140px; overflow: hidden; display: inline-block;">
+								<label class="float-right" for="field18">Filtrar por Cliente</label>
+								<input class="float-left" type="checkbox" id="chckbx_customer"/>
+							</div>
+						</p>
+                        <?php echo $this->Form->input('customer_id',array("value"=>1,"label"=>false)); ?>
+                        <br/>
+						<br/>
                     
                     <button id="btn_imprimir" type="button" onClick="manda();"> Imprimir</button>
 

@@ -117,7 +117,7 @@ document.getElementById("id_products").className = "products current";
                         <?php echo "Precio";//$this->Paginator->sort('precio'); ?>
                     </th>
                     <th scope="col">
-                        Stock (Actual/Minimo)
+                        Almacen (Actual/Minimo)
                     </th>
                     
                     <th scope="col"><?php echo "Unidad";//$this->Paginator->sort('unities_id'); ?></th>

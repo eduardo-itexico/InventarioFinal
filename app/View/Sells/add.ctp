@@ -132,7 +132,7 @@
                                 <th scope="col">Descripci&oacute;n</th>
                                 <th scope="col">Categor&iacute;a</th>
                                 <th scope="col">Precio</th>
-                                <th scope="col">Stock</th>
+                                <th scope="col">Almacen</th>
                                 
                                <!-- <th scope="col">Unidad</th>-->
                                 <th scope="col">Cantidad</th>
@@ -220,6 +220,7 @@
                 	<?php //echo $this->Form->end(__('Submit')); ?>	
                         <?php echo $this->Form->end(); ?>	
                 </fieldset>
+                <div style="height:300px;overflow:auto">
                     <table class="table" cellspacing="0" width="100%" style="margin-top: 20px;">
                         <thead>
                             <tr>
@@ -232,7 +233,7 @@
                                 <th scope="col">Descripci&oacute;n</th>
                                 <th scope="col">Categor&iacute;a</th>
                                 <th scope="col">Precio</th>
-                                <th scope="col">Stock</th>
+                                <th scope="col">Almacen</th>
                                 
                                 <!--<th scope="col">Unidad</th>-->
                                 <th scope="col">Cantidad</th>
@@ -252,6 +253,7 @@
                         <tbody id="rows-productos">
                         </tbody>
                     </table>
+                  </div>
                 <div class="block-footer align-right">
                     <button type="button" onclick="document.getElementById('productos-modal').className = 'no-modal';">Close</button>
                 </div>
@@ -262,7 +264,7 @@
     
     
     <div id="client-modal" class="no-modal">
-        <div style="position:relative;margin:0 auto;width:1100px;top:200px">
+        <div style="position:relative;margin:0 auto;width:1100px;top:50px">
             <div class="block-border">
                 <div class="block-content">
                     <h1>Buscar Cliente</h1>
@@ -276,6 +278,7 @@
                     <fieldset class="grey-bg no-margin">
                             <?php //echo $this->Form->end(__('Submit')); ?>	
                     </fieldset>
+                    <div style="height:300px;overflow:auto">
                     <table class="table" cellspacing="0" width="100%">
                         <thead>
                             <tr>
@@ -300,7 +303,7 @@
                         <tbody id="rows-clients">
                         </tbody>
                     </table>
-                    
+                    </div>
                     <div class="block-footer align-right">
                    		<button type="button" onclick="document.getElementById('client-modal').className = 'no-modal';">Close</button>
                     </div>

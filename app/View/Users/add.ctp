@@ -12,11 +12,15 @@ document.getElementById("id_users").className = "users current";
 			<?php echo $this->Form->create('User'); ?>
                 <fieldset>
                 <?php
-                    echo $this->Form->input('username');
-                    echo $this->Form->input('pass');
-                    echo $this->Form->input('nombre');
+				?><label>Usuario</label><?PHP
+                    echo $this->Form->input('username',array("label"=>false));
+					?><label>Contraseña</label><?PHP
+                    echo $this->Form->input('pass',array("label"=>false));
+					?><label>Nombre</label><?PHP
+                    echo $this->Form->input('nombre',array("label"=>false));
                     //echo $this->Form->input('status');
-                    echo $this->Form->input('email',array("type"=>"text"));
+					?><label>Correo</label><?PHP
+                    echo $this->Form->input('email',array("type"=>"text","label"=>false));
                 ?>
                 </fieldset>
             <?php echo $this->Form->end(__('Submit')); ?>

@@ -21,11 +21,15 @@ div .number label {
                 <?php
                     echo $this->Form->input('nombre');
                     echo $this->Form->input('descripcion',array("type"=>"text"));
-                    echo $this->Form->input('category_id');
-                    echo $this->Form->input('precio');
-                    echo $this->Form->input('imagen',array('type'=>'file'));
+					?><label>Categoria</label><?PHP
+                    echo $this->Form->input('category_id',array("label"=>false));
+					?><label>Precio</label><?PHP
+                    echo $this->Form->input('precio',array("label"=>false));
+					?><label>Imagen</label><?PHP
+                    echo $this->Form->input('imagen',array('type'=>'file',"label"=>false));
                     echo $this->Form->input('imagen_dir',array('type'=>'hidden'));
-                    echo $this->Form->input('unity_id');
+					?><label>Unidad</label><?PHP
+                    echo $this->Form->input('unity_id',array("label"=>false));
                     echo $this->Form->input('Stock.minimo');
                     echo $this->Form->input('Stock.maximo');
                     echo $this->Form->input('Stock.actual');

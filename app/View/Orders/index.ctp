@@ -6,7 +6,7 @@ document.getElementById("id_orders").className = "orders current";
     
     <div class="block-border">
         <div class="block-content">
-            <h1>Ordenes</h1>
+            <h1>Compras</h1>
             
            <div class="block-controls">
 	            <ul class="controls-buttons">

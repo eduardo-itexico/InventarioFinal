@@ -10,8 +10,10 @@ document.getElementById("id_products").className = "products current";
             <div class="unities form">
             <?php echo $this->Form->create('Unity'); ?>
                 <fieldset>
+                <label>Nombre</label>
                 <?php
-                    echo $this->Form->input('name');
+					
+                    echo $this->Form->input('name',array("label"=>false));
                 ?>
                 </fieldset>
             <?php echo $this->Form->end(__('Submit')); ?>

@@ -10,8 +10,10 @@ document.getElementById("id_products").className = "products current";
             <div class="categories form">
             <?php echo $this->Form->create('Category'); ?>
                 <fieldset>
+                <label>Nombre</label>
                 <?php
-                    echo $this->Form->input('name');
+					
+                    echo $this->Form->input('name',array("label"=>false));
                     //echo $this->Form->input('status');
                     echo $this->Form->input('Category.category_id',array("type"=>"hidden","value"=>"1"));
                 ?>

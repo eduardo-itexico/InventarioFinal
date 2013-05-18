@@ -7,7 +7,7 @@ App::uses('AppController', 'Controller');
  */
 class ReportsController extends AppController {
 	
-	public $uses = array();
+	public $uses = array("Customer");
 
 /**
  * index method
@@ -15,6 +15,8 @@ class ReportsController extends AppController {
  * @return void
  */
 	public function index() {
+		$customers = $this->Customer->find('list');
+		$this->set(compact('customers'));
 		
 	}
 

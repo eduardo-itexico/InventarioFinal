@@ -58,7 +58,7 @@ document.getElementById("id_orders").className = "orders current";
     
     <div class="block-border">
         <div class="block-content">
-            <h1>Nueva Orden</h1>
+            <h1>Nueva Compra</h1>
             <div class="sells form">
             <div class="columns">
      			
