@@ -142,10 +142,16 @@ document.getElementById("id_users").className = "users current";
                     <!-- The class table-actions is designed for action icons -->
                     <td class="table-actions">
                     <?php //echo $this->Html->link(__('View'), array('action' => 'view', $user['User']['id'])); ?>
-						<?php //echo $this->Html->link(__('Edit'), array('action' => 'edit', $user['User']['id'])); ?>
-						<?php //echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $user['User']['id']), null, __('Are you sure you want to delete # %s?', $user['User']['id'])); ?>
+                    <?php echo $this->Html->link($this->Html->image("icons/fugue/pencil.png"), 
+                                                 array('action' => 'edit', $user['User']['id']),
+                                                array("escape"=>false)); ?>
+                    <?php //echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $user['User']['id']), null, __('Are you sure you want to delete # %s?', $user['User']['id'])); ?>
                         <!--<a href="#" title="Edit" class="with-tip"><?=$this->Html->image("icons/fugue/pencil.png")?></a>-->
-                        <a href="#" title="Delete" class="with-tip"><?=$this->Html->image("icons/fugue/cross-circle.png")?></a>
+                        
+                         <?php echo $this->Form->postLink($this->Html->image("icons/fugue/cross-circle.png"), 
+                                                             array('action' => 'delete', $user['User']['id']),
+                                                             array("class"=>"with-tip",'escape' => false), 
+                                                             __('Are you sure you want to delete # %s?', $user['User']['id']));?>	
                     </td>
                 </tr>
 			<?php endforeach; ?>

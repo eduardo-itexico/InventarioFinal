@@ -7,6 +7,7 @@ App::uses('AppController', 'Controller');
  */
 class UsersController extends AppController {
 
+    public $uses = array("User");
     
 /**
  * index method
@@ -16,14 +17,22 @@ class UsersController extends AppController {
 	public function index() {
 		$this->User->recursive = 0;
 		//$this->set('users', $this->paginate());
-		$users = $this->paginate();
+		$users      = null;
+                $conditions = array();
+                $conditions["conditions"]["AND"]["User.status LIKE "] = '1'; 
+                $conditions["order"]                                     = array("User.id"=>"desc");
 		if ($this->request->is('post')) {
 			$search = $this->request->data["simple-search"];
 			$conditions["conditions"]["OR"]["User.Username LIKE"]  	= "%$search%"; 
 			$conditions["conditions"]["OR"]["User.Nombre LIKE"]  	= "%$search%"; 
 			$conditions["conditions"]["OR"]["User.Email LIKE"]  	= "%$search%"; 
 			$users = $this->User->find('all',$conditions);
-		}
+		}else{
+                
+                //$this->paginate = array("order"=>array("Sell.id"=>"desc"));   
+                $this->paginate = $conditions;   
+                $users = $this->paginate("User");
+                }
 		$this->set('users', $users);
 	}
 	
@@ -74,12 +83,37 @@ class UsersController extends AppController {
 			throw new NotFoundException(__('Invalid user'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
-			if ($this->User->save($this->request->data)) {
-				$this->Session->setFlash(__('The user has been saved'));
-				$this->redirect(array('action' => 'index'));
-			} else {
-				$this->Session->setFlash(__('The user could not be saved. Please, try again.'));
-			}
+                        $continue = true;
+                        //$this->request->data["User"]["status"] = "1";
+                        $password = $this->request->data["User"]["pass"];
+                        $repeated = $this->request->data["User"]["repeat"];
+                        
+                        if(!$password){
+                            unset($this->request->data["User"]["pass"]); 
+                        }else{
+                            if($password != $repeated){
+                                $continue = false;
+                            }
+                        }
+                        unset($this->request->data["User"]["repeat"]);
+                       /*
+                        Debugger::dump($this->request->data);
+                        $this->User->save($this->request->data);
+                        Debugger::dump($this->User->getLastQuery());
+                        exit(1);
+                        */
+                        if($continue){
+                            if ( $this->User->save($this->request->data)) {
+                                    $this->Session->setFlash(__('The user has been saved'));
+                                    $this->redirect(array('action' => 'index'));
+                            } else {
+                                    $this->Session->setFlash(__('The user could not be saved. Please, try again.'));
+                            }
+                        }else{
+                            $this->Session->setFlash(__('Los password no coinciden'));
+                            $this->redirect(array('action' => 'index'));
+                        }
+                        
 		} else {
 			$this->request->data = $this->User->read(null, $id);
 		}
@@ -93,7 +127,11 @@ class UsersController extends AppController {
  * @param string $id
  * @return void
  */
+        
 	public function delete($id = null, $redirect = true) {
+            parent::delete($id);
+            
+               /*
 		if (!$this->request->is('post')) {
 			throw new MethodNotAllowedException();
 		}
@@ -107,6 +145,8 @@ class UsersController extends AppController {
 		}
 		$this->Session->setFlash(__('User was not deleted'));
 		$this->redirect(array('action' => 'index'));
+            */
+        
 	}
 	
 	
@@ -132,17 +172,12 @@ class UsersController extends AppController {
             $this->layout = null;
             $this->Auth->logout();
             if ($this->request->is('post')) {
-                
-                
-                
                 if ($this->Auth->login()) {
                     $this->redirect($this->Auth->redirect());
                 } else {
                     //$this->Session->setFlash(__('Username or password is incorrect'), 'default', array(), 'auth');
                     $this->Session->setFlash(__('Credenciales inválidas, inténtalo de nuevo'));
                 }
-                
-                
             }
         }
         

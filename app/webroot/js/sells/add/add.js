@@ -72,7 +72,7 @@ $(document).ready(function()
                 if(datos.length > 0){
                   var contador = 0;
                   for(var i in  datos){
-                      console.log(datos);
+                      
                       var producto      = datos[i].Product;
                       var categoria     = datos[i].Category;
                       var unidad        = datos[i].Unity;
@@ -140,8 +140,10 @@ $(document).ready(function()
                             anchor_eliminar.attr("href","#");
                             anchor_eliminar.html("Eliminar");
                             anchor_eliminar.click(function(event){
-                                event.preventDefault();
-                                $(this).parent().parent().parent().parent().remove()
+                                event.preventDefault();                                
+                                $(this).parent().parent().parent().parent().remove();
+                                console.log("Eliminar------------------------------>")
+                                calculateSubtotal();
                                 //console.log($(this).parent().parent().parent().parent().remove());
                             });
                             //console.log("data-Before");

@@ -97,7 +97,7 @@ class AppController extends Controller {
             }
             //var_dump($this->uses);
             if(!empty($this->uses)){
-                $model ? $this->loadModel($model) : $this->loadModel($this->uses[0]);
+                //$model ? $this->loadModel($model) : $this->loadModel($this->uses[0]);
                 $modelo = $this->uses[0];
                 $modelo = $this->$modelo;
                 $modelo->id = $id;
@@ -107,8 +107,12 @@ class AppController extends Controller {
                     throw new NotFoundException(__('Registro inválido'));
                 }
                 
-                //var_dump($this->request->data);
-                //exit(1);
+                /*
+                var_dump($this->request->data);
+                $modelo->save($this->request->data);
+                
+                var_dump($modelo->getLastQuery());
+                */
                 if ($modelo->save($this->request->data)){
                     $this->Session->setFlash(__('Registro eliminado'));
                     $direccion = array('action' => 'index');
@@ -119,6 +123,7 @@ class AppController extends Controller {
                     $regreso    = false;
                     //$this->redirect(array('action' => 'index'));
                 }
+                
 
             }else{
                 $this->Session->setFlash(__('El registro no fue eliminado'));

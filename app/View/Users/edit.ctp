@@ -5,9 +5,10 @@
 	<?php
 		echo $this->Form->input('id');
 		echo $this->Form->input('username');
-		echo $this->Form->input('pass');
+		echo $this->Form->input('pass', array("value"=>""));
+                echo $this->Form->input('repeat', array("value"=>""));
 		echo $this->Form->input('nombre');
-		echo $this->Form->input('status');
+		
 		echo $this->Form->input('email');
 	?>
 	</fieldset>
