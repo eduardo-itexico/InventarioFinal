@@ -32,6 +32,8 @@ document.getElementById("id_customer").className = "customer current";
 						echo $this->Form->input('telefono');
 						echo $this->Form->input('rfc');
 						echo $this->Form->input('ciudad');
+                                                echo $this->Form->input('estado');
+                                                echo $this->Form->input('codigo_postal', array("type"=>"text"));
 					?>
 					</fieldset>
 					<fieldset class="grey-bg no-margin">

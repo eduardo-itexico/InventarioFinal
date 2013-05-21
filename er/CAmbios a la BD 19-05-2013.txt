@@ -1,0 +1,8 @@
+Cambios a la BD
+
+ALTER TABLE  `customers` ADD  `estado` VARCHAR( 100 ) NULL AFTER  `ciudad` ,
+ADD  `codigo_postal` INT( 50 ) NULL AFTER  `estado`
+
+
+ALTER TABLE  `supliers` ADD  `estado` VARCHAR( 100 ) NULL AFTER  `ciudad` ,
+ADD  `codigo_postal` INT( 50 ) NULL AFTER  `estado`
